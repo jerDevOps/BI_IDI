@@ -1,4 +1,4 @@
-import { LayoutDashboard, Building2, Sprout, Users, BadgeCheck, FileBarChart, BookOpen } from 'lucide-react';
+import { LayoutDashboard, Building2, Sprout, Users, BadgeCheck } from 'lucide-react';
 
 export default function Sidebar({ activeSection, setActiveSection }) {
   const navItems = [
@@ -7,8 +7,8 @@ export default function Sidebar({ activeSection, setActiveSection }) {
     { id: 'semilleros', label: 'Semilleros', icon: Sprout },
     { id: 'grupos', label: 'Grupos de Inv.', icon: Users },
     { id: 'renacyt', label: 'RENACYT', icon: BadgeCheck },
-    { id: 'fedu', label: 'Proyectos FEDU', icon: FileBarChart },
-    { id: 'publicaciones', label: 'Publicaciones', icon: BookOpen },
+
+
   ];
 
   return (

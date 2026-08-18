@@ -3,7 +3,7 @@ import { BadgeCheck, Medal } from 'lucide-react';
 import YearFilter from '../ui/YearFilter';
 import { 
   renacytPorAnio, renacytPorNivel2023, renacytPorFacultad2023,
-  renacytPorNivel2026, renacytPorFacultad2026, renacytPorEscuela2026
+  renacytPorNivel2026, renacytPorFacultad2026
 } from '../../data/data';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell
@@ -101,25 +101,7 @@ export default function Renacyt() {
         </div>
       </div>
       
-      {activeYear === 2026 && (
-        <div className="chart-card" style={{marginTop: '2rem'}}>
-          <h3 className="chart-title">Distribución por Escuela Profesional ({activeYear})</h3>
-          <div className="chart-container" style={{height: '400px'}}>
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={renacytPorEscuela2026.slice(0, 20)} layout="vertical" margin={{ top: 5, right: 30, left: 180, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="var(--color-border)" />
-                <XAxis type="number" stroke="var(--color-text-light)" />
-                <YAxis dataKey="name" type="category" width={170} stroke="var(--color-text-light)" tick={{fontSize: 11}} />
-                <Tooltip 
-                  contentStyle={{ backgroundColor: 'var(--color-surface)', borderColor: 'var(--color-border)', borderRadius: '8px' }}
-                  itemStyle={{ color: 'var(--color-text)' }}
-                />
-                <Bar dataKey="investigadores" fill="#a78bfa" radius={[0, 4, 4, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-      )}
+
     </div>
   );
 }
