@@ -8,6 +8,7 @@ import Grupos from './components/sections/Grupos';
 import Renacyt from './components/sections/Renacyt';
 import Fedu from './components/sections/Fedu';
 import Publicaciones from './components/sections/Publicaciones';
+import Financiamiento from './components/sections/Financiamiento';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       case 'renacyt': return 'Docentes RENACYT';
       case 'fedu': return 'Proyectos FEDU';
       case 'publicaciones': return 'Publicaciones y Repositorio';
+      case 'financiamiento': return 'Financiamiento de Proyectos';
       default: return 'Dashboard';
     }
   };
@@ -41,6 +43,7 @@ function App() {
           {activeSection === 'renacyt' && <Renacyt />}
           {activeSection === 'fedu' && <Fedu />}
           {activeSection === 'publicaciones' && <Publicaciones />}
+          {activeSection === 'financiamiento' && <Financiamiento />}
         </div>
       </main>
     </div>
