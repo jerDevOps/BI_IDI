@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Sprout, Search, TrendingUp, ArrowUpRight } from 'lucide-react';
+import WebPreviewCard from '../ui/WebPreviewCard';
 import YearFilter from '../ui/YearFilter';
 import Badge from '../ui/Badge';
 import {
@@ -202,6 +203,13 @@ export default function Semilleros() {
           </ResponsiveContainer>
         </div>
       </div>
+
+      {/* Portal VRI */}
+      <WebPreviewCard
+        url="https://web.vriunap.pe/instituto/investigamos/semilleros"
+        label="Ver en Portal VRI"
+        color="#2e7d32"
+      />
 
       {/* Directorio filtrable */}
       <div className="card">

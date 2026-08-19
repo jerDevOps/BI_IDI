@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Users, Search, ArrowUpRight, BarChart2 } from 'lucide-react';
+import WebPreviewCard from '../ui/WebPreviewCard';
 import YearFilter from '../ui/YearFilter';
 import Badge from '../ui/Badge';
 import { grupos, gruposEvolucion } from '../../data/data';
@@ -196,6 +197,13 @@ export default function Grupos() {
           </ResponsiveContainer>
         </div>
       </div>
+
+      {/* Portal VRI */}
+      <WebPreviewCard
+        url="https://web.vriunap.pe/instituto/investigamos/grupos"
+        label="Ver en Portal VRI"
+        color="#2e7d32"
+      />
 
       {/* Directorio */}
       <div className="card">

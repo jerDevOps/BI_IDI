@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { BadgeCheck, Medal } from 'lucide-react';
 import YearFilter from '../ui/YearFilter';
+import WebPreviewCard from '../ui/WebPreviewCard';
 import { 
-  renacytPorAnio, renacytPorNivel2023, renacytPorFacultad2023,
-  renacytPorNivel2026, renacytPorFacultad2026
+  renacytPorAnio
 } from '../../data/data';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell
@@ -12,9 +12,6 @@ import {
 export default function Renacyt() {
   const [activeYear, setActiveYear] = useState(2026);
   const currentTotal = renacytPorAnio.find(r => r.anio === activeYear)?.total || 0;
-  
-  const dataNivel = activeYear === 2026 ? renacytPorNivel2026 : renacytPorNivel2023;
-  const dataFacultad = activeYear === 2026 ? renacytPorFacultad2026 : renacytPorFacultad2023;
 
   return (
     <div className="animate-fade-in-up stagger-children">
@@ -63,45 +60,14 @@ export default function Renacyt() {
         </div>
       </div>
 
-      <div className="grid grid-2 gap-6">
-        <div className="chart-card">
-          <h3 className="chart-title">Distribución por Nivel RENACYT ({activeYear})</h3>
-          <div className="chart-container">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={dataNivel} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="var(--color-border)" />
-                <XAxis type="number" stroke="var(--color-text-light)" />
-                <YAxis dataKey="name" type="category" width={80} stroke="var(--color-text-light)" />
-                <Tooltip 
-                  contentStyle={{ backgroundColor: 'var(--color-surface)', borderColor: 'var(--color-border)', borderRadius: '8px' }}
-                  itemStyle={{ color: 'var(--color-text)' }}
-                />
-                <Bar dataKey="value" fill="var(--color-primary)" radius={[0, 4, 4, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-
-        <div className="chart-card">
-          <h3 className="chart-title">Top Facultades con más Investigadores ({activeYear})</h3>
-          <div className="chart-container">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={dataFacultad.slice(0, 10)} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--color-border)" />
-                <XAxis dataKey="name" stroke="var(--color-text-light)" tick={{fontSize: 10}} angle={-45} textAnchor="end" height={80} />
-                <YAxis stroke="var(--color-text-light)" />
-                <Tooltip 
-                  contentStyle={{ backgroundColor: 'var(--color-surface)', borderColor: 'var(--color-border)', borderRadius: '8px' }}
-                  itemStyle={{ color: 'var(--color-text)' }}
-                />
-                <Bar dataKey="investigadores" fill="var(--color-secondary)" radius={[4, 4, 0, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-      </div>
-      
+      {/* Vista previa del portal VRI — reemplaza las gráficas de nivel y facultad */}
+      <WebPreviewCard
+        url="https://web.vriunap.pe/instituto/investigamos/investigadores"
+        label="Ver Investigadores en Portal VRI"
+        color="#0277bd"
+      />
 
     </div>
   );
 }
+

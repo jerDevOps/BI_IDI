@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Building2, Search, Calendar, Layers } from 'lucide-react';
+import WebPreviewCard from '../ui/WebPreviewCard';
 import YearFilter from '../ui/YearFilter';
 import Badge from '../ui/Badge';
 import { institutos } from '../../data/data';
@@ -186,6 +187,13 @@ export default function Institutos() {
           })}
         </div>
       </div>
+
+      {/* Portal VRI */}
+      <WebPreviewCard
+        url="https://web.vriunap.pe/instituto/investigamos/institutos"
+        label="Ver en Portal VRI"
+        color="#2e7d32"
+      />
 
       {/* Directorio filtrable */}
       <div className="card">
