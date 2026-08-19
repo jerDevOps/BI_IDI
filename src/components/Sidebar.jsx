@@ -14,19 +14,19 @@ export default function Sidebar({ activeSection, setActiveSection }) {
   return (
     <aside className="sidebar">
       <div className="sidebar-logo">
-        <div className="sidebar-logo-icon">IDI</div>
-        <div className="sidebar-logo-text">
-          <strong>UNA PUNO</strong>
-          <span>Instituto de Investigación</span>
-        </div>
+        <img
+          src="/images/Instituto.png"
+          alt="Instituto de Investigación UNA Puno"
+          style={{ width: '100%', maxWidth: 160, objectFit: 'contain', borderRadius: 8 }}
+        />
       </div>
-      
+
       <nav className="sidebar-nav">
-        <div className="sidebar-section-label">Dashboard 2021-2026</div>
+        <div className="sidebar-section-label">Panel de Control</div>
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeSection === item.id;
-          
+
           return (
             <button
               key={item.id}
@@ -41,8 +41,7 @@ export default function Sidebar({ activeSection, setActiveSection }) {
       </nav>
 
       <div className="sidebar-footer">
-        <div>Memoria Anual</div>
-        <div style={{ color: 'var(--color-primary-light)', fontWeight: 600 }}>2021 - 2026</div>
+        <div>© Desarrollado por: JRGC - IDI</div>
       </div>
     </aside>
   );
