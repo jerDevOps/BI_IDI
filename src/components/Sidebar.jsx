@@ -1,6 +1,6 @@
 import { LayoutDashboard, Building2, Sprout, Users, BadgeCheck, DollarSign } from 'lucide-react';
 
-export default function Sidebar({ activeSection, setActiveSection }) {
+export default function Sidebar({ activeSection, setActiveSection, isOpen }) {
   const navItems = [
     { id: 'overview', label: 'Resumen General', icon: LayoutDashboard },
     { id: 'institutos', label: 'Institutos', icon: Building2 },
@@ -12,7 +12,7 @@ export default function Sidebar({ activeSection, setActiveSection }) {
 
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar${isOpen ? ' sidebar-open' : ''}`}>
       <div className="sidebar-logo">
         <img
           src="/images/Instituto.png"

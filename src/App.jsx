@@ -13,6 +13,7 @@ import './App.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('overview');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const getSectionTitle = () => {
     switch(activeSection) {
@@ -28,13 +29,34 @@ function App() {
     }
   };
 
+  const handleNavigation = (section) => {
+    setActiveSection(section);
+    setSidebarOpen(false); // cierra el drawer al navegar en móvil
+  };
+
   return (
     <div className="app-layout">
-      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
-      
+      {/* Overlay para cerrar sidebar en móvil */}
+      {sidebarOpen && (
+        <div
+          className="sidebar-overlay"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
+      <Sidebar
+        activeSection={activeSection}
+        setActiveSection={handleNavigation}
+        isOpen={sidebarOpen}
+      />
+
       <main className="main-content">
-        <Header title={getSectionTitle()} />
-        
+        <Header
+          title={getSectionTitle()}
+          onMenuClick={() => setSidebarOpen(prev => !prev)}
+          sidebarOpen={sidebarOpen}
+        />
+
         <div className="page-content">
           {activeSection === 'overview' && <Overview />}
           {activeSection === 'institutos' && <Institutos />}
@@ -51,3 +73,4 @@ function App() {
 }
 
 export default App;
+

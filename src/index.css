@@ -961,18 +961,76 @@ tbody td:first-child {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+
+/* Por defecto ocultar elementos solo-móvil */
+.hamburger-btn { display: none; }
+.sidebar-overlay { display: none; }
+
+/* --- Tablet grande --- */
 @media (max-width: 1200px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* --- Tablet / Móvil --- */
 @media (max-width: 900px) {
-  :root { --sidebar-width: 0px; }
+  /* Sidebar se convierte en drawer */
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    z-index: 200;
+  }
+
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+    box-shadow: 4px 0 32px rgba(0,0,0,0.18);
+  }
+
+  /* Overlay oscuro detrás del drawer */
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 199;
+    animation: fadeIn 0.2s ease forwards;
+  }
+
+  /* Main no necesita margen izquierdo */
   .main-content { margin-left: 0; }
+
+  /* Header ocupa todo el ancho */
+  .header { left: 0; padding: 0 var(--space-4); }
+
+  /* Mostrar botón hamburguesa */
+  .hamburger-btn { display: flex; }
+
+  /* Ocultar stats del header en móvil para ahorrar espacio */
+  .header-stat { display: none; }
+
   .page-content { padding: var(--space-4); }
   .grid-3, .grid-2 { grid-template-columns: 1fr; }
+
+  /* Col-span-2 queda como 1 */
+  .col-span-2 { grid-column: span 1; }
+
+  .section-header { flex-wrap: wrap; gap: var(--space-2); }
+  .section-title { font-size: 1.1rem; }
+
+  /* Year filter se vuelve más pequeño */
+  .year-filter { flex-wrap: wrap; }
+  .year-btn { padding: 4px 8px; font-size: 0.72rem; }
 }
 
+/* --- Móvil chico --- */
 @media (max-width: 600px) {
   .grid-4 { grid-template-columns: 1fr; }
   .stat-number { font-size: 2rem; }
+  .page-content { padding: var(--space-3); }
+  .header { padding: 0 var(--space-3); }
+  .section-title { font-size: 1rem; }
+  .card { padding: var(--space-4); }
+  .kpi-card { padding: var(--space-4); }
+
+  /* Tabs en Financiamiento — stack vertical en móvil muy chico */
+  .tab-btn-group { flex-direction: column; }
 }

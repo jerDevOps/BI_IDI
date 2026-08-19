@@ -1,12 +1,34 @@
-import { Bell, UserCircle, Leaf } from 'lucide-react';
+import { Bell, Leaf, Menu, X } from 'lucide-react';
 
-export default function Header({ title }) {
+export default function Header({ title, onMenuClick, sidebarOpen }) {
   return (
     <header className="header">
-      <div className="header-breadcrumb">
-        <Leaf size={15} style={{ color: 'var(--color-primary)', flexShrink: 0 }} />
-        <span style={{ margin: '0 6px', opacity: 0.4 }}>/</span>
-        <strong>{title}</strong>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        {/* Botón hamburguesa — visible solo en móvil via CSS */}
+        <button
+          className="hamburger-btn"
+          onClick={onMenuClick}
+          aria-label="Abrir menú"
+          style={{
+            alignItems: 'center', justifyContent: 'center',
+            width: 38, height: 38,
+            borderRadius: 10,
+            border: '1px solid var(--color-border)',
+            background: '#f1f8f1',
+            cursor: 'pointer',
+            color: 'var(--color-primary)',
+            transition: 'all 0.2s',
+            flexShrink: 0,
+          }}
+        >
+          {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
+
+        <div className="header-breadcrumb">
+          <Leaf size={15} style={{ color: 'var(--color-primary)', flexShrink: 0 }} />
+          <span style={{ margin: '0 6px', opacity: 0.4 }}>/</span>
+          <strong>{title}</strong>
+        </div>
       </div>
 
       <div className="header-right">
