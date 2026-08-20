@@ -1,64 +1,271 @@
 // ============================================================
-// DATOS EXTRAÍDOS DE LA MEMORIA ANUAL 2021-2026
-// Universidad Nacional del Altiplano - Vicerrectorado de Investigación
-// Instituto de Investigación
+// DATOS EXTRAÍDOS DE SQL OFICIAL
 // ============================================================
 
-// ------------------------------------------------------------------
-// KPIs RESUMEN POR AÑO
-// ------------------------------------------------------------------
 export const kpiPorAnio = [
-  { anio: 2021, institutos: 13, semilleros: 0,  grupos: 0,  renacyt: 124,   fedu: 0   },
-  { anio: 2022, institutos: 24, semilleros: 0,  grupos: 0,  renacyt: 159,   fedu: 0   },
-  { anio: 2023, institutos: 33, semilleros: 2,  grupos: 0,  renacyt: 181,  fedu: 417 },
-  { anio: 2024, institutos: 36, semilleros: 47, grupos: 21, renacyt: 210,  fedu: 292 },
-  { anio: 2025, institutos: 36, semilleros: 132, grupos: 43, renacyt: 236,  fedu: 369 },
-  { anio: 2026, institutos: 36, semilleros: 236, grupos: 63, renacyt: 302,  fedu: 0 },
+  { anio: 2021, institutos: 12, semilleros: 0, grupos: 0, renacyt: 124, fedu: 0 },
+  { anio: 2022, institutos: 11, semilleros: 0, grupos: 0, renacyt: 159, fedu: 0 },
+  { anio: 2023, institutos: 9, semilleros: 2, grupos: 0, renacyt: 181, fedu: 417 },
+  { anio: 2024, institutos: 3, semilleros: 45, grupos: 21, renacyt: 210, fedu: 292 },
+  { anio: 2025, institutos: 0, semilleros: 85, grupos: 22, renacyt: 236, fedu: 369 },
+  { anio: 2026, institutos: 0, semilleros: 103, grupos: 21, renacyt: 302, fedu: 0 },
 ];
 
-// ------------------------------------------------------------------
-// INSTITUTOS DE INVESTIGACIÓN
-// ------------------------------------------------------------------
 export const institutos = [
-  { id: 1, nombre: 'INSTITUTO DE INVESTIGACION Y DESARROLLO ANDINO AMAZON9ICO - IIDEAA', facultad: 'Medicina Humana', rr: '0719-2020-R-UNA', anioCreacion: 2020 },
-  { id: 2, nombre: 'INSTITUTO DE INVESTIGACIONES EDUCATIVAS - IIEDU DE LA FACULTAD DE CIENCIAS DE LA EDUCACIÓN', facultad: 'Ciencias de la Educación', rr: '2593-2021-R-UNA', anioCreacion: 2021 },
-  { id: 3, nombre: 'INSTITUTO DE INVESTIGACIONES INTERCULTURALES (iii)', facultad: 'Ciencias Sociales', rr: '0894-2021-R-UNA', anioCreacion: 2021 },
-  { id: 4, nombre: 'Instituto de Investigación Científica en Medicina David Frisancho Pineda', facultad: 'Medicina Humana', rr: '1879-2021-R-UNA', anioCreacion: 2021 },
-  { id: 5, nombre: 'Instituto de Investigación Social y Empresarial (IDISEM)', facultad: 'Ciencias Sociales', rr: '1443-2021-R-UNA', anioCreacion: 2021 },
-  { id: 6, nombre: 'Instituto de Investigación de Socioeconómicas y de Agrobiodiversidad', facultad: 'Ciencias Sociales', rr: '1441-2021-R-UNA', anioCreacion: 2021 },
-  { id: 7, nombre: 'Instituto de Investigación en Ciencias Ambientales, Salud y Biodiversidad –IICASB', facultad: 'Ciencias Biológicas', rr: '1439-2021-R-UNA', anioCreacion: 2021 },
-  { id: 8, nombre: 'Instituto de Investigación en Ciencias de Educación', facultad: 'Ciencias de la Educación', rr: '1878-2021-R-UNA', anioCreacion: 2021 },
-  { id: 9, nombre: 'Instituto de Investigación en Ciencias de la Administración de la Universidad Nacional del Altiplano Puno.', facultad: 'Ciencias Contables y Administrativas', rr: '1877-2021-R-UNA', anioCreacion: 2021 },
-  { id: 10, nombre: 'Instituto de Investigación en Metalúrgica, Materiales y Medio Ambiente', facultad: 'Ingeniería Geológica y Metalurgia', rr: '1442-2021-R-UNA', anioCreacion: 2021 },
-  { id: 11, nombre: 'Instituto de Investigación en Protección Vegetal', facultad: 'Ciencias Agrarias', rr: '0354-2021-R-UNA', anioCreacion: 2021 },
-  { id: 12, nombre: 'Instituto de Investigación en Tecnología y Salud', facultad: 'Ciencias de la Salud', rr: '1440-2021-R-UNA', anioCreacion: 2021 },
-  { id: 13, nombre: 'Instituto de Investigación para el Fomento de la Competitividad e Innovación regional - INFOCIR', facultad: 'Ingeniería Económica', rr: '1444-2021-R-UNA', anioCreacion: 2021 },
-  { id: 14, nombre: 'INSTITUTO DE BIOSOSTENIBILIDAD', facultad: 'Ciencias Agrarias', rr: '2022-2023-R-UNA', anioCreacion: 2022 },
-  { id: 15, nombre: 'INSTITUTO DE INVESTIGACIONES EN ENERGÍA , AUTOMATIZACIÓN ELÉCTRICA Y MECANICA (ENAEM)', facultad: 'Facultad Ingeniería Mecánica Eléctrica, Electronica Y Sistemas', rr: '1782-2022-R-UNA', anioCreacion: 2022 },
-  { id: 16, nombre: 'INSTITUTO DE INVESTIGACIONES SOCIALES “JOSÉ ANTONIO ENCINAS” (INS-JAE)', facultad: 'Ciencias de la Educación', rr: '0355-2022-R-UNA', anioCreacion: 2022 },
-  { id: 17, nombre: 'INSTITUTO DE INVESTIGACIÓN DE DESARROLLO DE TECNOLOGÍA Y MEDIO AMBIENTE (IIDTMA)', facultad: 'Ingeniería Civil y Arquitectura', rr: '0090-2022-R-UNA', anioCreacion: 2022 },
-  { id: 18, nombre: 'INSTITUTO DE INVESTIGACIÓN DEL ALTIPLANO PARA EL DESARROLLO SOSTENIBLE - INADESO', facultad: 'Ciencias de la Salud', rr: '0356-2022-R-UNA', anioCreacion: 2022 },
-  { id: 19, nombre: 'INSTITUTO DE INVESTIGACIÓN EN ARQUITECTURA Y CONSTRUCCIÓNES (IARCO)', facultad: 'Ingeniería Civil y Arquitectura', rr: '3046-2022-R-UNA', anioCreacion: 2022 },
-  { id: 20, nombre: 'INSTITUTO DE INVESTIGACIÓN EN ESTUDIOS SOCIOCULTURALES, EDUCACIONALES Y DE INFORMATICA EN CIENCIAS SOCIALES (IIESCUEDUCIS)', facultad: 'Ciencias Sociales', rr: '2555-2022-R-UNA', anioCreacion: 2022 },
-  { id: 21, nombre: 'INSTITUTO DE INVESTIGACIÓN EN SMART GRID, ENERGIA Y AUTOMATIZACIÓN (IISGEA)', facultad: 'Ingeniería Mecánica Eléctrica, Electrónica y Sistemas', rr: '2741-2022-R-UNA', anioCreacion: 2022 },
-  { id: 22, nombre: 'INSTITUTO DE INVESTIGACIÓN PARA EL DESARROLLO SOCIAL ANDINO (IIDSA)', facultad: 'Ciencias Sociales', rr: '2138-2022-R-UNA', anioCreacion: 2022 },
-  { id: 23, nombre: 'INSTITUTO DE INVESTIGACIÓN Y DE PROMOCIÓN DE CAMELIDOS SUDAMERICANOS (IIPC)', facultad: 'Medicina Veterinaria y Zootecnia', rr: '1783-2022-R-UNA', anioCreacion: 2022 },
-  { id: 24, nombre: 'INSTITUTO DE INVESTIGACIÓN Y TECNOLOGÍA EN INGENIERÍA CIVIL (IITEIC)', facultad: 'Ingeniería Civil y Arquitectura', rr: '3049-2022-R-UNA', anioCreacion: 2022 },
-  { id: 25, nombre: 'INSTTTUTO DE INVESTIGACIONES ECONÓMICAS (IIE)', facultad: 'Ingeniería Económica', rr: '0087-2022-R-UNA', anioCreacion: 2022 },
-  { id: 26, nombre: 'INSTITUTO DE INVESTIGACIÓN CIENTÍFICA Y HUMANISTICA (IDICH)', facultad: 'Ciencias Sociales', rr: '0333-2023-R-UNA', anioCreacion: 2023 },
-  { id: 27, nombre: 'INSTITUTO DE INVESTIGACIÓN DEL ALTIPLANO - IIA', facultad: 'Escuela de Posgrado', rr: '2922-2023-R-UNA', anioCreacion: 2023 },
-  { id: 28, nombre: 'INSTITUTO DE INVESTIGACIÓN E INNOVACIÓN EN PRODUCCIÓN, SEGURIDAD ALIMENTARIA Y AGROINDUSTRIA (IPSAA)', facultad: 'Ciencias Agrarias', rr: '0332-2023-R-UNA', anioCreacion: 2023 },
-  { id: 29, nombre: 'INSTITUTO DE INVESTIGACIÓN EN CIENCIA Y TECNOLOGIA DEL AGUA (IICTA)', facultad: 'Ingeniería Agrícola', rr: '3373-2023-R-UNA', anioCreacion: 2023 },
-  { id: 30, nombre: 'INSTITUTO DE INVESTIGACIÓN EN INTELIGENCIA COMPUTACIONAL Y CIENCIA DE DATOS - IICCD', facultad: 'Ingeniería Estadística e Informática', rr: '0526-2023-R-UNA', anioCreacion: 2023 },
-  { id: 31, nombre: 'INSTITUTO DE INVESTIGACIÓN EN PEQUEÑA MINERA - ISPEMI', facultad: 'Ingeniería de Minas', rr: '1075-2023-R-UNA', anioCreacion: 2023 },
-  { id: 32, nombre: 'INSTITUTO DE INVESTIGACIÓN EN TECNOLOGÍAS DE INFORMACIÓN Y COMUNICACIÓN ALTO ANDINO - ITICA', facultad: 'Ingeniería Mecánica Eléctrica, Electrónica y Sistemas', rr: '1676-2023-R-UNA', anioCreacion: 2023 },
-  { id: 33, nombre: 'INSTITUTO DE INVESTIGACIÓN Y DESARROLLO DELSUR', facultad: 'Ingeniería Mecánica Eléctrica, Electrónica y Sistemas', rr: '1074-2023-R-UNA', anioCreacion: 2023 },
-  { id: 34, nombre: 'INSTITUTO DE INVESTIGACIÓN ALTO ANDINAS (IIAA)', facultad: 'Ciencias Biológicas', rr: '0808-2024-R-UNA', anioCreacion: 2024 },
-  { id: 35, nombre: 'INSTITUTO DE INVESTIGACIÓN EN CIENCIAS DE LA TIERRA (INICTI)', facultad: 'Ingeniería de Minas', rr: '3759-2024-R-UNA', anioCreacion: 2024 },
-  { id: 36, nombre: 'INSTITUTO DE INVESTIGACIÓN EN GEOMÁTICA APLICADA, GEOTECNOLOGÍAS ESPACIALES Y TERRESTRES (IGEOMGET)', facultad: 'Ciencias Agrarias', rr: '3247-2024-R-UNA', anioCreacion: 2024 },
+  {
+    "id": 1,
+    "nombre": "INSTITUTO DE INVESTIGACION Y DESARROLLO ANDINO AMAZONICO - IIDEAA ",
+    "responsable": "Dr. MOISES GUILLERMO APAZA AHUMADA",
+    "anioCreacion": "2020",
+    "facultad": "Medicina Humana"
+  },
+  {
+    "id": 2,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN CLASE I EN  PROTECCIÓN VEGETAL  (IIPV)",
+    "responsable": " Dra. JESÚS HERÁCLIDES ARCOS PINEDA",
+    "anioCreacion": "2021",
+    "facultad": "Ciencias Agrarias"
+  },
+  {
+    "id": 3,
+    "nombre": "INSTITUTO DE INVESTIGACIONES INTERCULTURALES (III)",
+    "responsable": "DR. DUVERLY JOAO INCACUTIPA LIMACHI",
+    "anioCreacion": "2021",
+    "facultad": "Ciencias Sociales"
+  },
+  {
+    "id": 4,
+    "nombre": "INSTITUTO DE INVESTIGACIONES EDUCATIVAS - IIEDU",
+    "responsable": "DR. HERBER NEHEMIAS CHUI BETANCUR",
+    "anioCreacion": "2021",
+    "facultad": "Ciencias de la Educación"
+  },
+  {
+    "id": 5,
+    "nombre": "INSTITUTO DE INVESTIGACIONES ECONÓMICAS (IIE)",
+    "responsable": "DR. CRISTOBAL RUFINO YAPUCHURA SAICO",
+    "anioCreacion": "2022",
+    "facultad": "Ingeniería Económica"
+  },
+  {
+    "id": 6,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN DE DESARROLLO DE TECNOLOGÍA Y MEDIO AMBIENTE (IIDTMA)",
+    "responsable": "DR. JULIO PEDRO QUISPE AYMACHOQUE",
+    "anioCreacion": "2022",
+    "facultad": "Ingeniería Civil y Arquitectura"
+  },
+  {
+    "id": 7,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN EN TECNOLOGÍAS DE INFORMACIÓN Y COMUNICACIÓN ALTO ANDINO - ITICA",
+    "responsable": "M.SC. MAGALI GIANINA GONZALES PACO",
+    "anioCreacion": "2023",
+    "facultad": "Ingeniería Mecánica Eléctrica, Electrónica y Sistemas"
+  },
+  {
+    "id": 8,
+    "nombre": "INSTITUTO DE BIOSOSTENIBILIDAD",
+    "responsable": "DR. JUAN MARCOS ARO ARO",
+    "anioCreacion": "2023",
+    "facultad": "Ciencias Agrarias"
+  },
+  {
+    "id": 9,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN DEL ALTIPLANO - IIA",
+    "responsable": "DR. POLAN BRANBALT FERRO GONZALES",
+    "anioCreacion": "2023",
+    "facultad": "Escuela de Posgrado"
+  },
+  {
+    "id": 10,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN EN CIENCIA Y TECNOLOGÍA DEL AGUA (IICTA)",
+    "responsable": "DR. JOSE ANTONIO MAMANI GOMEZ",
+    "anioCreacion": "2023",
+    "facultad": "Ingeniería Agrícola"
+  },
+  {
+    "id": 11,
+    "nombre": "INSTITUTO DE INVESTIGACIONES SOCIALES  “JOSÉ ANTONIO ENCINAS” (INS-JAE)",
+    "responsable": "DR. HENRY MARK VILCA APAZA",
+    "anioCreacion": "2022",
+    "facultad": "Ciencias de la Educación"
+  },
+  {
+    "id": 12,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN EN ENERGÍA, AUTOMATIZACIÓN ELÉCTRICA Y MECANICA (ENAEM)",
+    "responsable": "DR. NORMÁN JESÚS BELTRAN CASTAÑON",
+    "anioCreacion": "2022",
+    "facultad": "40103"
+  },
+  {
+    "id": 13,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN DEL ALTIPLANO PARA EL DESARROLLO SOSTENIBLE -  INADESO",
+    "responsable": "DR. WILBER PAREDES UGARTE",
+    "anioCreacion": "2022",
+    "facultad": "Ciencias de la Salud"
+  },
+  {
+    "id": 14,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN Y DE PROMOCIÓN DE CAMELIDOS SUDAMERICANOS (IIPC)",
+    "responsable": "DR. EDWIN ORMACHEA VALDEZ",
+    "anioCreacion": "2022",
+    "facultad": "Medicina Veterinaria y Zootecnia"
+  },
+  {
+    "id": 15,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN PARA EL DESARROLLO SOCIAL ANDINO (IIDSA)",
+    "responsable": "DR. PORFIRIO ENRIQUEZ SALAS",
+    "anioCreacion": "2022",
+    "facultad": "Ciencias Sociales"
+  },
+  {
+    "id": 16,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN EN ESTUDIOS SOCIOCULTURALES, EDUCACIONALES Y DE INFORMATICA EN CIENCIAS SOCIALES (IIESCUEDUCIS)",
+    "responsable": "DR. FELIPE SUPO CONDORI",
+    "anioCreacion": "2022",
+    "facultad": "Ciencias Sociales"
+  },
+  {
+    "id": 17,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN EN SMART GRID, ENERGIA Y AUTOMATIZACIÓN (IISGEA)",
+    "responsable": "DR. JAMES ROLANDO ARREDONDO MAMANI",
+    "anioCreacion": "2022",
+    "facultad": "Ingeniería Mecanica Electrica, Electronica y Sistemas"
+  },
+  {
+    "id": 18,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN EN ARQUITECTURA Y CONSTRUCCIÓNES (IARCO)",
+    "responsable": "DR. HUGO ANSELMO CCAMA CONDORI",
+    "anioCreacion": "2022",
+    "facultad": "Ingeniería Civil y Arquitectura"
+  },
+  {
+    "id": 19,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN Y TECNOLOGÍA EN INGENIERÍA CIVIL (IITEIC)",
+    "responsable": "DR. SAMUEL HUAQUISTO CACERES",
+    "anioCreacion": "2022",
+    "facultad": "Ingeniería Civil y Arquitectura"
+  },
+  {
+    "id": 20,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN EN INTELIGENCIA COMPUTACIONAL Y CIENCIA DE DATOS - IICCD",
+    "responsable": "DR. LEONID ALEMAN GONZALES",
+    "anioCreacion": "2023",
+    "facultad": "Ingeniería Estadistica e Informática"
+  },
+  {
+    "id": 21,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN E INNOVACIÓN EN PRODUCCIÓN, SEGURIDAD ALIMENTARIA Y AGROINDUSTRIA (IPSAA)",
+    "responsable": "DR. ALEJANDRO COLOMA PAXI",
+    "anioCreacion": "2023",
+    "facultad": "Ciencias Agrarias"
+  },
+  {
+    "id": 22,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN CIENTÍFICA Y HUMANISTA (IDICH)",
+    "responsable": "DR. WILBER CESAR CALSINA PONCE",
+    "anioCreacion": "2023",
+    "facultad": "Ciencias Sociales"
+  },
+  {
+    "id": 23,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN Y DESARROLLO DELSUR",
+    "responsable": "DR. JOSÉ EMANUEL CRUZ DE LA CRUZ",
+    "anioCreacion": "2023",
+    "facultad": "Ingeniería Mecanica Electrica, Electronica y Sistemas"
+  },
+  {
+    "id": 24,
+    "nombre": "INSTITUTO DE INVESTIGACIONES EN PEQUEÑA MINERIA - ISPEMI",
+    "responsable": "DR. JUAN WALTER TUDELA MAMANI",
+    "anioCreacion": "2023",
+    "facultad": "Ingeniería de Minas"
+  },
+  {
+    "id": 25,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN EN GEOMÁTICA APLICADA, GEOTECNOLOGIAS ESPACIALES Y TERRESTRES (IGEOMAGET)",
+    "responsable": "DR. ELMER ELIO CALIZAYA LLATASI",
+    "anioCreacion": "2024",
+    "facultad": "Ciencias  Agrarias"
+  },
+  {
+    "id": 26,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN EN CIENCIAS DE LA TIERRA (INICTI)",
+    "responsable": "DR. FERNANDO BENIGNO SALAS URVIOLA",
+    "anioCreacion": "2024",
+    "facultad": "Ingeniería de Minas"
+  },
+  {
+    "id": 27,
+    "nombre": "Instituto de Investigación en Ciencias de Educación",
+    "responsable": "Dr. José Damián Fuentes López",
+    "anioCreacion": "2021",
+    "facultad": "Ciencias de la Educación"
+  },
+  {
+    "id": 28,
+    "nombre": "Instituto de Investigación de Socioeconómicas y de Agrobiodiversidad",
+    "responsable": "Dr. Emilio Flores Mamani",
+    "anioCreacion": "2021",
+    "facultad": "Ciencias Sociales"
+  },
+  {
+    "id": 29,
+    "nombre": "Instituto de Investigación en Ciencias Ambientales, Salud y Biodiversidad –IICASB",
+    "responsable": "Dr. Alfredo Ludwig Loza del Carpio",
+    "anioCreacion": "2021",
+    "facultad": "Ciencias Biológicas"
+  },
+  {
+    "id": 30,
+    "nombre": "Instituto de Investigación para el Fomento de la Competitividad e Innovación regional - INFOCIR",
+    "responsable": "Dra. Tita Flores de Quispe",
+    "anioCreacion": "2021",
+    "facultad": "Ingeniería Económica"
+  },
+  {
+    "id": 31,
+    "nombre": "Instituto de Investigación en Tecnología y Salud",
+    "responsable": "Dra. Edith Tello Palma",
+    "anioCreacion": "2021",
+    "facultad": "Ciencias de la Salud"
+  },
+  {
+    "id": 32,
+    "nombre": "Instituto de Investigación Social y Empresarial (IDISEM)",
+    "responsable": "Dra. Yudi Yaneh Yucra Mamani",
+    "anioCreacion": "2021",
+    "facultad": "Ciencias Sociales"
+  },
+  {
+    "id": 33,
+    "nombre": "Instituto de Investigación en Ciencias de la Administración de la Universidad Nacional del Altiplano Puno.",
+    "responsable": "Dr. Nicolás Edgar Roque Barrios",
+    "anioCreacion": "2021",
+    "facultad": "Ciencias Contable y Administración"
+  },
+  {
+    "id": 34,
+    "nombre": "Instituto de Investigación en Metalúrgica, Materiales y Medio Ambiente",
+    "responsable": "Dr. Dante Atilio Salas Ávila",
+    "anioCreacion": "2021",
+    "facultad": "Ingeniería Geológica y Metalurgia"
+  },
+  {
+    "id": 35,
+    "nombre": "Instituto de Investigación Científica en Medicina David Frisancho Pineda",
+    "responsable": "M.Sc. Tania R. Aguilar portugal",
+    "anioCreacion": "2021",
+    "facultad": "Medicina Humana"
+  },
+  {
+    "id": 36,
+    "nombre": "INSTITUTO DE INVESTIGACIÓN ALTO ANDINAS (IIAA)",
+    "responsable": "Dr. ANGEL CANALES GUTIERREZ",
+    "anioCreacion": "2024",
+    "facultad": "Ciencias Biológicas"
+  }
 ];
 
-// Institutos por facultad (para gráficos)
 export const institutosPorFacultad = [
   { facultad: 'Ciencias Sociales',                   count: 7 },
   { facultad: 'Ing. Mecánica Eléctrica y Sistemas',  count: 4 },
@@ -78,364 +285,3053 @@ export const institutosPorFacultad = [
   { facultad: 'Escuela de Posgrado',                 count: 1 },
 ];
 
-// ------------------------------------------------------------------
-// SEMILLEROS DE INVESTIGACIÓN 2025 (83 total)
-// ------------------------------------------------------------------
-export const semillerosPorFacultad2025 = [];
-
-// Evolución de semilleros por año
-export const semillerosEvolucion = [
-  { anio: 2023, total: 2, nuevos: 2, concursoGanadores: 0  },
-  { anio: 2024, total: 47, nuevos: 45, concursoGanadores: 20 },
-  { anio: 2025, total: 132, nuevos: 85, concursoGanadores: 0  },
-  { anio: 2026, total: 236, nuevos: 104, concursoGanadores: 0  },
-];
-
-// Semilleros 2025 — listado completo por facultad (resumen)
-
-
-// Semilleros 2023 — resumido por sección
-
-
-// ------------------------------------------------------------------
-// GRUPOS DE INVESTIGACIÓN
-// ------------------------------------------------------------------
-export const semilleros2023 = [
-  { n: 1, nombre: 'SEMILLEROS DE INVESTIGACIÓN EDUCATIVA YACHAY (SIEY)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '2500-2023-R-UNA' },
-  { n: 2, nombre: 'MUEJERES INVESTIGADORAS DE CIENCIAS DE LA SALUD', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '2343-2023-R-UNA' },
-];
-
-export const semilleros2024 = [
-  { n: 1, nombre: 'AGRONOMY AND ANIMAL SCIENCIES', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agronómica', rr: '1843-2024-R-UNA' },
-  { n: 2, nombre: 'SEMILLERO DE INVESTIGACIÓN AGRONÓMICA (SIAGRO)', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agronómica', rr: '1843-2024-R-UNA' },
-  { n: 3, nombre: 'SEMILLERO AGROINNOVA', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '1843-2024-R-UNA' },
-  { n: 4, nombre: 'PIONEROS DEL CONOCIMIENTO AGROINDUSTRIAL', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '1843-2024-R-UNA' },
-  { n: 5, nombre: 'GRUPO DE INVESTIGACIÓN EN BIOQUIMICA Y BIOLOGIA MOLECULAR (GIBBM)', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '1843-2024-R-UNA' },
-  { n: 6, nombre: 'GRUPO DE INVESTIGACIÓN EN FARMACOLOGIA EXPERIMENTAL-GIFE', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '1843-2024-R-UNA' },
-  { n: 7, nombre: 'ECONOMISTAS POR LA INNOVACIÓN TECNOLÓGICA Y SOCIAL (EITS)', facultad: 'INGENIERÍA ECONOMICA', ep: 'Ingeniería Económica', rr: '1843-2024-R-UNA' },
-  { n: 8, nombre: 'ECOSALUD', facultad: 'INGENIERÍA ECONOMICA', ep: 'Ingeniería Económica', rr: '1843-2024-R-UNA' },
-  { n: 9, nombre: 'INVESTIGAR PARA EL CUIDADO ENFERMERO (INCUEN)', facultad: 'ENFERMERÍA', ep: 'Enfermería', rr: '1843-2024-R-UNA' },
-  { n: 10, nombre: 'SEMILLEROS DE SERENDIPIA EN TRABAJO SOCIAL', facultad: 'TRABAJO SOCIAL', ep: 'Trabajo Social', rr: '1843-2024-R-UNA' },
-  { n: 11, nombre: 'UNA SEMILLA EN EL ALTIPLANO', facultad: 'TRABAJO SOCIAL', ep: 'Trabajo Social', rr: '1843-2024-R-UNA' },
-  { n: 12, nombre: 'SEMILLEROS EN ACCION POR EL CAMBIO SOCIAL DESDE EL TRABAJO SOCIAL', facultad: 'TRABAJO SOCIAL', ep: 'Trabajo Social', rr: '1843-2024-R-UNA' },
-  { n: 13, nombre: 'SEMILLEROS DE INNOVACIÓN CIENTIFICA', facultad: 'TRABAJO SOCIAL', ep: 'Trabajo Social', rr: '1843-2024-R-UNA' },
-  { n: 14, nombre: 'FORMANDO MENTES CAMBIANDO EL MUNDO', facultad: 'CIENCIAS SOCIALES', ep: 'Sociología', rr: '1843-2024-R-UNA' },
-  { n: 15, nombre: 'CALIDAD Y EXCELENCIA ACADEMICA CON SOSTENIBILIDAD AMBIENTAL', facultad: 'CIENCIAS SOCIALES', ep: 'Sociología', rr: '1843-2024-R-UNA' },
-  { n: 16, nombre: 'GRUPO DE INVESTIGACION EN COMUNICACIÓN Y SOCIEDAD "GICS"', facultad: 'CIENCIAS SOCIALES', ep: 'Comunicación Social', rr: '1843-2024-R-UNA' },
-  { n: 17, nombre: 'SEMILLEROS DE INVESTIGACION MEDIOS Y SOCIEDAD', facultad: 'CIENCIAS SOCIALES', ep: 'Comunicación Social', rr: '1843-2024-R-UNA' },
-  { n: 18, nombre: 'MICROBIOLOGOS EN ACCIÓN', facultad: 'CIENCIAS BIOLÓCAS', ep: 'Ciencias Biológicas', rr: '1843-2024-R-UNA' },
-  { n: 19, nombre: 'PHYSIS SPOROS', facultad: 'CIENCIAS BIOLÓCAS', ep: 'Ciencias Biológicas', rr: '1843-2024-R-UNA' },
-  { n: 20, nombre: 'INSTITUTO DE INVESTIGACIONES ALTO ANDINAS (IIAA)', facultad: 'CIENCIAS BIOLÓCAS', ep: 'Ciencias Biológicas', rr: '1843-2024-R-UNA' },
-  { n: 21, nombre: 'INVESTIGADORES DEL ALTIPLANO', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Física', rr: '1843-2024-R-UNA' },
-  { n: 22, nombre: 'SEMILLEROS DE INVESTIGACION MULTIDISCIPLINAR EN PSICOMOTRICIDAD, CIENCIAS DE LA ACTIVIDAD FISICA, DEPORTE Y SALUD (SIMPCAFDS)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Física', rr: '1843-2024-R-UNA' },
-  { n: 23, nombre: 'JOVENES INVESTIGADORES DEL ALTIPLANO', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Física', rr: '1843-2024-R-UNA' },
-  { n: 24, nombre: 'SE APRENDE HACIENDO', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Física', rr: '1843-2024-R-UNA' },
-  { n: 25, nombre: 'PIONEROS DE LA INVESTIGACIÓN (SIP)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '1843-2024-R-UNA' },
-  { n: 26, nombre: 'INVESTIGACIÓN EN EDUCACIÓN Y FORMACIÓN AMBIENTAL (SIEFA)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '1843-2024-R-UNA' },
-  { n: 27, nombre: 'SEMILLERO DE INVESTIGACIÓN PEDAGÓGICA, EDUCATIVA Y SOCIAL WIÑAY (SIPES)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '1843-2024-R-UNA' },
-  { n: 28, nombre: 'INVESTIGACION MULTIDISCIPLINAR DE LENGUAJE Y LITERATURA-IMLELI', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '1843-2024-R-UNA' },
-  { n: 29, nombre: 'LABORATORIO HISTORICO, SOCIOCULTURAL EDUCATIVO', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '1843-2024-R-UNA' },
-  { n: 30, nombre: 'INNOVACIÓN EDUCATIVA', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '1843-2024-R-UNA' },
-  { n: 31, nombre: 'SEMILLERO DE INVESTIGACION INTERDISCIPLINARIA Y EDUCACION AMBIENTAL (SIIEA)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '1843-2024-R-UNA' },
-  { n: 32, nombre: 'SEMILLERO DEL INSTITUTO DE INVESTIGACION EN METALURGIA, MATERIALES Y MEDIO AMBIENTE', facultad: 'INGENIERÍA GEOLÓGICA Y METALÚRGICA', ep: 'Ingeniería Metalúrgica', rr: '1843-2024-R-UNA' },
-  { n: 33, nombre: 'SEMILLEROS DE INVESTIGACIÓN LITIO', facultad: 'INGENIERÍA QUÍMICA', ep: 'Ingeniería Química', rr: '1843-2024-R-UNA' },
-  { n: 34, nombre: 'NUTRI-CIENCIAS', facultad: 'CIENCIAS DE LA SALUD', ep: 'Nutrición Humana', rr: '1843-2024-R-UNA' },
-  { n: 35, nombre: 'INVESTIGANDO EN CIENCIAS DE LA NUTRICION Y SALUD (ICANS)', facultad: 'CIENCIAS DE LA SALUD', ep: 'Nutrición Humana', rr: '1843-2024-R-UNA' },
-  { n: 36, nombre: 'ORAL HEALTH RESEARCHERS TEAM (OHRT)', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '1843-2024-R-UNA' },
-  { n: 37, nombre: 'ESTUDIANTES APORTANDO A LA INVESTIGACIÓN EN SALUD (EAIS)', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '1843-2024-R-UNA' },
-  { n: 38, nombre: 'RUTAS DE LA CIENCIAS EN SALUD', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '1843-2024-R-UNA' },
-  { n: 39, nombre: 'ODONTOINVESTIGA', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '1843-2024-R-UNA' },
-  { n: 40, nombre: 'RED DE INVESTIGACIÓN EN CÁLCULO FRACCIONARIO', facultad: 'INGENIERÍA CIVIL Y ARQUITECTURA', ep: 'Ciencias Físico - Matemáticas', rr: '1843-2024-R-UNA' },
-  { n: 41, nombre: 'RED DE INVESTIGACIÓN EN ECUACIONES DIFERENCIALES PARCIALES (RIEDP)', facultad: 'INGENIERÍA CIVIL Y ARQUITECTURA', ep: 'Ciencias Físico - Matemáticas', rr: '1843-2024-R-UNA' },
-  { n: 42, nombre: 'GRUPO AVICENA', facultad: 'MEDICINA HUMANA', ep: 'Medicina Humana', rr: '1843-2024-R-UNA' },
-  { n: 43, nombre: 'ENERGIAS, TECNOLOGIA Y AUTOMATIZACION E INVESTIGACION (ETAI)', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Electrónica', rr: '1843-2024-R-UNA' },
-  { n: 44, nombre: 'AUREA MINDS', facultad: 'CIENCIAS ADMINISTRATIVAS Y HUMANAS', ep: 'Administración', rr: '1843-2024-R-UNA' },
-  { n: 45, nombre: 'CHANGE RESEARCHERS', facultad: 'CIENCIAS ADMINISTRATIVAS Y HUMANAS', ep: 'Administración', rr: '1843-2024-R-UNA' },
-];
-
-export const semilleros2025 = [
-  { n: 1, nombre: 'AGROBIODIVERSIDAD Y LA NUTRICIÓN ANDINA', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agronómica', rr: '1511-2025-R-UNA' },
-  { n: 2, nombre: 'SI-AGROTEC SEMILLERO DE INVESTIGACIÓN AGRARIA EN GESTIÓN RURAL CON ORGANIZACIÓN EN TECNOLOGÍA Y ESTUDIOS CIENTÍFICOS', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agronómica', rr: '1511-2025-R-UNA' },
-  { n: 3, nombre: 'ECOAGRO INVESTIGACIÓN EN AGRICULTURA SOSTENIBLE Y PROTECCIÓN AMBIENTAL', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agronómica', rr: '1511-2025-R-UNA' },
-  { n: 4, nombre: 'SEMILLERO DE ESTUDIANTES MOTIVADOS EN LA AGRONOMÍA - SEMAGRO', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agronómica', rr: '1511-2025-R-UNA' },
-  { n: 5, nombre: 'SEMILLERO DE INVESTIGACIÓN E INNOVACIÓN AGROINDUSTRIAL – I  (SIIA-I)', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '1511-2025-R-UNA' },
-  { n: 6, nombre: 'SEMILLERO DE INVESTIGACIÓN “CREAS AGROINDUSTRIA”', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '1511-2025-R-UNA' },
-  { n: 7, nombre: 'SEMILLERO DE INVESTIGACIÓN E INNOVACIÓN EN MATRICES ALIMENTARIAS (SIIMA)', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '1511-2025-R-UNA' },
-  { n: 8, nombre: 'GRUPO DE INVESTIGACIÓN EN ALIMENTOS FUNCIONALES Y RECUBRIMIENTOS NATURALES (GIAFREN)', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '1511-2025-R-UNA' },
-  { n: 9, nombre: 'SEMILLERO - NATURA BREW', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '1511-2025-R-UNA' },
-  { n: 10, nombre: 'AGROINDUSTRIAS PARA LA INNOVACIÓN Y DESARROLLO TECNOLÓGICO (AGROIDET)', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '1511-2025-R-UNA' },
-  { n: 11, nombre: 'GRUPO DE INVESTIGACIÓN EN BIOQUÍMICA VETERINARIA (GIBIOQVET)', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '1511-2025-R-UNA' },
-  { n: 12, nombre: 'ESTUDIOS DE FISIOLOGÍA EN ANIMALES DOMÉSTICOS PARA LA ADAPTACIÓN A LA ALTITUD', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '1511-2025-R-UNA' },
-  { n: 13, nombre: 'SEMILLERO DE INVESTIGACIÓN EN SANIDAD ANIMAL', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '1511-2025-R-UNA' },
-  { n: 14, nombre: 'SEMILLERO DE INVESTIGACIÓN EN ENFERMEDADES PARASITARIAS EN ANIMALES DOMÉSTICOS Y SILVESTRES', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '1511-2025-R-UNA' },
-  { n: 15, nombre: 'GRUPO DE INVESTIGACIÓN EN BIOTECNOLOGÍA REPRODUCTIVA ANIMAL (GIBRA)', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '1511-2025-R-UNA' },
-  { n: 16, nombre: 'GRUPO DE INVESTIGACIÓN EN MICROBIOLOGÍA DE ANIMALES DOMÉSTICOS - GIMAD', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '1511-2025-R-UNA' },
-  { n: 17, nombre: 'GRUPO DE INVESTIGACIÓN EN INMUNOLOGÍA VETERINARIA - GIIV', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '1511-2025-R-UNA' },
-  { n: 18, nombre: 'SEMILLERO DE INNOVACIÓN Y NUEVAS ECONOMÍAS (SINECO)', facultad: 'INGENIERÍA ECONOMICA', ep: 'Ingeniería Económica', rr: '1511-2025-R-UNA' },
-  { n: 19, nombre: 'CRISÁLIDA SOCIAL -UNAP', facultad: 'TRABAJO SOCIAL', ep: 'Trabajo Social', rr: '3421-2025-R-UNA' },
-  { n: 20, nombre: 'SANAR PERÚ - SEMILLERO DE ANÁLISIS DE NECESIDADES ADOLESCENTES REGIONALES - PERÚ.', facultad: 'TRABAJO SOCIAL', ep: 'Trabajo Social', rr: '1511-2025-R-UNA' },
-  { n: 21, nombre: 'REMINA (RESTAURACIÓN AMBIENTAL EN MINERÍA)', facultad: 'INGENIERÍA DE MINAS', ep: 'Ingeniería de Minas', rr: '1511-2025-R-UNA' },
-  { n: 22, nombre: 'INNOVA+', facultad: 'INGENIERÍA DE MINAS', ep: 'Ingeniería de Minas', rr: '1511-2025-R-UNA' },
-  { n: 23, nombre: 'SOCIOLOGÍA PARA LA INVESTIGACIÓN ACCIÓN - "SOCIOLOGIA"', facultad: 'CIENCIAS SOCIALES', ep: 'Sociología', rr: '1511-2025-R-UNA' },
-  { n: 24, nombre: 'REDES SOCIALES Y TURISMO: LA NUEVA BRÚJULA DEL TURISTA MODERNO', facultad: 'CIENCIAS SOCIALES', ep: 'Turismo', rr: '1511-2025-R-UNA' },
-  { n: 25, nombre: 'GRUPO PENSAMIENTO CRÍTICO ANTROPOLÓGICO UNA-PUNO', facultad: 'CIENCIAS SOCIALES', ep: 'Antropología', rr: '1511-2025-R-UNA' },
-  { n: 26, nombre: 'SEMILLERO DE INVESTIGACIONES ETNOGRÁFICAS - SIE', facultad: 'CIENCIAS SOCIALES', ep: 'Antropología', rr: '1511-2025-R-UNA' },
-  { n: 27, nombre: 'DIGITALIZANDO EL ARTE VISUAL', facultad: 'CIENCIAS SOCIALES', ep: 'Arte', rr: '1511-2025-R-UNA' },
-  { n: 28, nombre: 'MICROBIOTECH', facultad: 'CIENCIAS BIOLÓCAS', ep: 'Ciencias Biológicas', rr: '1511-2025-R-UNA' },
-  { n: 29, nombre: 'SEMILLEROS DE INVESTIGACIÓN EN: CIENCIAS DEL DEPORTE Y PSICOMOTRICIDAD PARA UNA VIDA SALUDABLE (CIPROVIDA)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Física', rr: '1511-2025-R-UNA' },
-  { n: 30, nombre: 'SEMILLERO MIRADAS INTERDISCIPLINARIAS ACERCA DEL BIENESTAR EN EDUCACIÓN INICIAL', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Inicial', rr: '1511-2025-R-UNA' },
-  { n: 31, nombre: 'SEMILLERO DE INVESTIGACIÓN: PRIMERA INFANCIA', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Inicial', rr: '1511-2025-R-UNA' },
-  { n: 32, nombre: 'SEMILLERO DE PEDAGOGÍA Y BIENESTAR INFANTIL', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Inicial', rr: '1511-2025-R-UNA' },
-  { n: 33, nombre: 'EPEP - INVESTIGA', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '1511-2025-R-UNA' },
-  { n: 34, nombre: 'YACHAY T\'IKARINAN', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '1511-2025-R-UNA' },
-  { n: 35, nombre: 'CONSCIENCIA COLECTIVA', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '1511-2025-R-UNA' },
-  { n: 36, nombre: '"SEMILLERO DE INVESTIGACIÓN: MONITORES DEL ECOBARÓMETRO ALTIPLÁNICO" (SIMEA)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '1511-2025-R-UNA' },
-  { n: 37, nombre: 'EUREKA INVESTIGACIÓN CIENTÍFICA', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '1511-2025-R-UNA' },
-  { n: 38, nombre: 'SEMILLERO DE INVESTIGACIÓN EN ESTUDIOS DE LENGUAJE Y LITERATURA (SIELL)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '1511-2025-R-UNA' },
-  { n: 39, nombre: 'GRUPO MULTIDISCIPLINAR EDUCACIÓN GME', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '1511-2025-R-UNA' },
-  { n: 40, nombre: 'SEMILLERO DE INVESTIGACIÓN INTERDISCIPLINARIO EN SALUD, TECNOLOGÍA Y EDUCACIÓN AMBIENTAL', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '1511-2025-R-UNA' },
-  { n: 41, nombre: 'DATANOVALAB', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '3421-2025-R-UNA' },
-  { n: 42, nombre: 'SMART TITICACA CONECTADA AL MUNDO', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 43, nombre: 'HATUN DATA FINESI', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 44, nombre: 'INNOVACODE INVESTIGACIÓN Y DESARROLLO EN INTELIGENCIA ARTIFICIAL', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 45, nombre: 'HACIENDO HABLAR A LOS DATOS', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 46, nombre: 'MACHINE LEARNING AND DATA ENGINEERING', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 47, nombre: 'BAYESTATS - UNAP', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 48, nombre: 'STATMARKET-UNAP', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 49, nombre: 'PROGRAMING COMPETITIVE ACM CONTEST', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 50, nombre: 'RAÍZ Y RESULTADOS', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 51, nombre: 'PENTAGONITO - FINESI', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 52, nombre: 'GRUPO DE INVESTIGACIÓN ESTADÍSTICA APLICADA (GI-EA)', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 53, nombre: 'INNOVANDO, DESCUBRIENDO Y EMPRENDIENDO FINESI', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 54, nombre: 'CGTA BIOINFORMATIC', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 55, nombre: 'INFOTECH.', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 56, nombre: 'ARTHUR L. SAMUEL - IIICCD', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 57, nombre: 'JHON J. HOPFIELD - IIICCD', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '1511-2025-R-UNA' },
-  { n: 58, nombre: 'JÓVENES EN LA CIENCIA', facultad: 'INGENIERÍA GEOLÓGICA Y METALÚRGICA', ep: 'Ingeniería Geológica', rr: '1511-2025-R-UNA' },
-  { n: 59, nombre: 'CILORD - PLURALISMO JURÍDICO', facultad: 'CIENCIAS JURÍDICAS Y POLÍTICAS', ep: 'Derecho', rr: '1511-2025-R-UNA' },
-  { n: 60, nombre: 'IQ - HIDRÓGENO VERDE- IQHV', facultad: 'INGENIERÍA QUÍMICA', ep: 'Ingeniería Química', rr: '1511-2025-R-UNA' },
-  { n: 61, nombre: 'HIDRO-ELECTROMETALURGIA', facultad: 'INGENIERÍA QUÍMICA', ep: 'Ingeniería Química', rr: '1511-2025-R-UNA' },
-  { n: 62, nombre: 'ELECTROQUÍMICA VERDE', facultad: 'INGENIERÍA QUÍMICA', ep: 'Ingeniería Química', rr: '1511-2025-R-UNA' },
-  { n: 63, nombre: 'ALIMENTOS FUNCIONALES Y NUTRAÉUTICOS EN INVESTIGACIÓN (ALFANUTRI)', facultad: 'INGENIERÍA QUÍMICA', ep: 'Ingeniería Química', rr: '1511-2025-R-UNA' },
-  { n: 64, nombre: 'INVESTIGADENT', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '1511-2025-R-UNA' },
-  { n: 65, nombre: 'BIOODONTOLAB', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '1511-2025-R-UNA' },
-  { n: 66, nombre: 'REDI (RED DE ESTUDIANTES PARA INVESTIGACIÓN', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '1511-2025-R-UNA' },
-  { n: 67, nombre: 'FLUVIOMÁTICA', facultad: 'INGENIERÍA AGRÍCOLA', ep: 'Ingeniería Agrícola', rr: '1511-2025-R-UNA' },
-  { n: 68, nombre: 'SEMILLERO DE INVESTIGACIÓN EN ECOSISTEMAS URBANOS Y CAMBIO CLIMÁTICO (ECOCLIMA-UNA)', facultad: 'INGENIERÍA AGRÍCOLA', ep: 'Ingeniería Agrícola', rr: '1511-2025-R-UNA' },
-  { n: 69, nombre: 'SEMILLERO DE INVESTIGACIÓN EN ANÁLISIS FUNCIONAL Y APLICACIONES', facultad: 'INGENIERÍA CIVIL Y ARQUITECTURA', ep: 'Ciencias Físico - Matemáticas', rr: '1511-2025-R-UNA' },
-  { n: 70, nombre: 'SEMILLERO DE INVESTIGACIÓN: PRIMUN NON NOCERE', facultad: 'MEDICINA HUMANA', ep: 'Medicina Humana', rr: '1511-2025-R-UNA' },
-  { n: 71, nombre: 'SEMILLERO DE INVESTIGACIÓN: SAPIENTIA MEDIC', facultad: 'MEDICINA HUMANA', ep: 'Medicina Humana', rr: '1511-2025-R-UNA' },
-  { n: 72, nombre: 'SEMILLERO DE INVESTIGACIÓN: NEURIAMED', facultad: 'MEDICINA HUMANA', ep: 'Medicina Humana', rr: '1511-2025-R-UNA' },
-  { n: 73, nombre: 'MEDICINA HACIA EL FUTURO', facultad: 'MEDICINA HUMANA', ep: 'Medicina Humana', rr: '1511-2025-R-UNA' },
-  { n: 74, nombre: 'INVESTIGADORES JUNIOR DE ELECTRÓNICA', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Electrónica', rr: '1511-2025-R-UNA' },
-  { n: 75, nombre: 'TITICACA MED - XR', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Electrónica', rr: '1511-2025-R-UNA' },
-  { n: 76, nombre: 'SENAM-UNA', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Mecánica Eléctrica', rr: '1511-2025-R-UNA' },
-  { n: 77, nombre: 'ENERGÍAS RENOVABLES-LEVITACIÓN MAGNÉTICA', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Mecánica Eléctrica', rr: '1511-2025-R-UNA' },
-  { n: 78, nombre: 'ENERGÍAS RENOVABLES-GENERACIÓN HIDRÓGENO', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Mecánica Eléctrica', rr: '1511-2025-R-UNA' },
-  { n: 79, nombre: 'LOCALIZACIÓN DE FALLAS EN LÍNEAS DE TRANSMISIÓN', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Mecánica Eléctrica', rr: '1511-2025-R-UNA' },
-  { n: 80, nombre: 'ENERGÍAS RENOVABLES - BATERÍAS DE LITIO', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Mecánica Eléctrica', rr: '1511-2025-R-UNA' },
-  { n: 81, nombre: 'INNOME-INNOVACIÓN MECÁNICA ELÉCTRICA', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Mecánica Eléctrica', rr: '1511-2025-R-UNA' },
-  { n: 82, nombre: 'SISTEMAS Y COMPILADORES', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '1511-2025-R-UNA' },
-  { n: 83, nombre: 'DEEP MIND ED', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '1511-2025-R-UNA' },
-  { n: 84, nombre: 'ADMINLAB', facultad: 'CIENCIAS ADMINISTRATIVAS Y HUMANAS', ep: 'Administración', rr: '1511-2025-R-UNA' },
-  { n: 85, nombre: 'IMPADE - (INSTITUTO DE INVESTIGACIÓN EN GESTIÓN, IMPACTO Y DESARROLLO EMPRESARIAL)', facultad: 'CIENCIAS ADMINISTRATIVAS Y HUMANAS', ep: 'Administración', rr: '1511-2025-R-UNA' },
-];
-
-export const semilleros2026 = [
-  { n: 1, nombre: 'SEMILLERO DE INVESTIGACION EN DINÁMICA DE CARBONO Y CAMBIO CLIMÁTICO EN ECOSISTEMAS ALTOANDINOS (SIDICCA)', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agronómica', rr: '2026' },
-  { n: 2, nombre: 'BIODIVERSIDAD Y RESILIENCIA AL CAMBIO CLIMÁTICO', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agronómica', rr: '2026' },
-  { n: 3, nombre: 'TRANSFORMANDO LA ALIMENTACIÓN EN PRODUCCIÓN', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agronómica', rr: '2026' },
-  { n: 4, nombre: 'MICROORGANISMOS EFICACES PARA LA RESTAURACIÓN DE AGROECOSISTEMAS', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agronómica', rr: '2026' },
-  { n: 5, nombre: 'QUINUAS PRECOCES SEMI TARDÍAS Y TARDÍAS (NORMAN BORLAUG)', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agronómica', rr: '2026' },
-  { n: 6, nombre: '"COMPOST" TRANSFORMADO, NUESTROS RESIDUOS EN VIDA', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agronómica', rr: '2026' },
-  { n: 7, nombre: 'FORMULA INNOVAU', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '2026' },
-  { n: 8, nombre: 'SEMILLERO DE INVESTIGACION EN DISEÑO DE MATRICES ALIMENTARIAS FUNCIONALES (SI-DMAF)', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '2026' },
-  { n: 9, nombre: 'ESENCIA ALTIPLÁNICA', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '2026' },
-  { n: 10, nombre: 'REVALORIZACIÓN DE PRODUCTOS ALTOANDINOS', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '2026' },
-  { n: 11, nombre: 'AGRODET', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '2026' },
-  { n: 12, nombre: 'SEMILLERO DE INVESTIGACION DE CONTROL DE PROCESOS AGROINDUSTRIALES - SICPAI', facultad: 'CIENCIAS AGRARIAS', ep: 'Ingeniería Agroindustrial', rr: '2026' },
-  { n: 13, nombre: 'CIACS CIRCULO DE INVESTIGACION ALTO ANDINA EN CAMÉLIDOS', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '2026' },
-  { n: 14, nombre: 'LIDERES DE CHUQUIBAMBILLA', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '2026' },
-  { n: 15, nombre: 'FISIOLOGÍA DE ALTURA: APLICACIÓN DE TÉCNICAS COMPLEMENTARIAS PARA EL ESTUDIO DE PROCESOS FISIOLÓGICOS EN ANIMALES DOMÉSTICOS.', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '2026' },
-  { n: 16, nombre: 'CARACTERIZACIÓN DE BIOMARCADORES HORMONALES DURANTE EL PRIMER TERCIO DE GESTACIÓN EN ALPACAS HUACAYA', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '2026' },
-  { n: 17, nombre: 'GENÉTICA Y GENÓMICA EN LA SALUD ANIMAL DE ALTURA', facultad: 'MEDICINA VETERINARIA Y ZOOTECNIA', ep: 'Medicina Veterinaria y Zootecnia', rr: '2026' },
-  { n: 18, nombre: 'ECONOMÍA Y NEGOCIOS', facultad: 'INGENIERÍA ECONOMICA', ep: 'Ingeniería Económica', rr: '2026' },
-  { n: 19, nombre: 'ZEUS - INVESTIGACION EN DESARROLLO ECONOMÍA SOSTENIBLE', facultad: 'INGENIERÍA ECONOMICA', ep: 'Ingeniería Económica', rr: '2026' },
-  { n: 20, nombre: 'SEMILLERO DE INVESTIGACION EN CONTABILIDAD, TRIBUTACIÓN E INNOVACIÓN EMPRESARIAL', facultad: 'CIENCIAS CONTABLES Y ADMINISTRATIVAS', ep: 'CIENCIAS CONTABLES', rr: '2026' },
-  { n: 21, nombre: 'SEMILLERO DE INVESTIGACION EN COSTOS Y TOMA DE DECISIONES EMPRESARIALES', facultad: 'CIENCIAS CONTABLES Y ADMINISTRATIVAS', ep: 'CIENCIAS CONTABLES', rr: '2026' },
-  { n: 22, nombre: '“INVESTIGADORES EN ACCION”', facultad: 'ENFERMERÍA', ep: 'Enfermería', rr: '2026' },
-  { n: 23, nombre: 'VOCES EN MOVIMIENTO DE TRABAJO (PRISMA)', facultad: 'TRABAJO SOCIAL', ep: 'Trabajo Social', rr: '2026' },
-  { n: 24, nombre: 'SEMILLERO PRISMA SOCIAL', facultad: 'TRABAJO SOCIAL', ep: 'Trabajo Social', rr: '2026' },
-  { n: 25, nombre: 'SEMILLERO DE INVESTIGACION, INNOVACIÓN Y UNIÓN SOCIAL (SIRIUS)', facultad: 'TRABAJO SOCIAL', ep: 'Trabajo Social', rr: '2026' },
-  { n: 26, nombre: 'SEMILLEROS GENERACIÓN SOCIAL', facultad: 'TRABAJO SOCIAL', ep: 'Trabajo Social', rr: '2026' },
-  { n: 27, nombre: 'MENTES EN ACCIÓN PARA LA TRANSFORMACIÓN SOCIAL', facultad: 'TRABAJO SOCIAL', ep: 'Trabajo Social', rr: '2026' },
-  { n: 28, nombre: 'MINERÍA INTELIGENTE Y TRANSFORMACIÓN DIGITAL', facultad: 'INGENIERÍA DE MINAS', ep: 'Ingeniería de Minas', rr: '2026' },
-  { n: 29, nombre: 'HIDROMIN-IA (SEMILLERO DE INVESTIGACION EN HIDROGEOQUÍMICA APLICADA E INTELIGENCIA COMPUTACIONAL MINERO-AMBIENTAL)', facultad: 'INGENIERÍA DE MINAS', ep: 'Ingeniería de Minas', rr: '2026' },
-  { n: 30, nombre: 'REDES QUE GUÍAN EL TURISMO MODERNO', facultad: 'CIENCIAS SOCIALES', ep: 'Turismo', rr: '2026' },
-  { n: 31, nombre: 'CIENCIAS SOCIALES DE LA INVESTIGACION', facultad: 'CIENCIAS SOCIALES', ep: 'Turismo', rr: '2026' },
-  { n: 32, nombre: 'RAÍCES HUMANAS', facultad: 'CIENCIAS SOCIALES', ep: 'Antropología', rr: '2026' },
-  { n: 33, nombre: 'GRUPO DE INVESTIGACIONES ANTROPOLÓGICAS (GIA)', facultad: 'CIENCIAS SOCIALES', ep: 'Antropología', rr: '2026' },
-  { n: 34, nombre: 'COMUNICACIÓN PARTICIPATIVA Y DESARROLLO TERRITORIAL - COPADET', facultad: 'CIENCIAS SOCIALES', ep: 'Comunicación Social', rr: '2026' },
-  { n: 35, nombre: 'COMUNICACIÓN PARA LA INVESTIGACION ACCIÓN - CIA', facultad: 'CIENCIAS SOCIALES', ep: 'Comunicación Social', rr: '2026' },
-  { n: 36, nombre: 'COMUNICACIÓN DIGITAL Y CAMBIO SOCIAL - CODICAS', facultad: 'CIENCIAS SOCIALES', ep: 'Comunicación Social', rr: '2026' },
-  { n: 37, nombre: 'VISUALIZANDO LAS REDES DIGITALES', facultad: 'CIENCIAS SOCIALES', ep: 'Arte', rr: '2026' },
-  { n: 38, nombre: 'YUYAY, CULTURA Y COGNICION', facultad: 'CIENCIAS SOCIALES', ep: 'CIENCIAS SOCIALES: DEPARTAMENTO DE HUMANIDADES', rr: '2026' },
-  { n: 39, nombre: 'SEMILLEROS PSICOLOGÍA', facultad: 'CIENCIAS SOCIALES', ep: 'PSICOLOGÍA', rr: '2026' },
-  { n: 40, nombre: 'MICROHEM-PAR', facultad: 'CIENCIAS BIOLÓCAS', ep: 'Ciencias Biológicas', rr: '2026' },
-  { n: 41, nombre: 'SEMILLERO DE INVESTIGACION EN EDUCACIÓN FÍSICA Y LIDERAZGO FEMENINO (SIEFLF)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Física', rr: '2026' },
-  { n: 42, nombre: 'HORIZONTE DE LA INVESTIGACION CIENTÍFICA EN EDUCACIÓN FÍSICA (HORICEF)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Física', rr: '2026' },
-  { n: 43, nombre: 'VISIBILIZANDO LA PRIMERA INFANCIA', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Inicial', rr: '2026' },
-  { n: 44, nombre: 'SEMILLEROS DEL SABER', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Inicial', rr: '2026' },
-  { n: 45, nombre: 'SEMILLERO DE INVESTIGACION MONTESSORI (SIM)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '2026' },
-  { n: 46, nombre: 'INVESTICIENCIA', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '2026' },
-  { n: 47, nombre: 'EURECA TEAM', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '2026' },
-  { n: 48, nombre: 'E-PRIMA INVESTIGA', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '2026' },
-  { n: 49, nombre: 'ILLARIY INNOVA', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '2026' },
-  { n: 50, nombre: 'DIVERGEN EDUTECH', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '2026' },
-  { n: 51, nombre: 'EPISTEME YACHAY', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '2026' },
-  { n: 52, nombre: 'NOVA SCIENTIA', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Primaria', rr: '2026' },
-  { n: 53, nombre: 'EXDUCERE', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '2026' },
-  { n: 54, nombre: 'INNOVADORES EDU TECH', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '2026' },
-  { n: 55, nombre: 'SEMILLERO DE INVESTIGACION CIENCIA, INNOVACIÓN, TECNOLOGÍA Y EDUCACIÓN EN SALUD (CITES)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '2026' },
-  { n: 56, nombre: 'HIERBAS SANTAS', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '2026' },
-  { n: 57, nombre: 'SEMILLERO DE INVESTIGACION CIENCIA, TECNOLOGÍA E INNOVACIÓN (CITEI)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '2026' },
-  { n: 58, nombre: 'SEMILLERO DE INVESTIGACION ETNOMATEMATICAS Y SABERES ANDINOS (SIESA)', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '2026' },
-  { n: 59, nombre: 'AYLLU DE SABER: UNIDOS POR LA INVESTIGACION EDUCATIVA”', facultad: 'CIENCIAS DE LA EDUCACIÓN', ep: 'Educación Secundaria', rr: '2026' },
-  { n: 60, nombre: 'SEMILLERO DE INNOVACION EDUCATIVA CON IA (SIE-IA)', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '2026' },
-  { n: 61, nombre: 'GEOFFREY HINTON - IIICCD', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '2026' },
-  { n: 62, nombre: 'ARS BAYESIANA', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '2026' },
-  { n: 63, nombre: 'DATA STAT RESEARCH', facultad: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', ep: 'Ingeniería Estadística e Informática', rr: '2026' },
-  { n: 64, nombre: 'ENERGÍAS RENOVABLES', facultad: 'INGENIERÍA QUÍMICA', ep: 'Ingeniería Química', rr: '2026' },
-  { n: 65, nombre: 'ODONTOCIENCIA Y SALUD', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '2026' },
-  { n: 66, nombre: 'GENERACIÓN ODONTOINVESTIGADORA', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '2026' },
-  { n: 67, nombre: 'SINERGIA ODONTO-KIDS', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '2026' },
-  { n: 68, nombre: 'ODONTOCIENCIA', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '2026' },
-  { n: 69, nombre: 'SEMILLERO RAÍCES ODONTOLOGICAS', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '2026' },
-  { n: 70, nombre: 'INVESTIGA DENTAL', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '2026' },
-  { n: 71, nombre: 'DENT - INV', facultad: 'CIENCIAS DE LA SALUD', ep: 'Odontología', rr: '2026' },
-  { n: 72, nombre: 'SEMILLERO DE INVESTIGACION EN ORDENAMIENTO TERRITORIAL Y SOSTENIBILIDAD AMBIENTAL (SIOTSA)', facultad: 'INGENIERÍA AGRÍCOLA', ep: 'Ingeniería Agrícola', rr: '2026' },
-  { n: 73, nombre: 'INGENIERÍA AGRÍCOLA', facultad: 'INGENIERÍA AGRÍCOLA', ep: 'Ingeniería Agrícola', rr: '2026' },
-  { n: 74, nombre: 'LAGOURBANO', facultad: 'INGENIERÍA AGRÍCOLA', ep: 'Ingeniería Agrícola', rr: '2026' },
-  { n: 75, nombre: 'EDUAGUA PUNO', facultad: 'INGENIERÍA AGRÍCOLA', ep: 'Ingeniería Agrícola', rr: '2026' },
-  { n: 76, nombre: 'RESILIENCIA COMUNITARIA Y CULTURA DE PREVENCIÓN EN EL CERRO AZOGUINE - PREVENCIÓN AZOGUINE', facultad: 'INGENIERÍA AGRÍCOLA', ep: 'Ingeniería Agrícola', rr: '2026' },
-  { n: 77, nombre: 'INNOVACIÓN TRANSDISCIPLINAR EN INFRAESTRUCTURA SOSTENIBLE (ITIS)', facultad: 'INGENIERÍA AGRÍCOLA', ep: 'Ingeniería Agrícola', rr: '2026' },
-  { n: 78, nombre: 'SEMILLERO DE INVESTIGACION EN: CIENCIAS DE LOS MATERIALES', facultad: 'INGENIERÍA CIVIL Y ARQUITECTURA', ep: 'Ingeniería Civil', rr: '2026' },
-  { n: 79, nombre: 'RESEARCH IN MATERIALS AND CONSTRUCTION TECHNOLOGY', facultad: 'INGENIERÍA CIVIL Y ARQUITECTURA', ep: 'Ingeniería Civil', rr: '2026' },
-  { n: 80, nombre: 'MONUMENTA', facultad: 'INGENIERÍA CIVIL Y ARQUITECTURA', ep: 'Arquitectura y Urbanismo', rr: '2026' },
-  { n: 81, nombre: 'NEXO MATEMÁTICO', facultad: 'INGENIERÍA CIVIL Y ARQUITECTURA', ep: 'Ciencias Físico - Matemáticas', rr: '2026' },
-  { n: 82, nombre: 'FÍSICOS DE LA UNA', facultad: 'INGENIERÍA CIVIL Y ARQUITECTURA', ep: 'Ciencias Físico - Matemáticas', rr: '2026' },
-  { n: 83, nombre: 'MODELIZACIÓN MATEMÁTICA', facultad: 'INGENIERÍA CIVIL Y ARQUITECTURA', ep: 'Ciencias Físico - Matemáticas', rr: '2026' },
-  { n: 84, nombre: 'JOSEPH FOURIER ENERGÍA Y CALOR (JFEC)', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Mecánica Eléctrica', rr: '2026' },
-  { n: 85, nombre: 'SCI-PROYECT (SISTEMA DE CONTROL INTELIGENTE)', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Mecánica Eléctrica', rr: '2026' },
-  { n: 86, nombre: 'FERDINAND PORSCHE', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Mecánica Eléctrica', rr: '2026' },
-  { n: 87, nombre: 'ENERGÍAS RENOVABLES - BATERÍAS DE LITIO', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Mecánica Eléctrica', rr: '2026' },
-  { n: 88, nombre: 'CALIBRATECH PRECISION GROUP', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería Mecánica Eléctrica', rr: '2026' },
-  { n: 89, nombre: 'INTELIGENCIA COMPUTACIONAL APLICADA', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 90, nombre: 'SEMILLERO DE INNOVACIÓN TECNOLÓGICA Y EDUCACIÓN INCLUSIVA "AXIS"', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 91, nombre: 'INNOVA SISTEMAS', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 92, nombre: 'SEMILLERO DE COMPUTACIÓN INTELIGENTE PARA EL DESARROLLO REGIONAL-JILATANAKATECH', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 93, nombre: 'SEMILLERO DE INVESTIGACION EN SEGURIDAD DE INFORMACIÓN (SISI)', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 94, nombre: 'SYNAPSE', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 95, nombre: 'KENJA NO KAI', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 96, nombre: 'NEURO VISIÓN', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 97, nombre: 'PEEPAL', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 98, nombre: 'SCIENCE DISTRI', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 99, nombre: 'PROYECTO MUHU', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 100, nombre: 'COMPUGRAPH PUNO', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 101, nombre: 'CLIMATECH UNA PUNO', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 102, nombre: 'TURISMO PUNO', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 103, nombre: 'NEUROLAB DATA', facultad: 'INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS', ep: 'Ingeniería de Sistemas', rr: '2026' },
-  { n: 104, nombre: 'LUMEN FUTURI', facultad: 'CIENCIAS ADMINISTRATIVAS Y HUMANAS', ep: 'Administración', rr: '2026' },
-];
-
-
 export const grupos = [
-  { id: 1, nombre: 'GRUPO DE I+D5:I5NVESTIGACIÓN Y DESARROLLO DE ALIMENTOS SALUDABLES (GI-IDEAS)', facultad: 'Ciencias Agrarias', ep: 'INGENIERÍA AGROINDUSTRIAL', rr: '0181-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 2, nombre: 'GRUPO DE INVESTIGACION CRECIMIENTO, ACTIVIDAD FISICA Y SALUD EN ALTURA (GICAFSA)', facultad: 'Ciencias de la Educación', ep: 'EDUCACIÓN FÍSICA', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 3, nombre: 'GRUPO DE INVESTIGACION YACHAY', facultad: 'Ciencias Sociales', ep: 'CIENCIAS DE LA COMUNICACIÓN SOCIAL', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 4, nombre: 'GRUPO DE INVESTIGACIÓN CIENCIA DE DATOS – GICD', facultad: 'Ingeniería Estadística e Informática', ep: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', rr: '2400-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 5, nombre: 'GRUPO DE INVESTIGACIÓN EDUCATIVA RIKCH\'ARIY [GIER]', facultad: 'Ciencias de la Educación', ep: 'EDUCACIÓN PRIMARIA', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 6, nombre: 'GRUPO DE INVESTIGACIÓN EN ENERGIAS RENOVABLES (GIER)', facultad: 'Ingeniería Mecánica Eléctrica, Electrónica Y Sistemas', ep: 'INGENIERIA MECÁNICA ELÉCTRICA', rr: '2400-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 7, nombre: 'GRUPO DE INVESTIGACIÓN EN PROTECCIÓN VEGETAL', facultad: 'Ciencias Agrarias', ep: 'INGENIERÍA AGRONOMICA', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 8, nombre: 'GRUPO DE INVESTIGACIÓN ESTADISTICA APLICADA - GI-EA', facultad: 'Ingeniería Estadística e Informática', ep: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', rr: '2400-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 9, nombre: 'GRUPO DE INVESTIGACIÓN ESTADISTICA BAYESIANA', facultad: 'Ingeniería Estadística e Informática', ep: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', rr: '2400-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 10, nombre: 'GRUPO DE INVESTIGACIÓN INTELIGENCIA ARTIFICIAL (GI - IA)', facultad: 'Ingeniería Estadística e Informática', ep: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', rr: '2400-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 11, nombre: 'GRUPO DE INVESTIGACIÓN INTERDISCIPLINARIA, CIENTIFICA Y TECNOLÓGICA (SIICyT)', facultad: 'Ciencias de la Educación', ep: 'EDUCACIÓN SECUNDARIA', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 12, nombre: 'GRUPO DE INVESTIGACIÓNDE TECNOLOGÍAS Y EDUCACIÓN AMBIENTAL (GIITEA)', facultad: 'Ciencias de la Educación', ep: 'EDUCACIÓN SECUNDARIA', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 13, nombre: 'INNOVACION Y DESARROLLO EN ALIMENTACION Y NUTRICION HUMANA', facultad: 'Ciencias de la Salud', ep: 'NUTRICIÓN HUMANA', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 14, nombre: 'INVESTIGACION Y DESARROLLO EN NUTRICION Y SALUD (IDENUTS)', facultad: 'Ciencias de la Salud', ep: 'NUTRICIÓN HUMANA', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 15, nombre: 'INVESTIGACIÓN EN EDUCACIÓN Y FORMACIÓN AMBIENTAL PARA EL DESARROLLO SOSTENIBLE', facultad: 'Ingeniería Agrícola', ep: 'Ingeniería Agrícola', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 16, nombre: 'INVESTIGACIÓN EN SALUD PUBLICA EN ALTURA (INSPA)', facultad: 'Ciencias de la Salud', ep: 'ODONTOLOGÍA', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 17, nombre: 'LABORATORIO DE INVESTIGACION SOCIAL Y COMUNICACIÓN "Social.Com"', facultad: 'Ciencias Sociales', ep: 'CIENCIAS DE LA COMUNICACIÓN SOCIAL', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 18, nombre: 'MIRADA CIENTIFÍCA', facultad: 'Ciencias de la Salud', ep: 'ODONTOLOGÍA', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 19, nombre: 'MUJERES DE CIENCIA Y TECNOLOGÍA EN ACCIÓN', facultad: 'Ciencias de la Salud', ep: 'ODONTOLOGÍA', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 20, nombre: 'NUCLEO DE INVESTIGACION PARA LA SOCIEDAD', facultad: 'Trabajo Social', ep: 'TRABAJO SOCIAL', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 21, nombre: 'SOCIOESTADISTICA', facultad: 'Ciencias Sociales', ep: 'SOCIOLOGÍA', rr: '1842-2024-R-UNA', anioReconocimiento: 2024 },
-  { id: 22, nombre: 'COLECTIVO INTERDISCIPLINARIO DE INVESTIGACIÓN-ACCIÓN TRANSFORMADORA', facultad: 'Ciencias Sociales', ep: 'SOCIOLOGÍA', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 23, nombre: 'CONEXIÓN A LA CIENCIA', facultad: 'Ciencias de la Educación', ep: 'EDUCACIÓN PRIMARIA', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 24, nombre: 'FIGIM INGENIEROS EN ACCIÓN', facultad: 'Ingeniería Geológica y Metalurgia', ep: 'INGENIERÍA GEOLÓGICA', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 25, nombre: 'GIICDA - GRUPO DE INVESTIGACIÓN EN INTELIGENCIA ARTIFICIAL Y CIENCIA DE DATOS APLICADA', facultad: 'Ingeniería Mecánica Eléctrica, Electrónica Y Sistemas', ep: 'Ingeniería de Sistemas', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 26, nombre: 'GIISA - GRUPO ITERDISCIPLINARIO DE INVESTIGACIÓN EN SUSTENIBILIDAD Y ANÁLISIS', facultad: 'Ingeniería Agrícola', ep: 'Ingeniería Agrícola', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 27, nombre: 'GRUPO DE INNOVACIÓN Y ESTUDIOS ECONOMICO SOCIALES (GIEES)', facultad: 'Ingeniería Económica', ep: 'INGENIERÍA ECONÓMICA', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 28, nombre: 'GRUPO DE INVESTIGACION EN RECURSOS HÍDRICOS, CAMBIO CLIMÁTICO Y GESTIÓN DE RIESGOS - HYDROCLIM', facultad: 'Ingeniería Agrícola', ep: 'Ingeniería Agrícola', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 29, nombre: 'GRUPO DE INVESTIGACION MULTIDISCIPLINARIO DE INVESTIGACIONES DE INGENIERÍA AGRÍCOLA Y ECONOMÍA GI-MIIAE', facultad: 'Ingeniería Agrícola', ep: 'Ingeniería Agrícola', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 30, nombre: 'GRUPO DE INVESTIGACIÓN " PLATÓN PALOMINO QUISPE"', facultad: 'Ciencias de la Educación', ep: 'EDUCACIÓN SECUNDARIA', rr: '660-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 31, nombre: 'GRUPO DE INVESTIGACIÓN DE ALIMENTOS FUNCIONALES Y SALUD GIAFS', facultad: 'Ingeniería Química', ep: 'INGENIERÍA QUÍMICA', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 32, nombre: 'GRUPO DE INVESTIGACIÓN DE BIODISPONIBILIDAD- IBIS', facultad: 'Ciencias Agrarias', ep: 'INGENIERÍA AGROINDUSTRIAL', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 33, nombre: 'GRUPO DE INVESTIGACIÓN ELECTROQUÍMICA Y MATERIALES - GIEM', facultad: 'Ingeniería Química', ep: 'INGENIERÍA QUÍMICA', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 34, nombre: 'GRUPO DE INVESTIGACIÓN EN ARQUITECTURA, MATERIALES ALTERNATIVOS Y SOSTENILIDAD - ARQUIMAS', facultad: 'Ingeniería Civil y Arquitectura', ep: 'Arquitectura y Urbanismo', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 35, nombre: 'GRUPO DE INVESTIGACIÓN EN PRODUCCIÓN ANIMAL SOSTENIBLE', facultad: 'Medicina Veterinaria y Zootecnia', ep: 'MEDICINA VETERINARIA Y ZOOTECNIA', rr: '1306-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 36, nombre: 'GRUPO DE INVESTIGACIÓN EN SALUD ANIMAL (GIENSA)', facultad: 'Medicina Veterinaria y Zootecnia', ep: 'MEDICINA VETERINARIA Y ZOOTECNIA', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 37, nombre: 'GRUPO DE INVESTIGACIÓN EN SIMULACIÓN Y MODELAMIENTO DE PROCESOS ELECTRO - HIDROMETALÚGICOS Y MINEROS - SIMPEM', facultad: 'Ingeniería Química', ep: 'INGENIERÍA QUÍMICA', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 38, nombre: 'GRUPO DE INVESTIGACIÓN EN SISTEMAS INTEGRADOS PARA ENTORNOS INTELIGENTES', facultad: 'Ingeniería Mecánica Eléctrica, Electrónica Y Sistemas', ep: 'Ingeniería Electrónica', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 39, nombre: 'GRUPO DE INVESTIGACIÓN INNOVANDO-FIE', facultad: 'Ingeniería Económica', ep: 'INGENIERÍA ECONÓMICA', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 40, nombre: 'INVESTIGADORES DEL TITICACA PARA EL PROGRESO ACADÉMICO Y CIENTIFICO (INTIPAC)', facultad: 'Ciencias de la Educación', ep: 'EDUCACIÓN SECUNDARIA', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 41, nombre: 'REPENSANDO EL DERECHO', facultad: 'Ciencias Jurídicas y Políticas', ep: 'DERECHO', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 42, nombre: 'SINERGIA MULTIDISCIPLINAR PARA EL DESARROLLO EDUCATIVO Y SOCIAL (SIMUDES)', facultad: 'Ciencias de la Educación', ep: 'EDUCACIÓN SECUNDARIA', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 43, nombre: 'SOCIEDAD CIENTIFICA PARA EL DESARROLLO DE EDUCACIÓN TRANSDISCIPLINARIA', facultad: 'Ciencias de la Educación', ep: 'EDUCACIÓN SECUNDARIA', rr: '1526-2025-R-UNA', anioReconocimiento: 2025 },
-  { id: 44, nombre: 'ADVANCED SOCIETY FOR CONSTRUCTION MATERIALS', facultad: 'Ingeniería Civil y Arquitectura', ep: 'INGENIERÍA CIVIL', rr: '2026', anioReconocimiento: 2026 },
-  { id: 45, nombre: 'BIOSALUD INTEGRADA', facultad: 'Ciencias de la Salud', ep: 'ODONTOLOGÍA', rr: '2026', anioReconocimiento: 2026 },
-  { id: 46, nombre: 'DATA ANALYTICS & AI-LAB', facultad: 'Ingeniería Estadística e Informática', ep: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', rr: '0071-2026-R-UNA', anioReconocimiento: 2026 },
-  { id: 47, nombre: 'Data Analytics & AI - Lab', facultad: 'Ingeniería Estadística E Informática', ep: 'Ingeniería Estadística e Informática', rr: '2026', anioReconocimiento: 2026 },
-  { id: 48, nombre: 'ESTUDIOS ANDINOS Y PRACTICAS SOCIALES', facultad: 'Trabajo Social', ep: 'TRABAJO SOCIAL', rr: '2026', anioReconocimiento: 2026 },
-  { id: 49, nombre: 'EXTRACCIÓN NO METÁLICA Y PLANIFICACIÓN URBANA EN JULIACA', facultad: 'Ingeniería Agrícola', ep: 'Ingeniería Agrícola', rr: '2026', anioReconocimiento: 2026 },
-  { id: 50, nombre: 'Equipo de Investigación en Gestión Estratégica y Políticas Públicas (EIGEPP)', facultad: 'Ciencias Administrativas y Humanas', ep: 'Administración', rr: '2026', anioReconocimiento: 2026 },
-  { id: 51, nombre: 'GRUPO DE CIBERSEGURIDAD Y ANÁLISIS DE RIESGO (GICAR)', facultad: 'Ingeniería Mecánica Eléctrica, Electrónica Y Sistemas', ep: 'Ingeniería de Sistemas', rr: '2026', anioReconocimiento: 2026 },
-  { id: 52, nombre: 'GRUPO DE INVESTIGACION DENTAL Y EDUCACIÓN PARA EL ALTIPLANO Y PROYECCION INTERNACIONAL (GIDE - PUNO)', facultad: 'Ciencias de la Salud', ep: 'ODONTOLOGÍA', rr: '2026', anioReconocimiento: 2026 },
-  { id: 53, nombre: 'Grupo de Investigación Tecnología, desarrollo e Innovación (GI TDI)', facultad: 'Ingeniería Eléctrica, Electrónica Y Sistemas', ep: 'Ingeniería de Sistemas', rr: '2026', anioReconocimiento: 2026 },
-  { id: 54, nombre: 'HUB DE GESTIÓN, INNOVACIÓN Y DESARROLLO SOSTENIBLE E INCLUSIVO (HUB GIDSI)', facultad: 'Ciencias Administrativas y Humanas', ep: 'ADMINISTRACIÓN', rr: '2026', anioReconocimiento: 2026 },
-  { id: 55, nombre: 'ILLAPA', facultad: 'Ingeniería Económica', ep: 'Ingeniería Económica', rr: '2026', anioReconocimiento: 2026 },
-  { id: 56, nombre: 'INSTITUTO DE INVESTIGACION "TARIY"', facultad: 'Ciencias de la Educación', ep: 'EDUCACIÓN SECUNDARIA', rr: '2026', anioReconocimiento: 2026 },
-  { id: 57, nombre: 'INVESTIGACION EN CONSERVACIÓN Y REVALORIZACIÓN DE PROPIEDADES DE CULTIVO ANDINOS (CREPCA)', facultad: 'Ciencias Agrarias', ep: 'INGENIERÍA AGROINDUSTRIAL', rr: '2026', anioReconocimiento: 2026 },
-  { id: 58, nombre: 'INVESTIGACION MULTIDISCIPLINARIA EN PROMOCIÓN Y ACCIÓN EN CIENCIA Y TECNOLOGÍA EN SALUD (IMPACTA)', facultad: 'Enfermería', ep: 'ENFERMERÍA', rr: '2026', anioReconocimiento: 2026 },
-  { id: 59, nombre: 'LABORATORIO DE ALGORITMOS CUÁNTICOS (LAC)', facultad: 'Ingeniería Civil y Arquitectura', ep: 'CIENCIAS FÍSICO MATEMÁTICAS', rr: '2026', anioReconocimiento: 2026 },
-  { id: 60, nombre: 'MEDENF', facultad: 'Enfermería', ep: 'ENFERMERÍA', rr: '2026', anioReconocimiento: 2026 },
-  { id: 61, nombre: 'MINERÍA SOSTENIBLE PARA EL DESARROLLO', facultad: 'Ingeniería de Minas', ep: 'INGENIERÍA MINAS', rr: '2026', anioReconocimiento: 2026 },
-  { id: 62, nombre: 'SCIENCE: GRUPOS DE SALUD COMPUTACIONAL INTELIGENCIA ARTIFICIAL ECONÓMICA, NUEVAS TECNOLOGÍAS CIBERNÉTICAS Y ELECTROMECÁNICAS', facultad: 'Ingeniería Mecánica Eléctrica, Electrónica Y Sistemas', ep: 'Ingeniería de Sistemas', rr: '2026', anioReconocimiento: 2026 },
-  { id: 63, nombre: 'SOLUCIONES DE TURISMO ANDINO CIENCIA DE DATOS', facultad: 'Ingeniería Estadística e Informática', ep: 'INGENIERÍA ESTADISTICA E INFORMÁTICA', rr: '2026', anioReconocimiento: 2026 },
-];
-
-export const gruposPorArea = [
-  { area: 'Veterinaria',          cantidad: 4 },
-  { area: 'Ciencia de Datos e IA',cantidad: 4 },
-  { area: 'Estadística',          cantidad: 2 },
-  { area: 'Ciencias de la Salud', cantidad: 2 },
-  { area: 'Administración',       cantidad: 4 },
-  { area: 'Agroindustria',        cantidad: 1 },
-  { area: 'Ciencias Sociales',    cantidad: 2 },
-  { area: 'Energías Renovables',  cantidad: 1 },
-  { area: 'Medicina',             cantidad: 1 },
+  {
+    "id": 1,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN ENERGÍAS RENOVABLES (GIER)",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA MECÁNICA ELÉCTRICA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 2,
+    "nombre": "GRUPO DE INVESTIGACIÓN ESTADÍSTICA APLICADA - GIEA",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 3,
+    "nombre": "GRUPO DE INVESTIGACIÓN CIENCIA DE DATOS - GICD",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 4,
+    "nombre": "GRUPO DE INVESTIGACIÓN ESTADÍSTICA BAYESIANA",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 5,
+    "nombre": "GRUPO DE INVESTIGACIÓN INTELIGENCIA ARTIFICIAL (GI IA)",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 6,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN PROTECCIÓN VEGETAL",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGRONOMICA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 7,
+    "nombre": "NUCLEO DE INVESTIGACION PARA LA SOCIEDAD",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 8,
+    "nombre": "SOCIOESTADISTICA",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "SOCIOLOGIA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 9,
+    "nombre": "GRUPO DE INVESTIGACION YACHAY",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "CIENCIAS DE LA COMUNICACIÓN SOCIAL",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 10,
+    "nombre": "GRUPO DE INVESTIGACION DE TECNOLOGIAS Y EDUCACION AMBIENTAL (GITEA)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACION SECUNDARIA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 11,
+    "nombre": "GRUPO DE INVESTIGACIÓN INTERDISCIPLINARIA, CIENTIFICA Y TECNOLOGICA (GIICT)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACION SECUNDARIA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 12,
+    "nombre": "GRUPO DE INVESTIGACION EDUCATIVA RIKCH'ARY (GIER)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACION PRIMARIA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 13,
+    "nombre": "GRUPO DE INVESTIGACION CRECIMIENTO, ACTIVIDAD FISICA Y SALUD EN ALTURA (GICAFSA)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACION FISICA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 14,
+    "nombre": "INNOVACION Y DESARROLLO EN NUTRICION HUMANA",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "NUTRICION HUMANA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 15,
+    "nombre": "INVESTIGACION Y DESARROLLO EN NUTRICION Y SALUD (IDENUTS)",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "NUTRICION HUMANA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 16,
+    "nombre": "INVESTIGACION EN SALUD PUBLICA EN ALTURA (INSPA)",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 17,
+    "nombre": "MIRADA CIENTIFICA",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 18,
+    "nombre": "MUJERES DE CIENCIA Y TECNOLOGÍA EN ACCIÓN",
+    "facultad": "ODONTOLOGIA",
+    "ep": "ODONTOLOGIA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 19,
+    "nombre": "INVESTIGACION EN EDUCACION Y FORMACION AMBIENTAL PARA EL DESARROLLO SOSTENIBLE",
+    "facultad": "INGENIERIA AGRICOLA",
+    "ep": "INGENIERIA AGRICOLA",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 20,
+    "nombre": "GRUPO DE INVESTIGACIÓN DE BIO DISPONIBILIDAD-IBIS",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agroindustrial",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 21,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN SALUD ANIMAL (GIENSA)",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "Medicina Veterinaria y Zootecnia",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 22,
+    "nombre": "GRUPO DE INNOVACIÓN Y ESTUDIOS ECONÓMICO SOCIALES (GIIES)",
+    "facultad": "INGENIERÍA ECONÓMICA",
+    "ep": "Ingeniería Económica",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 23,
+    "nombre": "GRUPO DE INVESTIGACIÓN INNOVANDO-FIE",
+    "facultad": "INGENIERÍA ECONÓMICA",
+    "ep": "Ingeniería Económica",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 24,
+    "nombre": "COLECTIVO INTERDISCIPLINARIO DE INVESTIGACIÓN-ACCIÓN TRANSFORMADORA",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "Sociología",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 25,
+    "nombre": "SINERGIA MULTIDISCIPLINAR PARA EL DESARROLLO EDUCATIVO Y SOCIAL (SIMUDES)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Secundaria",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 26,
+    "nombre": "INVESTIGADORES DEL TITICACA PARA EL PROGRESO ACADÉMICO Y CIENTÍFICO (INTIPAC)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Secundaria",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 27,
+    "nombre": "SOCIEDAD CIENTÍFICA PARA EL DESARROLLO DE EDUCACIÓN TRANSDISCIPLINARIA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Secundaria",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 28,
+    "nombre": "CONEXIÓN A LA CIENCIA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Primaria",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 29,
+    "nombre": "FIGM INGENIEROS EN ACCIÓN",
+    "facultad": "INGENIERÍA GEOLÓGICA Y METALÚRGICA",
+    "ep": "Ingeniería Geológica",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 30,
+    "nombre": "REPENSANDO EL DERECHO",
+    "facultad": "CIENCIAS JURÍDICAS Y POLÍTICAS",
+    "ep": "Derecho",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 31,
+    "nombre": "GRUPO DE INVESTIGACIÓN ELECTROQUÍMICA Y MATERIALES - GIEM",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "Ingeniería Química",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 32,
+    "nombre": "GRUPO DE INVESTIGACIÓN DE ALIMENTOS FUNCIONALES Y SALUD GIAFS",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "Ingeniería Química",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 33,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN SIMULACIÓN Y MODELAMIENTO DE PROCESOS ELECTRO-HIDROMETALÚRGICOS Y MINEROS - SIMPEM",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "Ingeniería Química",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 34,
+    "nombre": "INNOVACIÓN MULTIDISCIPLINARIA EN ACCIONES SOCIOAMBIENTALES (IMAS)",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "Ingeniería Agrícola",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 35,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN GEOTECNOLOGIAS APLICADAS A RECURSOS HIDRICOS Y RIESGOS DE DESASTRES - GIGARH-RD",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "Ingeniería Agrícola",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 36,
+    "nombre": "GIISA - GRUPO ITERDISCIPLINARIO DE INVESTIGACIÓN EN SUSTENTABILIDAD Y ANÁLISIS",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "Ingeniería Agrícola",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 37,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN ARQUITECTURA, MATERIALES ALTERNATIVOS Y SOSTENIBILIDAD - ARQUIMAS",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "Arquitectura y Urbanismo",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 38,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN SISTEMAS INTEGRADOS PARA ENTORNOS INTELIGENTES",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "Ingeniería Electrónica",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 39,
+    "nombre": "GIICDA - GRUPO DE INVESTIGACIÓN EN SISTEMAS INTELIGENTES ARTIFICIAL Y CIENCIA DE DATOS APLICADA",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "Ingeniería de Sistemas",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 40,
+    "nombre": "INVESTIGACION EN CONSERVACIÓN Y REVALORIZACIÓN DE PROPIEDADES DE CULTIVO ANDINOS (CREPCA)",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 41,
+    "nombre": "ESTUDIOS ANDINOS Y PRACTICAS SOCIALES",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 42,
+    "nombre": "INVESTIGACION MULTIDISCIPLINARIA EN PROMOCIÓN Y ACCIÓN EN CIENCIA Y TECNOLOGÍA EN SALUD (IMPACTA)",
+    "facultad": "ENFERMERÍA",
+    "ep": "ENFERMERÍA",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 43,
+    "nombre": "MEDENF",
+    "facultad": "ENFERMERÍA",
+    "ep": "ENFERMERÍA",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 44,
+    "nombre": "SOLUCIONES DE TURISMO ANDINO CIENCIA DE DATOS",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 45,
+    "nombre": "INSTITUTO DE INVESTIGACION \"TARIY\"",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 46,
+    "nombre": "BIOSALUD INTEGRADA",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 47,
+    "nombre": "GRUPO DE INVESTIGACION DENTAL Y EDUCACIÓN PARA EL ALTIPLANO Y PROYECCION INTERNACIONAL (GIDE - PUNO)",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 48,
+    "nombre": "LABORATORIO DE ALGORITMOS CUÁNTICOS (LAC)",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "CIENCIAS FÍSICO MATEMÁTICAS",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 49,
+    "nombre": "ADVANCED SOCIETY FOR CONSTRUCTION MATERIALS",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "INGENIERÍA CIVIL",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 50,
+    "nombre": "EXTRACCIÓN NO METÁLICA Y PLANIFICACIÓN URBANA EN JULIACA",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 51,
+    "nombre": "GRUPO DE INVESTIGACION EN RECURSOS HÍDRICOS, CAMBIO CLIMÁTICO Y GESTIÓN DE RIESGOS - HYDROCLIM",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 52,
+    "nombre": "GRUPO DE INVESTIGACION MULTIDISCIPLINARIO DE INVESTIGACIONES DE INGENIERÍA AGRÍCOLA Y ECONOMÍA GI-MIIAE",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 53,
+    "nombre": "GRUPO DE CIBERSEGURIDAD Y ANÁLISIS DE RIESGO (GICAR)",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 54,
+    "nombre": "SCIENCE: GRUPOS DE SALUD COMPUTACIONAL INTELIGENCIA ARTIFICIAL ECONÓMICA, NUEVAS TECNOLOGÍAS CIBERNÉTICAS Y ELECTROMECÁNICAS",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 55,
+    "nombre": "HUB DE GESTIÓN, INNOVACIÓN Y DESARROLLO SOSTENIBLE E INCLUSIVO (HUB GIDSI)",
+    "facultad": "CIENCIAS ADMINISTRATIVAS Y HUMANAS",
+    "ep": "ADMINISTRACIÓN",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 56,
+    "nombre": "MINERÍA SOSTENIBLE PARA EL DESARROLLO",
+    "facultad": "INGENIERÍA MINAS",
+    "ep": "INGENIERÍA MINAS",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 57,
+    "nombre": "GRUPO DE I+D5:I5NVESTIGACIÓN Y DESARROLLO DE ALIMENTOS SALUDABLES (GI-IDEAS)",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 58,
+    "nombre": "LABORATORIO DE INVESTIGACION SOCIAL Y COMUNICACIÓN \"Social.Com\"",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "CIENCIAS DE LA COMUNICACIÓN SOCIAL",
+    "anioReconocimiento": "2024"
+  },
+  {
+    "id": 59,
+    "nombre": "GRUPO DE INVESTIGACIÓN \" PLATÓN PALOMINO QUISPE\"",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Secundaria",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 60,
+    "nombre": "Equipo de Investigación en Gestión Estratégica y Políticas Públicas (EIGEPP)",
+    "facultad": "CIENCIAS ADMINISTRATIVAS Y HUMANAS",
+    "ep": "ADMINISTRACIÓN",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 61,
+    "nombre": "ILLAPA",
+    "facultad": "INGENIERÍA ECONÓMICA",
+    "ep": "Ingeniería Económica",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 62,
+    "nombre": "Grupo de Investigación Tecnología, desarrollo e Innovación (GI TDI)",
+    "facultad": "INGENIERÍA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS",
+    "anioReconocimiento": "2026"
+  },
+  {
+    "id": 63,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN PRODUCCIÓN ANIMAL SOSTENIBLE",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "Medicina Veterinaria y Zootecnia",
+    "anioReconocimiento": "2025"
+  },
+  {
+    "id": 64,
+    "nombre": "DATA ANALYTICS & AI-LAB",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "anioReconocimiento": "2026"
+  }
 ];
 
 export const gruposEvolucion = [
   { anio: 2023, total: 0, nuevos: 0, proyectosGanadores: 0 },
-  { anio: 2024, total: 21, nuevos: 21,  proyectosGanadores: 6 },
-  { anio: 2025, total: 43, nuevos: 22,  proyectosGanadores: 0 },
-  { anio: 2026, total: 63, nuevos: 20,  proyectosGanadores: 0 },
+  { anio: 2024, total: 21, nuevos: 21, proyectosGanadores: 0 },
+  { anio: 2025, total: 22, nuevos: 22, proyectosGanadores: 0 },
+  { anio: 2026, total: 21, nuevos: 21, proyectosGanadores: 0 },
 ];
 
-// ------------------------------------------------------------------
-// PROYECTOS FEDU POR ESCUELA PROFESIONAL
+export const semillerosEvolucion = [
+  { anio: 2023, total: 2, nuevos: 2, concursoGanadores: 0 },
+  { anio: 2024, total: 45, nuevos: 45, concursoGanadores: 0 },
+  { anio: 2025, total: 85, nuevos: 85, concursoGanadores: 0 },
+  { anio: 2026, total: 103, nuevos: 103, concursoGanadores: 0 },
+];
+
+export const semilleros2024 = [
+  {
+    "n": 1,
+    "nombre": "AGRONOMY AND ANIMAL SCIENCIES",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agronómica"
+  },
+  {
+    "n": 2,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN AGRONÓMICA (SIAGRO)",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agronómica"
+  },
+  {
+    "n": 3,
+    "nombre": "SEMILLERO AGROINNOVA",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agroindustrial"
+  },
+  {
+    "n": 4,
+    "nombre": "PIONEROS DEL CONOCIMIENTO AGROINDUSTRIAL",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agroindustrial"
+  },
+  {
+    "n": 5,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN BIOQUIMICA Y BIOLOGIA MOLECULAR (GIBBM)",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "Medicina Veterinaria y Zootecnia"
+  },
+  {
+    "n": 6,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN FARMACOLOGIA EXPERIMENTAL-GIFE",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "Medicina Veterinaria y Zootecnia"
+  },
+  {
+    "n": 7,
+    "nombre": "ECONOMISTAS POR LA INNOVACIÓN TECNOLÓGICA Y SOCIAL (EITS)",
+    "facultad": "INGENIERÍA ECONÓMICA",
+    "ep": "Ingeniería Económica"
+  },
+  {
+    "n": 8,
+    "nombre": "ECOSALUD",
+    "facultad": "INGENIERÍA ECONÓMICA",
+    "ep": "Ingeniería Económica"
+  },
+  {
+    "n": 9,
+    "nombre": "INVESTIGAR PARA EL CUIDADO ENFERMERO (INCUEN)",
+    "facultad": "ENFERMERÍA",
+    "ep": "Enfermería"
+  },
+  {
+    "n": 10,
+    "nombre": "SEMILLEROS DE SERENDIPIA EN TRABAJO SOCIAL",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "Trabajo Social"
+  },
+  {
+    "n": 11,
+    "nombre": "UNA SEMILLA EN EL ALTIPLANO",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "Trabajo Social"
+  },
+  {
+    "n": 12,
+    "nombre": "SEMILLEROS EN ACCION POR EL CAMBIO SOCIAL DESDE EL TRABAJO SOCIAL",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "Trabajo Social"
+  },
+  {
+    "n": 13,
+    "nombre": "SEMILLEROS DE INNOVACIÓN CIENTIFICA",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "Trabajo Social"
+  },
+  {
+    "n": 14,
+    "nombre": "FORMANDO MENTES CAMBIANDO EL MUNDO",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "Sociología"
+  },
+  {
+    "n": 15,
+    "nombre": "CALIDAD Y EXCELENCIA ACADEMICA CON SOSTENIBILIDAD AMBIENTAL",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "Sociología"
+  },
+  {
+    "n": 16,
+    "nombre": "GRUPO DE INVESTIGACION EN COMUNICACIÓN Y SOCIEDAD \"GICS\"",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "Comunicación Social"
+  },
+  {
+    "n": 17,
+    "nombre": "SEMILLEROS DE INVESTIGACION MEDIOS Y SOCIEDAD",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "Comunicación Social"
+  },
+  {
+    "n": 18,
+    "nombre": "MICROBIOLOGOS EN ACCIÓN",
+    "facultad": "CIENCIAS BIOLOGICAS",
+    "ep": "Biología"
+  },
+  {
+    "n": 19,
+    "nombre": "PHYSIS SPOROS",
+    "facultad": "CIENCIAS BIOLOGICAS",
+    "ep": "Biología"
+  },
+  {
+    "n": 20,
+    "nombre": "INSTITUTO DE INVESTIGACIONES ALTO ANDINAS (IIAA)",
+    "facultad": "CIENCIAS BIOLOGICAS",
+    "ep": "Biología"
+  },
+  {
+    "n": 21,
+    "nombre": "INVESTIGACION MULTIDISCIPLINAR DE LENGUAJE Y LITERATURA-IMLELI",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Secundaria"
+  },
+  {
+    "n": 22,
+    "nombre": "LABORATORIO HISTORICO, SOCIOCULTURAL EDUCATIVO",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Secundaria"
+  },
+  {
+    "n": 23,
+    "nombre": "INNOVACIÓN EDUCATIVA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Secundaria"
+  },
+  {
+    "n": 24,
+    "nombre": "SEMILLERO DE INVESTIGACION INTERDISCIPLINARIA Y EDUCACION AMBIENTAL (SIIEA)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Secundaria"
+  },
+  {
+    "n": 25,
+    "nombre": "INVESTIGADORES DEL ALTIPLANO",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Fïsica"
+  },
+  {
+    "n": 26,
+    "nombre": "SEMILLEROS DE INVESTIGACION MULTIDISCIPLINAR EN PSICOMOTRICIDAD, CIENCIAS DE LA ACTIVIDAD FISICA, DEPORTE Y SALUD (SIMPCAFDS)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Fïsica"
+  },
+  {
+    "n": 27,
+    "nombre": "JOVENES INVESTIGADORES DEL ALTIPLANO",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Fïsica"
+  },
+  {
+    "n": 28,
+    "nombre": "SE APRENDE HACIENDO",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Fïsica"
+  },
+  {
+    "n": 29,
+    "nombre": "PIONEROS DE LA INVESTIGACIÓN (SIP)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Primaria"
+  },
+  {
+    "n": 30,
+    "nombre": "INVESTIGACIÓN EN EDUCACIÓN Y FORMACIÓN AMBIENTAL (SIEFA)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Primaria"
+  },
+  {
+    "n": 31,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN PEDAGÓGICA, EDUCATIVA Y SOCIAL WIÑAY (SIPES)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Primaria"
+  },
+  {
+    "n": 32,
+    "nombre": "SEMILLERO DEL INSTITUTO DE INVESTIGACION EN METALURGIA, MATERIALES Y MEDIO AMBIENTE",
+    "facultad": "INGENIERIA GEOLOGICA Y METALURGICA",
+    "ep": "Ingeniería Metalúrgica"
+  },
+  {
+    "n": 33,
+    "nombre": "SEMILLEROS DE INVESTIGACIÓN LITIO",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "Ingeniería Química"
+  },
+  {
+    "n": 34,
+    "nombre": "NUTRI-CIENCIAS",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "Nutrición Humana"
+  },
+  {
+    "n": 35,
+    "nombre": "INVESTIGANDO EN CIENCIAS DE LA NUTRICION Y SALUD (ICANS)",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "Nutrición Humana"
+  },
+  {
+    "n": 36,
+    "nombre": "ORAL HEALTH RESEARCHERS TEAM (OHRT)",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "Odontología"
+  },
+  {
+    "n": 37,
+    "nombre": "ESTUDIANTES APORTANDO A LA INVESTIGACIÓN EN SALUD (EAIS)",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "Odontología"
+  },
+  {
+    "n": 38,
+    "nombre": "RUTAS DE LA CIENCIAS EN SALUD",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "Odontología"
+  },
+  {
+    "n": 39,
+    "nombre": "ODONTOINVESTIGA",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "Odontología"
+  },
+  {
+    "n": 40,
+    "nombre": "RED DE INVESTIGACIÓN EN CÁLCULO FRACCIONARIO",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "Ciencias Físico - Matemáticas"
+  },
+  {
+    "n": 41,
+    "nombre": "RED DE INVESTIGACIÓN EN ECUACIONES DIFERENCIALES PARCIALES (RIEDP)",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "Ciencias Físico - Matemáticas"
+  },
+  {
+    "n": 42,
+    "nombre": "GRUPO AVICENA",
+    "facultad": "MEDICINA HUMANA",
+    "ep": "Medicina Humana"
+  },
+  {
+    "n": 43,
+    "nombre": "ENERGIAS, TECNOLOGIA Y AUTOMATIZACION E INVESTIGACION (ETAI)",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRONICA Y SISTEMAS",
+    "ep": "Ingeniería Electrónica"
+  },
+  {
+    "n": 44,
+    "nombre": "AUREA MINDS",
+    "facultad": "CIENCIAS ADMINISTRATIVAS Y HUMANAS",
+    "ep": "Administración"
+  },
+  {
+    "n": 45,
+    "nombre": "CHANGE RESEARCHERS",
+    "facultad": "CIENCIAS ADMINISTRATIVAS Y HUMANAS",
+    "ep": "Administración"
+  }
+];
+
+export const semilleros2025 = [
+  {
+    "n": 1,
+    "nombre": "AGROBIODIVERSIDAD Y LA NUTRICIÓN ANDINA",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agronómica"
+  },
+  {
+    "n": 2,
+    "nombre": "SI-AGROTEC SEMILLERO DE INVESTIGACIÓN AGRARIA EN GESTIÓN RURAL CON ORGANIZACIÓN EN TECNOLOGÍA Y ESTUDIOS CIENTÍFICOS",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agronómica"
+  },
+  {
+    "n": 3,
+    "nombre": "ECOAGRO INVESTIGACIÓN EN AGRICULTURA SOSTENIBLE Y PROTECCIÓN AMBIENTAL",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agronómica"
+  },
+  {
+    "n": 4,
+    "nombre": "SEMILLERO DE ESTUDIANTES MOTIVADOS EN LA AGRONOMÍA - SEMAGRO",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agronómica"
+  },
+  {
+    "n": 5,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN E INNOVACIÓN AGROINDUSTRIAL – I  (SIIA-I)",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agroindustrial"
+  },
+  {
+    "n": 6,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN “CREAS AGROINDUSTRIA”",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agroindustrial"
+  },
+  {
+    "n": 7,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN E INNOVACIÓN EN MATRICES ALIMENTARIAS (SIIMA)",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agroindustrial"
+  },
+  {
+    "n": 8,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN ALIMENTOS FUNCIONALES Y RECUBRIMIENTOS NATURALES (GIAFREN)",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agroindustrial"
+  },
+  {
+    "n": 9,
+    "nombre": "SEMILLERO - NATURA BREW",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agroindustrial"
+  },
+  {
+    "n": 10,
+    "nombre": "AGROINDUSTRIAS PARA LA INNOVACIÓN Y DESARROLLO TECNOLÓGICO (AGROIDET)",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "Ingeniería Agroindustrial"
+  },
+  {
+    "n": 11,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN BIOQUÍMICA VETERINARIA (GIBIOQVET)",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "Medicina Veterinaria y Zootecnia"
+  },
+  {
+    "n": 12,
+    "nombre": "ESTUDIOS DE FISIOLOGÍA EN ANIMALES DOMÉSTICOS PARA LA ADAPTACIÓN A LA ALTITUD",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "Medicina Veterinaria y Zootecnia"
+  },
+  {
+    "n": 13,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN EN SANIDAD ANIMAL",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "Medicina Veterinaria y Zootecnia"
+  },
+  {
+    "n": 14,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN EN ENFERMEDADES PARASITARIAS EN ANIMALES DOMÉSTICOS Y SILVESTRES",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "Medicina Veterinaria y Zootecnia"
+  },
+  {
+    "n": 15,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN BIOTECNOLOGÍA REPRODUCTIVA ANIMAL (GIBRA)",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "Medicina Veterinaria y Zootecnia"
+  },
+  {
+    "n": 16,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN MICROBIOLOGÍA DE ANIMALES DOMÉSTICOS - GIMAD",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "Medicina Veterinaria y Zootecnia"
+  },
+  {
+    "n": 17,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN INMUNOLOGÍA VETERINARIA - GIIV",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "Medicina Veterinaria y Zootecnia"
+  },
+  {
+    "n": 18,
+    "nombre": "SEMILLERO DE INNOVACIÓN Y NUEVAS ECONOMÍAS (SINECO)",
+    "facultad": "INGENIERÍA ECONOMICA",
+    "ep": "Ingeniería Económica"
+  },
+  {
+    "n": 19,
+    "nombre": "SANAR PERÚ - SEMILLERO DE ANÁLISIS DE NECESIDADES ADOLESCENTES REGIONALES - PERÚ.",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "Trabajo Social"
+  },
+  {
+    "n": 20,
+    "nombre": "REMINA (RESTAURACIÓN AMBIENTAL EN MINERÍA)",
+    "facultad": "INGENIERÍA DE MINAS",
+    "ep": "Ingeniería de Minas"
+  },
+  {
+    "n": 21,
+    "nombre": "INNOVA+",
+    "facultad": "INGENIERÍA DE MINAS",
+    "ep": "Ingeniería de Minas"
+  },
+  {
+    "n": 22,
+    "nombre": "SOCIOLOGÍA PARA LA INVESTIGACIÓN ACCIÓN - \"SOCIOLOGIA\"",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "Sociología"
+  },
+  {
+    "n": 23,
+    "nombre": "REDES SOCIALES Y TURISMO: LA NUEVA BRÚJULA DEL TURISTA MODERNO",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "Turismo"
+  },
+  {
+    "n": 24,
+    "nombre": "GRUPO PENSAMIENTO CRÍTICO ANTROPOLÓGICO UNA-PUNO",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "Antropología"
+  },
+  {
+    "n": 25,
+    "nombre": "SEMILLERO DE INVESTIGACIONES ETNOGRÁFICAS - SIE",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "Antropología"
+  },
+  {
+    "n": 26,
+    "nombre": "DIGITALIZANDO EL ARTE VISUAL",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "Arte"
+  },
+  {
+    "n": 27,
+    "nombre": "MICROBIOTECH",
+    "facultad": "CIENCIAS BIOLÓCAS",
+    "ep": "Ciencias Biológicas"
+  },
+  {
+    "n": 28,
+    "nombre": "SEMILLEROS DE INVESTIGACIÓN EN: CIENCIAS DEL DEPORTE Y PSICOMOTRICIDAD PARA UNA VIDA SALUDABLE (CIPROVIDA)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Física"
+  },
+  {
+    "n": 29,
+    "nombre": "SEMILLERO MIRADAS INTERDISCIPLINARIAS ACERCA DEL BIENESTAR EN EDUCACIÓN INICIAL",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Inicial"
+  },
+  {
+    "n": 30,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN: PRIMERA INFANCIA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Inicial"
+  },
+  {
+    "n": 31,
+    "nombre": "SEMILLERO DE PEDAGOGÍA Y BIENESTAR INFANTIL",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Inicial"
+  },
+  {
+    "n": 32,
+    "nombre": "EPEP - INVESTIGA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Primaria"
+  },
+  {
+    "n": 33,
+    "nombre": "YACHAY T'IKARINAN",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Primaria"
+  },
+  {
+    "n": 34,
+    "nombre": "CONSCIENCIA COLECTIVA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Primaria"
+  },
+  {
+    "n": 35,
+    "nombre": "\"SEMILLERO DE INVESTIGACIÓN: MONITORES DEL ECOBARÓMETRO ALTIPLÁNICO\" (SIMEA)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Primaria"
+  },
+  {
+    "n": 36,
+    "nombre": "EUREKA INVESTIGACIÓN CIENTÍFICA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Primaria"
+  },
+  {
+    "n": 37,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN EN ESTUDIOS DE LENGUAJE Y LITERATURA (SIELL)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Secundaria"
+  },
+  {
+    "n": 38,
+    "nombre": "GRUPO MULTIDISCIPLINAR EDUCACIÓN GME",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Secundaria"
+  },
+  {
+    "n": 39,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN INTERDISCIPLINARIO EN SALUD, TECNOLOGÍA Y EDUCACIÓN AMBIENTAL",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "Educación Secundaria"
+  },
+  {
+    "n": 40,
+    "nombre": "SMART TITICACA CONECTADA AL MUNDO",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 41,
+    "nombre": "HATUN DATA FINESI",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 42,
+    "nombre": "INNOVACODE INVESTIGACIÓN Y DESARROLLO EN INTELIGENCIA ARTIFICIAL",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 43,
+    "nombre": "HACIENDO HABLAR A LOS DATOS",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 44,
+    "nombre": "MACHINE LEARNING AND DATA ENGINEERING",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 45,
+    "nombre": "BAYESTATS - UNAP",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 46,
+    "nombre": "STATMARKET-UNAP",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 47,
+    "nombre": "PROGRAMING COMPETITIVE ACM CONTEST",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 48,
+    "nombre": "RAÍZ Y RESULTADOS",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 49,
+    "nombre": "PENTAGONITO - FINESI",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 50,
+    "nombre": "GRUPO DE INVESTIGACIÓN ESTADÍSTICA APLICADA (GI-EA)",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 51,
+    "nombre": "INNOVANDO, DESCUBRIENDO Y EMPRENDIENDO FINESI",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 52,
+    "nombre": "CGTA BIOINFORMATIC",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 53,
+    "nombre": "INFOTECH.",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 54,
+    "nombre": "ARTHUR L. SAMUEL - IIICCD",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 55,
+    "nombre": "JHON J. HOPFIELD - IIICCD",
+    "facultad": "INGENIERÍA ESTADISTICA E INFORMÁTICA",
+    "ep": "Ingeniería Estadística e Informática"
+  },
+  {
+    "n": 56,
+    "nombre": "JÓVENES EN LA CIENCIA",
+    "facultad": "INGENIERÍA GEOLÓGICA Y METALÚRGICA",
+    "ep": "Ingeniería Geológica"
+  },
+  {
+    "n": 57,
+    "nombre": "CILORD - PLURALISMO JURÍDICO",
+    "facultad": "CIENCIAS JURÍDICAS Y POLÍTICAS",
+    "ep": "Derecho"
+  },
+  {
+    "n": 58,
+    "nombre": "IQ - HIDRÓGENO VERDE- IQHV",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "Ingeniería Química"
+  },
+  {
+    "n": 59,
+    "nombre": "HIDRO-ELECTROMETALURGIA",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "Ingeniería Química"
+  },
+  {
+    "n": 60,
+    "nombre": "ELECTROQUÍMICA VERDE",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "Ingeniería Química"
+  },
+  {
+    "n": 61,
+    "nombre": "ALIMENTOS FUNCIONALES Y NUTRAÉUTICOS EN INVESTIGACIÓN (ALFANUTRI)",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "Ingeniería Química"
+  },
+  {
+    "n": 62,
+    "nombre": "INVESTIGADENT",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "Odontología"
+  },
+  {
+    "n": 63,
+    "nombre": "BIOODONTOLAB",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "Odontología"
+  },
+  {
+    "n": 64,
+    "nombre": "REDI (RED DE ESTUDIANTES PARA INVESTIGACIÓN",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "Odontología"
+  },
+  {
+    "n": 65,
+    "nombre": "FLUVIOMÁTICA",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "Ingeniería Agrícola"
+  },
+  {
+    "n": 66,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN EN ECOSISTEMAS URBANOS Y CAMBIO CLIMÁTICO (ECOCLIMA-UNA)",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "Ingeniería Agrícola"
+  },
+  {
+    "n": 67,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN EN ANÁLISIS FUNCIONAL Y APLICACIONES",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "Ciencias Físico - Matemáticas"
+  },
+  {
+    "n": 68,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN: PRIMUN NON NOCERE",
+    "facultad": "MEDICINA HUMANA",
+    "ep": "Medicina Humana"
+  },
+  {
+    "n": 69,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN: SAPIENTIA MEDIC",
+    "facultad": "MEDICINA HUMANA",
+    "ep": "Medicina Humana"
+  },
+  {
+    "n": 70,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN: NEURIAMED",
+    "facultad": "MEDICINA HUMANA",
+    "ep": "Medicina Humana"
+  },
+  {
+    "n": 71,
+    "nombre": "MEDICINA HACIA EL FUTURO",
+    "facultad": "MEDICINA HUMANA",
+    "ep": "Medicina Humana"
+  },
+  {
+    "n": 72,
+    "nombre": "INVESTIGADORES JUNIOR DE ELECTRÓNICA",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS",
+    "ep": "Ingeniería Electrónica"
+  },
+  {
+    "n": 73,
+    "nombre": "TITICACA MED - XR",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS",
+    "ep": "Ingeniería Electrónica"
+  },
+  {
+    "n": 74,
+    "nombre": "SENAM-UNA",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS",
+    "ep": "Ingeniería Mecánica Eléctrica"
+  },
+  {
+    "n": 75,
+    "nombre": "ENERGÍAS RENOVABLES-LEVITACIÓN MAGNÉTICA",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS",
+    "ep": "Ingeniería Mecánica Eléctrica"
+  },
+  {
+    "n": 76,
+    "nombre": "ENERGÍAS RENOVABLES-GENERACIÓN HIDRÓGENO",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS",
+    "ep": "Ingeniería Mecánica Eléctrica"
+  },
+  {
+    "n": 77,
+    "nombre": "LOCALIZACIÓN DE FALLAS EN LÍNEAS DE TRANSMISIÓN",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS",
+    "ep": "Ingeniería Mecánica Eléctrica"
+  },
+  {
+    "n": 78,
+    "nombre": "ENERGÍAS RENOVABLES - BATERÍAS DE LITIO",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS",
+    "ep": "Ingeniería Mecánica Eléctrica"
+  },
+  {
+    "n": 79,
+    "nombre": "INNOME-INNOVACIÓN MECÁNICA ELÉCTRICA",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS",
+    "ep": "Ingeniería Mecánica Eléctrica"
+  },
+  {
+    "n": 80,
+    "nombre": "SISTEMAS Y COMPILADORES",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS",
+    "ep": "Ingeniería de Sistemas"
+  },
+  {
+    "n": 81,
+    "nombre": "DEEP MIND ED",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELÉCTRONICA Y SISTEMAS",
+    "ep": "Ingeniería de Sistemas"
+  },
+  {
+    "n": 82,
+    "nombre": "ADMINLAB",
+    "facultad": "CIENCIAS ADMINISTRATIVAS Y HUMANAS",
+    "ep": "Administración"
+  },
+  {
+    "n": 83,
+    "nombre": "IMPADE - (INSTITUTO DE INVESTIGACIÓN EN GESTIÓN, IMPACTO Y DESARROLLO EMPRESARIAL)",
+    "facultad": "CIENCIAS ADMINISTRATIVAS Y HUMANAS",
+    "ep": "Administración"
+  },
+  {
+    "n": 84,
+    "nombre": "“INVESTIGADORES EN ACCION”",
+    "facultad": "ENFERMERÍA",
+    "ep": "Enfermería"
+  },
+  {
+    "n": 85,
+    "nombre": "CRISÁLIDA SOCIAL -UNAP",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "Trabajo Social"
+  }
+];
+
+export const semilleros2026 = [
+  {
+    "n": 1,
+    "nombre": "SEMILLERO DE INVESTIGACION EN DINÁMICA DE CARBONO Y CAMBIO CLIMÁTICO EN ECOSISTEMAS ALTOANDINOS (SIDICCA)",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGRONÓMICA"
+  },
+  {
+    "n": 2,
+    "nombre": "BIODIVERSIDAD Y RESILIENCIA AL CAMBIO CLIMÁTICO",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGRONÓMICA"
+  },
+  {
+    "n": 3,
+    "nombre": "TRANSFORMANDO LA ALIMENTACIÓN EN PRODUCCIÓN",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGRONÓMICA"
+  },
+  {
+    "n": 4,
+    "nombre": "MICROORGANISMOS EFICACES PARA LA RESTAURACIÓN DE AGROECOSISTEMAS",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGRONÓMICA"
+  },
+  {
+    "n": 5,
+    "nombre": "QUINUAS PRECOCES SEMI TARDIAS Y TARDIAS (NORMAN BORLAUG)",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGRONÓMICA"
+  },
+  {
+    "n": 6,
+    "nombre": "\"COMPOST\" TRANSFORMADO, NUESTROS RESIDUOS EN VIDA",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGRONÓMICA"
+  },
+  {
+    "n": 7,
+    "nombre": "FORMULA INNOVAU",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL"
+  },
+  {
+    "n": 8,
+    "nombre": "SEMILLERO DE INVESTIGACION EN DISEÑO DE MATRICES ALIMENTARIAS FUNCIONALES (SI-DMAF)",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL"
+  },
+  {
+    "n": 9,
+    "nombre": "ESENCIA ALTIPLÁNICA",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL"
+  },
+  {
+    "n": 10,
+    "nombre": "REVALORIZACIÓN DE PRODUCTOS ALTOANDINOS",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL"
+  },
+  {
+    "n": 11,
+    "nombre": "AGRODET",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL"
+  },
+  {
+    "n": 12,
+    "nombre": "SEMILLERO DE INVESTIGACION DE CONTROL DE PROCESOS AGROINDUSTRIALES - SICPAI",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL"
+  },
+  {
+    "n": 13,
+    "nombre": "GRUPO DE INVESTIGACION EN BIOQUÍMICA VETERINARIA (GIBIOQVET)",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA"
+  },
+  {
+    "n": 14,
+    "nombre": "CIACS CIRCULO DE INVESTIGACION ALTO ANDINA EN CAMÉLIDOS",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA"
+  },
+  {
+    "n": 15,
+    "nombre": "LIDERES DE CHUQUIBAMBILLA",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA"
+  },
+  {
+    "n": 16,
+    "nombre": "FISIOLOGÍA DE ALTURA: APLICACIÓN DE TÉCNICAS COMPLEMENTARIAS PARA EL ESTUDIO DE PROCESOS FISIOLÓGICOS EN ANIMALES DOMÉSTICOS.",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA"
+  },
+  {
+    "n": 17,
+    "nombre": "CARACTERIZACIÓN DE BIOMARCADORES HORMONALES DURANTE EL PRIMER TERCIO DE GESTACIÓN EN ALPACAS HUACAYA",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA"
+  },
+  {
+    "n": 18,
+    "nombre": "GENÉTICA Y GENÓMICA EN LA SALUD ANIMAL DE ALTURA",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA"
+  },
+  {
+    "n": 19,
+    "nombre": "ECONOMÍA Y NEGOCIOS",
+    "facultad": "INGENIERÍA ECONÓMICA",
+    "ep": "INGENIERÍA ECONÓMICA"
+  },
+  {
+    "n": 20,
+    "nombre": "ZEUS - INVESTIGACION EN DESARROLLO ECONOMÍA SOSTENIBLE",
+    "facultad": "INGENIERÍA ECONÓMICA",
+    "ep": "INGENIERÍA ECONÓMICA"
+  },
+  {
+    "n": 21,
+    "nombre": "SEMILLERO DE INVESTIGACION EN CONTABILIDAD, TRIBUTACIÓN E INNOVACIÓN EMPRESARIAL",
+    "facultad": "CIENCIAS CONTABLES Y ADMINISTRATIVAS",
+    "ep": "CONTABILIDAD"
+  },
+  {
+    "n": 22,
+    "nombre": "SEMILLERO DE INVESTIGACION EN COSTOS Y TOMA DE DECISIONES EMPRESARIALES",
+    "facultad": "CIENCIAS CONTABLES Y ADMINISTRATIVAS",
+    "ep": "CONTABILIDAD"
+  },
+  {
+    "n": 23,
+    "nombre": "VOCES EN MOVIMIENTO DE TRABAJO (PRISMA)",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL"
+  },
+  {
+    "n": 24,
+    "nombre": "SEMILLERO PRISMA SOCIAL",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL"
+  },
+  {
+    "n": 25,
+    "nombre": "SEMILLERO DE INVESTIGACION, INNOVACIÓN Y UNIÓN SOCIAL (SIRIUS)",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL"
+  },
+  {
+    "n": 26,
+    "nombre": "SEMILLEROS GENERACCION SOCIAL",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL"
+  },
+  {
+    "n": 27,
+    "nombre": "MENTES EN ACCION PARA LA TRANSFORMACION SOCIAL",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL"
+  },
+  {
+    "n": 28,
+    "nombre": "MINERÍA INTELIGENTE Y TRANSFORMACIÓN DIGITAL",
+    "facultad": "INGENIERÍA DE MINAS",
+    "ep": "INGENIERÍA DE MINAS"
+  },
+  {
+    "n": 29,
+    "nombre": "HIDROMIN-IA (SEMILLERO DE INVESTIGACION EN HIDROGEOQUÍMICA APLICADA E INTELIGENCIA COMPUTACIONAL MINERO-AMBIENTAL)",
+    "facultad": "INGENIERÍA DE MINAS",
+    "ep": "INGENIERÍA DE MINAS"
+  },
+  {
+    "n": 30,
+    "nombre": "RAÍCES HUMANAS",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "ANTROPOLOGÍA"
+  },
+  {
+    "n": 31,
+    "nombre": "GRUPO DE INVESTIGACIONES ANTROPOLÓGICAS (GIA)",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "ANTROPOLOGÍA"
+  },
+  {
+    "n": 32,
+    "nombre": "COMUNICACIÓN PARTICIPATIVA Y DESARROLLO TERRITORIAL - COPADET",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "CIENCIAS DE LA COMUNICACIÓN SOCIAL"
+  },
+  {
+    "n": 33,
+    "nombre": "COMUNICACIÓN PARA LA INVESTIGACION ACCIÓN - CIA",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "CIENCIAS DE LA COMUNICACIÓN SOCIAL"
+  },
+  {
+    "n": 34,
+    "nombre": "COMUNICACIÓN DIGITAL Y CAMBIO SOCIAL - CODICAS",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "CIENCIAS DE LA COMUNICACIÓN SOCIAL"
+  },
+  {
+    "n": 35,
+    "nombre": "VISUALIZANDO LAS REDES DIGITALES",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "ARTE"
+  },
+  {
+    "n": 36,
+    "nombre": "REDES QUE GUÍAN EL TURISMO MODERNO",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "TURISMO"
+  },
+  {
+    "n": 37,
+    "nombre": "CIENCIAS SOCIALES DE LA INVESTIGACION",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "TURISMO"
+  },
+  {
+    "n": 38,
+    "nombre": "YUYAY, CULTURA Y COGNICION",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "DEPARTAMENTO DE HUMANIDADES"
+  },
+  {
+    "n": 39,
+    "nombre": "SEMILLEROS PSICOLOGÍA",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "PSICOLOGÍA"
+  },
+  {
+    "n": 40,
+    "nombre": "MICROHEM-PAR",
+    "facultad": "CIENCIAS BIOLÓGICAS",
+    "ep": "BIOLOGÍA"
+  },
+  {
+    "n": 41,
+    "nombre": "SEMILLERO DE INNOVACION EDUCATIVA CON IA (SIE-IA)",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERIA ESTADISTICA E INFORMATICA"
+  },
+  {
+    "n": 42,
+    "nombre": "GEOFFREY HINTON - IIICCD",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERIA ESTADISTICA E INFORMATICA"
+  },
+  {
+    "n": 43,
+    "nombre": "ARS BAYESIANA",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERIA ESTADISTICA E INFORMATICA"
+  },
+  {
+    "n": 44,
+    "nombre": "DATA STAT RESEARCH",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERIA ESTADISTICA E INFORMATICA"
+  },
+  {
+    "n": 45,
+    "nombre": "VISIBILIZANDO LA PRIMERA INFANCIA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN INICIAL"
+  },
+  {
+    "n": 46,
+    "nombre": "SEMILLEROS DEL SABER",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN INICIAL"
+  },
+  {
+    "n": 47,
+    "nombre": "SEMILLERO DE INVESTIGACION MONTESSORI (SIM)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA"
+  },
+  {
+    "n": 48,
+    "nombre": "INVESTICIENCIA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA"
+  },
+  {
+    "n": 49,
+    "nombre": "EURECA TEAM",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA"
+  },
+  {
+    "n": 50,
+    "nombre": "E-PRIMA INVESTIGA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA"
+  },
+  {
+    "n": 51,
+    "nombre": "ILLARIY INNOVA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA"
+  },
+  {
+    "n": 52,
+    "nombre": "DIVERGEN EDUTECH",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA"
+  },
+  {
+    "n": 53,
+    "nombre": "EPISTEME YACHAY",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA"
+  },
+  {
+    "n": 54,
+    "nombre": "NOVA SCIENTIA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA"
+  },
+  {
+    "n": 55,
+    "nombre": "EXDUCERE",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA"
+  },
+  {
+    "n": 56,
+    "nombre": "INNOVADORES EDU TECH",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA"
+  },
+  {
+    "n": 57,
+    "nombre": "SEMILLERO DE INVESTIGACION CIENCIA, INNOVACIÓN, TECNOLOGÍA Y EDUCACIÓN EN SALUD (CITES)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA"
+  },
+  {
+    "n": 58,
+    "nombre": "HIERBAS SANTAS",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA"
+  },
+  {
+    "n": 59,
+    "nombre": "SEMILLERO DE INVESTIGACION CIENCIA, TECNOLOGÍA E INNOVACIÓN (CITEI)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA"
+  },
+  {
+    "n": 60,
+    "nombre": "SEMILLERO DE INVESTIGACION ETNOMATEMATICAS Y SABERES ANDINOS (SIESA)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA"
+  },
+  {
+    "n": 61,
+    "nombre": "SEMILLERO DE INVESTIGACION EN EDUCACIÓN FÍSICA Y LIDERAZGO FEMENINO (SIEFLF)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN FÍSICA"
+  },
+  {
+    "n": 62,
+    "nombre": "HORIZONTE DE LA INVESTIGACION CIENTÍFICA EN EDUCACIÓN FÍSICA (HORICEF)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN FÍSICA"
+  },
+  {
+    "n": 63,
+    "nombre": "ENERGÍAS RENOVABLES",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "INGENIERÍA QUÍMICA"
+  },
+  {
+    "n": 64,
+    "nombre": "SEMILLERO DE INVESTIGACION EN ORDENAMIENTO TERRITORIAL Y SOSTENIBILIDAD AMBIENTAL (SIOTSA)",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA"
+  },
+  {
+    "n": 65,
+    "nombre": "SEMILLERO DE INVESTIGACION EN ORDENAMIENTO TERRITORIAL ANDINO (SIOTA)",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA"
+  },
+  {
+    "n": 66,
+    "nombre": "LAGOURBANO",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA"
+  },
+  {
+    "n": 67,
+    "nombre": "EDUAGUA PUNO",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA"
+  },
+  {
+    "n": 68,
+    "nombre": "RESILIENCIA COMUNITARIA Y CULTURA DE PREVENCIÓN EN EL CERRO AZOGUINE - PREVENCIÓN AZOGUINE",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA"
+  },
+  {
+    "n": 69,
+    "nombre": "INNOVACIÓN TRANSDISCIPLINAR EN INFRAESTRUCTURA SOSTENIBLE (ITIS)",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA"
+  },
+  {
+    "n": 70,
+    "nombre": "ODONTOCIENCIA Y SALUD",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA"
+  },
+  {
+    "n": 71,
+    "nombre": "GENERACIÓN ODONTOINVESTIGADORA",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA"
+  },
+  {
+    "n": 72,
+    "nombre": "SINERGIA ODONTO-KIDS",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA"
+  },
+  {
+    "n": 73,
+    "nombre": "ODONTOCIENCIA",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA"
+  },
+  {
+    "n": 74,
+    "nombre": "SEMILLERO RAÍCES ODONTOLOGICAS",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA"
+  },
+  {
+    "n": 75,
+    "nombre": "INVESTIGA DENTAL",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA"
+  },
+  {
+    "n": 76,
+    "nombre": "DENT - INV",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA"
+  },
+  {
+    "n": 77,
+    "nombre": "NEXO MATEMÁTICO",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "CIENCIAS FÍSICO MATEMÁTICAS"
+  },
+  {
+    "n": 78,
+    "nombre": "FÍSICOS DE LA UNA",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "CIENCIAS FÍSICO MATEMÁTICAS"
+  },
+  {
+    "n": 79,
+    "nombre": "MODELIZACIÓN MATEMÁTICA",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "CIENCIAS FÍSICO MATEMÁTICAS"
+  },
+  {
+    "n": 80,
+    "nombre": "SEMILLERO DE INVESTIGACION EN: CIENCIAS DE LOS MATERIALES",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "INGENIERÍA CIVIL"
+  },
+  {
+    "n": 81,
+    "nombre": "RESEARCH IN MATERIALS AND CONSTRUCTION TECHNOLOGY",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "INGENIERÍA CIVIL"
+  },
+  {
+    "n": 82,
+    "nombre": "MONUMENTA",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "ARQUITECTURA Y URBANISMO"
+  },
+  {
+    "n": 83,
+    "nombre": "INTELIGENCIA COMPUTACIONAL APLICADA",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 84,
+    "nombre": "SEMILLERO DE INNOVACIÓN TECNOLÓGICA Y EDUCACIÓN INCLUSIVA \"AXIS\"",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 85,
+    "nombre": "INNOVA SISTEMAS",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 86,
+    "nombre": "SEMILLERO DE COMPUTACIÓN INTELIGENTE PARA EL DESARROLLO REGIONAL-JILATANAKATECH",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 87,
+    "nombre": "SEMILLERO DE INVESTIGACION EN SEGURIDAD DE INFORMACIÓN (SISI)",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 88,
+    "nombre": "SYNAPSE",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 89,
+    "nombre": "KENJA NO KAI",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 90,
+    "nombre": "NEURO VISIÓN",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 91,
+    "nombre": "PEEPAL",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 92,
+    "nombre": "SCIENCE DISTRI",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 93,
+    "nombre": "PROYECTO MUHU",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 94,
+    "nombre": "COMPUGRAPH PUNO",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 95,
+    "nombre": "CLIMATECH UNA PUNO",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 96,
+    "nombre": "TURISMO PUNO",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 97,
+    "nombre": "NEUROLAB DATA",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS"
+  },
+  {
+    "n": 98,
+    "nombre": "JOSEPH FOURIER ENERGÍA Y CALOR (JFEC)",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA MECÁNICA ELÉCTRICA"
+  },
+  {
+    "n": 99,
+    "nombre": "SCI-PROYECT (SISTEMA DE CONTROL INTELIGENTE)",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA MECÁNICA ELÉCTRICA"
+  },
+  {
+    "n": 100,
+    "nombre": "FERDINAND PORSCHE",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA MECÁNICA ELÉCTRICA"
+  },
+  {
+    "n": 101,
+    "nombre": "ENERGÍAS RENOVABLES - BATERÍAS DE LITIO",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA MECÁNICA ELÉCTRICA"
+  },
+  {
+    "n": 102,
+    "nombre": "CALIBRATECH PRECISION GROUP",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA MECÁNICA ELÉCTRICA"
+  },
+  {
+    "n": 103,
+    "nombre": "LUMEN FUTURI",
+    "facultad": "CIENCIAS ADMINISTRATIVAS Y HUMANAS",
+    "ep": "ADMINISTRACIÓN"
+  }
+];
+
+export const semilleros2023 = [
+  {
+    "n": 1,
+    "nombre": "MUEJERES INVESTIGADORAS DE CIENCIAS DE LA SALUD",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "Odontología"
+  },
+  {
+    "n": 2,
+    "nombre": "SEMILLEROS DE INVESTIGACIÓN EDUCATIVA YACHAY (SIEY)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA"
+  }
+];
+
+export const semillerosPorFacultad2025 = [];
+
+export const semillerosFinanciamiento = [
+  {
+    "id": 1,
+    "nombre": " PERFIL DE RESISTENCIA BACTERIANA AISLADAS DE LOS RELAVES MINEROS DEL CENTRO POBLADO DE LA MINA LA RINCONADA. PUNO - 2024",
+    "titulo": " PERFIL DE RESISTENCIA BACTERIANA AISLADAS DE LOS RELAVES MINEROS DEL CENTRO POBLADO DE LA MINA LA RINCONADA. PUNO - 2024",
+    "facultad": "CIENCIAS BIOLÓGICAS",
+    "ep": "BIOLOGIA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 2,
+    "nombre": "ANÁLISIS DE LA RADIACIÓN ULTRAVIOLETA Y SUS EFECTOS EN LA SALUD AMBIENTAL DE LA POBLACIÓN DE LA CIUDAD DE PUNO",
+    "titulo": "ANÁLISIS DE LA RADIACIÓN ULTRAVIOLETA Y SUS EFECTOS EN LA SALUD AMBIENTAL DE LA POBLACIÓN DE LA CIUDAD DE PUNO",
+    "facultad": "CIENCIAS BIOLÓGICAS",
+    "ep": "BIOLOGIA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 3,
+    "nombre": "DESARROLLO DE  PELICULA ACTIVA A BASE DE ALMIDÓN DE CÁSCARA DE PAPA Y EXTRACTO DE ORÉGANO PARA ALARGAR LA VIDA ÚTIL DEL QUESO FRESCO",
+    "titulo": "DESARROLLO DE  PELICULA ACTIVA A BASE DE ALMIDÓN DE CÁSCARA DE PAPA Y EXTRACTO DE ORÉGANO PARA ALARGAR LA VIDA ÚTIL DEL QUESO FRESCO",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERIA AGROINDUSTRIAL",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 4,
+    "nombre": "ANÁLISIS FACTORIAL DE LOS DETERMINANTES SOCIALES Y LA INCIDENCIA DE LA ANEMIA EN NIÑOS  DE 5 AÑOS EN BARRIOS URBANO MARGINALES DE PUNO.",
+    "titulo": "ANÁLISIS FACTORIAL DE LOS DETERMINANTES SOCIALES Y LA INCIDENCIA DE LA ANEMIA EN NIÑOS  DE 5 AÑOS EN BARRIOS URBANO MARGINALES DE PUNO.",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 5,
+    "nombre": "SIETE NIVELES LINGÜÍSTICOS Y COMPRENSIÓN LECTORA: UN ENFOQUE EXPERIMENTAL PARA POTENCIAR LA LECTURA EN NIÑOS",
+    "titulo": "SIETE NIVELES LINGÜÍSTICOS Y COMPRENSIÓN LECTORA: UN ENFOQUE EXPERIMENTAL PARA POTENCIAR LA LECTURA EN NIÑOS",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACION PRIMARIA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 6,
+    "nombre": "CARACTERIZACIÓN DE PAPAS NATIVAS DE LA REGIÓN DE PUNO",
+    "titulo": "CARACTERIZACIÓN DE PAPAS NATIVAS DE LA REGIÓN DE PUNO",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERIA AGRONOMICA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 7,
+    "nombre": "IMPACTO DEL CÁLCULO DE LA HUELLA HÍDRICA EN LA CONCIENCIA AMBIENTAL SOBRE EL USO RESPONSABLE DEL AGUA EN ESTUDIANTES DE EDUCACIÓN PRIMARIA",
+    "titulo": "IMPACTO DEL CÁLCULO DE LA HUELLA HÍDRICA EN LA CONCIENCIA AMBIENTAL SOBRE EL USO RESPONSABLE DEL AGUA EN ESTUDIANTES DE EDUCACIÓN PRIMARIA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACION PRIMARIA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 8,
+    "nombre": "EFECTO DEL PASTOREO EN LA CAPACIDAD DE ALMACENAMIENTO DE CARBONO DE PASTIZALES ALTOANDINOS",
+    "titulo": "EFECTO DEL PASTOREO EN LA CAPACIDAD DE ALMACENAMIENTO DE CARBONO DE PASTIZALES ALTOANDINOS",
+    "facultad": "CIENCIAS BIOLÓGICAS",
+    "ep": "BIOLOGIA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 9,
+    "nombre": "LA IMPLEMENTACIÓN DE LA INTELIGENCIA ARTIFICIAL EN LA REDACCIÓN DE ARTÍCULOS CIENTÍFICOS CUALITATIVOS EN ESTUDIANTES DE LA FACULTAD CIENCIAS DE LA EDUCACIÓN UNA-PUNO-2024.",
+    "titulo": "LA IMPLEMENTACIÓN DE LA INTELIGENCIA ARTIFICIAL EN LA REDACCIÓN DE ARTÍCULOS CIENTÍFICOS CUALITATIVOS EN ESTUDIANTES DE LA FACULTAD CIENCIAS DE LA EDUCACIÓN UNA-PUNO-2024.",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACION SECUNDARIA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 10,
+    "nombre": "ACTIVIDAD FISICA ADAPTADA PARA MEJORAR LA COORDINACIÓN MOTRIZ EN ESTUDIANTES CON DEFICIENCIA VISUAL EN UNA INSTITUCIÓN EDUCATIVA ESPECIAL",
+    "titulo": "ACTIVIDAD FISICA ADAPTADA PARA MEJORAR LA COORDINACIÓN MOTRIZ EN ESTUDIANTES CON DEFICIENCIA VISUAL EN UNA INSTITUCIÓN EDUCATIVA ESPECIAL",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACION FISICA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 11,
+    "nombre": "EFICACIA DE UN PROGRAMA DE INTERVENCIÓN EDUCATIVA INCLUSIVA SOBRE EL CONOCIMIENTO Y EL COMPORTAMIENTO HACIA LA SALUD BUCAL EN ESCOLARES DEL ALTIPLANO PUNEÑO.",
+    "titulo": "EFICACIA DE UN PROGRAMA DE INTERVENCIÓN EDUCATIVA INCLUSIVA SOBRE EL CONOCIMIENTO Y EL COMPORTAMIENTO HACIA LA SALUD BUCAL EN ESCOLARES DEL ALTIPLANO PUNEÑO.",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGIA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 12,
+    "nombre": "IDENTIFICACIÓN RÁPIDA DE LA CARNE DE CAMÉLIDOS SUDAMERICANOS MEDIANTE LA VISIÓN POR COMPUTADOR Y REDES NEURONALES CONVOLUCIONALES",
+    "titulo": "IDENTIFICACIÓN RÁPIDA DE LA CARNE DE CAMÉLIDOS SUDAMERICANOS MEDIANTE LA VISIÓN POR COMPUTADOR Y REDES NEURONALES CONVOLUCIONALES",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERIA AGROINDUSTRIAL",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 13,
+    "nombre": "IMPACTO EN LA INTELIGENCIA GENERAL DE LAS HABILIDADES MOTRICES EN NIÑOS DE EDUCACIÓN INFANTIL",
+    "titulo": "IMPACTO EN LA INTELIGENCIA GENERAL DE LAS HABILIDADES MOTRICES EN NIÑOS DE EDUCACIÓN INFANTIL",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACION FISICA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 14,
+    "nombre": "CARACTERIZACIÓN BIOQUÍMICA DEL LÍQUIDO HIDATÍDICO DE VACUNOS DE LA REGIÓN PUNO",
+    "titulo": "CARACTERIZACIÓN BIOQUÍMICA DEL LÍQUIDO HIDATÍDICO DE VACUNOS DE LA REGIÓN PUNO",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 15,
+    "nombre": "INFLUENCIA DEL CIBERACOSO EN EL COMPORTAMIENTO DE LOS ESTUDIANTES DE LA IES.GRAN UNIDAD ESCOLAR SAN CARLOS DE LA CIUDAD DE PUNO -2024",
+    "titulo": "INFLUENCIA DEL CIBERACOSO EN EL COMPORTAMIENTO DE LOS ESTUDIANTES DE LA IES.GRAN UNIDAD ESCOLAR SAN CARLOS DE LA CIUDAD DE PUNO -2024",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 16,
+    "nombre": "EVALUACIÓN DE LA CONTAMINACIÓN POR METALES PESADOS TÓXICOS EN ROCAS Y SUELOS DE LA MICROCUENCA DE LA LAGUNA UMAYO Y SU DISTRIBUCIÓN ESPACIAL MEDIANTE ANÁLISIS",
+    "titulo": "EVALUACIÓN DE LA CONTAMINACIÓN POR METALES PESADOS TÓXICOS EN ROCAS Y SUELOS DE LA MICROCUENCA DE LA LAGUNA UMAYO Y SU DISTRIBUCIÓN ESPACIAL MEDIANTE ANÁLISIS",
+    "facultad": "INGENIERÍA GEOLÓGICA Y METALÚRGICA",
+    "ep": "INGENIERIA METALURGICA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 17,
+    "nombre": "EFECTO ANTIPIRETICO DEL EXTRACTO ETANOLICO DEL AYRAMPO (OPUNTIA SOEHRENSIS) SOBRE RATAS CON INDUCCION FEBRIL",
+    "titulo": "EFECTO ANTIPIRETICO DEL EXTRACTO ETANOLICO DEL AYRAMPO (OPUNTIA SOEHRENSIS) SOBRE RATAS CON INDUCCION FEBRIL",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 18,
+    "nombre": "ACTIVIDAD FÍSICA, PREVALENCIA DE SOBREPESO Y OBESIDAD EN ADOLESCENTES DE ZONAS URBANAS Y RURALES DE PUNO.",
+    "titulo": "ACTIVIDAD FÍSICA, PREVALENCIA DE SOBREPESO Y OBESIDAD EN ADOLESCENTES DE ZONAS URBANAS Y RURALES DE PUNO.",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACION FISICA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 19,
+    "nombre": "IMPACTOS ECONÓMICOS Y AMBIENTALES POR ACTIVIDADES HUMANAS EN EL ENTORNO DEL LAGO TITICACA: PERCEPCIÓN Y EVALUACIÓN POR ESTUDIANTES DE LA UNIVERSIDAD NACIONAL DEL ALTIPLANO",
+    "titulo": "IMPACTOS ECONÓMICOS Y AMBIENTALES POR ACTIVIDADES HUMANAS EN EL ENTORNO DEL LAGO TITICACA: PERCEPCIÓN Y EVALUACIÓN POR ESTUDIANTES DE LA UNIVERSIDAD NACIONAL DEL ALTIPLANO",
+    "facultad": "INGENIERIA ECONOMICA",
+    "ep": "INGENIERÍA ECONÓMICA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 20,
+    "nombre": "PREVALENCIA Y ANÁLISIS FILOGENÉTICO DE LOS CÉSTODES EN EL ISPI (ORESTIA ISPI) EXPENDIDOS EN LOS MERCADOS DE LA CIUDAD DE PUNO",
+    "titulo": "PREVALENCIA Y ANÁLISIS FILOGENÉTICO DE LOS CÉSTODES EN EL ISPI (ORESTIA ISPI) EXPENDIDOS EN LOS MERCADOS DE LA CIUDAD DE PUNO",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 21,
+    "nombre": "DESARROLLO DE UNA BEBIDA FUNCIONAL PROBIÓTICA MEDIANTE LA FERMENTACIÓN CON BACTERIAS LÁCTICAS EN MEZCLAS DE SUERO DE QUESO CON CASCARA DE CAFÉ",
+    "titulo": "DESARROLLO DE UNA BEBIDA FUNCIONAL PROBIÓTICA MEDIANTE LA FERMENTACIÓN CON BACTERIAS LÁCTICAS EN MEZCLAS DE SUERO DE QUESO CON CASCARA DE CAFÉ",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "ING. AGROINDUSTRIAL",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 22,
+    "nombre": "DESARROLLO Y EVALUACIÓN DE ELECTRODOS AVANZADOS DE TI/PBO₂ PARA LA DEGRADACIÓN ELECTROQUÍMICA DEL COLORANTE LANASET AZUL 2R EN EFLUENTES TEXTILES",
+    "titulo": "DESARROLLO Y EVALUACIÓN DE ELECTRODOS AVANZADOS DE TI/PBO₂ PARA LA DEGRADACIÓN ELECTROQUÍMICA DEL COLORANTE LANASET AZUL 2R EN EFLUENTES TEXTILES",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "INGENIERÍA QUÍMICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 23,
+    "nombre": "INFLUENCIA DE LA CALIDAD DEL SUEÑO EN LA CAPACIDAD COGNITIVA EN ADULTOS RESIDENTES DE GRAN Y EXTREMA ALTITUD EN POBLACIONES ALTOANDINAS, 2025",
+    "titulo": "INFLUENCIA DE LA CALIDAD DEL SUEÑO EN LA CAPACIDAD COGNITIVA EN ADULTOS RESIDENTES DE GRAN Y EXTREMA ALTITUD EN POBLACIONES ALTOANDINAS, 2025",
+    "facultad": "MEDICINA HUMANA",
+    "ep": "MEDICINA HUMANA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 24,
+    "nombre": "MACHINE LEARNING EN EL DIAGNÓSTICO DE LESIÓN RENAL AGUDA: MODELO PREDICTIVO A MÁS 3800 MSNM",
+    "titulo": "MACHINE LEARNING EN EL DIAGNÓSTICO DE LESIÓN RENAL AGUDA: MODELO PREDICTIVO A MÁS 3800 MSNM",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGIA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 25,
+    "nombre": "DESARROLLO DE TECNOLOGÍA ELECTROQUÍMICA AVANZADA PARA LA PRODUCCIÓN SOSTENIBLE DE HIDRÓGENO VERDE EN EL ALTIPLANO",
+    "titulo": "DESARROLLO DE TECNOLOGÍA ELECTROQUÍMICA AVANZADA PARA LA PRODUCCIÓN SOSTENIBLE DE HIDRÓGENO VERDE EN EL ALTIPLANO",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "INGENIERÍA QUÍMICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 26,
+    "nombre": "RECICLAJE ELECTROQUÍMICO DE NÍQUEL DESDE BATERÍAS FUERA DE USO EN EL MARCO DE LA ECONOMÍA CIRCULAR DE MATERIALES ESTRATÉGICOS",
+    "titulo": "RECICLAJE ELECTROQUÍMICO DE NÍQUEL DESDE BATERÍAS FUERA DE USO EN EL MARCO DE LA ECONOMÍA CIRCULAR DE MATERIALES ESTRATÉGICOS",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "INGENIERÍA QUÍMICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 27,
+    "nombre": "APLICACIÓN DE REDES BAYESIANAS PARA LA INFERENCIA CAUSAL DE LAS RELACIONES ENTRE ESTRÉS ACADÉMICO, ANSIEDAD Y DEPRESIÓN EN ESTUDIANTES DE LA UNIVERSIDAD NACIONAL DEL ALTIPLANO",
+    "titulo": "APLICACIÓN DE REDES BAYESIANAS PARA LA INFERENCIA CAUSAL DE LAS RELACIONES ENTRE ESTRÉS ACADÉMICO, ANSIEDAD Y DEPRESIÓN EN ESTUDIANTES DE LA UNIVERSIDAD NACIONAL DEL ALTIPLANO",
+    "facultad": "INGENIERIA ESTADISTICA E INFORMATICA",
+    "ep": "INGENIERIA ESTADISTICA E INFORMATICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 28,
+    "nombre": "DESARROLLO DE UNA PASTA NUTRI-FUNCIONAL TIPO “ESPAGUETI” CON INCORPORACIÓN DE HARINAS DE ALGA LLASKA (CLADOPHORA CRISPATA) Y TARWI (LUPINUS MUTABILIS)",
+    "titulo": "DESARROLLO DE UNA PASTA NUTRI-FUNCIONAL TIPO “ESPAGUETI” CON INCORPORACIÓN DE HARINAS DE ALGA LLASKA (CLADOPHORA CRISPATA) Y TARWI (LUPINUS MUTABILIS)",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "ING. AGROINDUSTRIAL",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 29,
+    "nombre": "“CONCENTRACIÓN DE MONÓXIDO DE CARBONO (CO) Y SUS VALORES PERMISIBLES DE LA CIUDAD DE PUNO 2025”",
+    "titulo": "“CONCENTRACIÓN DE MONÓXIDO DE CARBONO (CO) Y SUS VALORES PERMISIBLES DE LA CIUDAD DE PUNO 2025”",
+    "facultad": "INGENIERIA ESTADISTICA E INFORMATICA",
+    "ep": "INGENIERIA ESTADISTICA E INFORMATICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 30,
+    "nombre": "FACTORES DE RIESGO PSICOSOCIAL EN ADOLESCENTES: ESTUDIO COMPARATIVO EN INSTITUCIONES EDUCATIVAS DE LA REGIÓN PUNO",
+    "titulo": "FACTORES DE RIESGO PSICOSOCIAL EN ADOLESCENTES: ESTUDIO COMPARATIVO EN INSTITUCIONES EDUCATIVAS DE LA REGIÓN PUNO",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 31,
+    "nombre": "CONTROL DE UNA MICRORED HIDROSOLAR PARA OPTIMIZAR LA CARGA EN LA MINI-CENTRAL DE LIMBANI",
+    "titulo": "CONTROL DE UNA MICRORED HIDROSOLAR PARA OPTIMIZAR LA CARGA EN LA MINI-CENTRAL DE LIMBANI",
+    "facultad": "MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "ING. MECANICA ELECTRICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 32,
+    "nombre": "DIAGNÓSTICO AUTOMATIZADO DE NEUMONÍA EN RADIOGRAFÍAS DE TÓRAX MEDIANTE REDES NEURONALES CONVOLUCIONALES: ANÁLISIS DE CASOS. PUNO, 2020-2024",
+    "titulo": "DIAGNÓSTICO AUTOMATIZADO DE NEUMONÍA EN RADIOGRAFÍAS DE TÓRAX MEDIANTE REDES NEURONALES CONVOLUCIONALES: ANÁLISIS DE CASOS. PUNO, 2020-2024",
+    "facultad": "MEDICINA HUMANA",
+    "ep": "MEDICINA HUMANA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 33,
+    "nombre": "EVALUACIÓN DE LA PRODUCCIÓN DE EMBRIONES IN VITRO EN OVINOS CRIOLLOS BAJO CONDICIONES DEL ALTIPLANO PERUANO",
+    "titulo": "EVALUACIÓN DE LA PRODUCCIÓN DE EMBRIONES IN VITRO EN OVINOS CRIOLLOS BAJO CONDICIONES DEL ALTIPLANO PERUANO",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 34,
+    "nombre": "DISEÑO E IMPLEMENTACIÓN DE UN SISTEMA DE CALEFACCIÓN SOLAR PASIVA PARA LA MEJORA DEL CONFORT TÉRMICO EN VIVIENDAS RURALES DE ZONAS ALTOANDINAS EN PUNO",
+    "titulo": "DISEÑO E IMPLEMENTACIÓN DE UN SISTEMA DE CALEFACCIÓN SOLAR PASIVA PARA LA MEJORA DEL CONFORT TÉRMICO EN VIVIENDAS RURALES DE ZONAS ALTOANDINAS EN PUNO",
+    "facultad": "MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "ING. MECANICA ELECTRICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 35,
+    "nombre": "DETECCIÓN AUTOMÁTICA DE ANOMALÍAS MORFOLÓGICAS EN ALPACAS DEL ALTIPLANO PUNEÑO MEDIANTE EL DESARROLLO DE UN SISTEMA BASADO EN VISIÓN COMPUTACIONAL",
+    "titulo": "DETECCIÓN AUTOMÁTICA DE ANOMALÍAS MORFOLÓGICAS EN ALPACAS DEL ALTIPLANO PUNEÑO MEDIANTE EL DESARROLLO DE UN SISTEMA BASADO EN VISIÓN COMPUTACIONAL",
+    "facultad": "INGENIERIA ESTADISTICA E INFORMATICA",
+    "ep": "INGENIERIA ESTADISTICA E INFORMATICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 36,
+    "nombre": "ECOBARÓMETRO ANDINO: DESARROLLO DE INDICADORES PARA EVALUAR LA CONCIENCIA AMBIENTAL EN ESTUDIANTES DE EDUCACIÓN PRIMARIA DE LA CIUDAD DE PUNO",
+    "titulo": "ECOBARÓMETRO ANDINO: DESARROLLO DE INDICADORES PARA EVALUAR LA CONCIENCIA AMBIENTAL EN ESTUDIANTES DE EDUCACIÓN PRIMARIA DE LA CIUDAD DE PUNO",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 37,
+    "nombre": "CAMBIOS EN LOS NIVELES SÉRICOS DE HORMONAS TIROIDEAS EN CRÍAS DE ALPACAS POR EFECTO DEL DESTETE",
+    "titulo": "CAMBIOS EN LOS NIVELES SÉRICOS DE HORMONAS TIROIDEAS EN CRÍAS DE ALPACAS POR EFECTO DEL DESTETE",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 38,
+    "nombre": "MATERIALES BIOACTIVOS EN PULPITIS IRREVERSIBLE DE DIENTES DECIDUOS. ESTUDIO PILOTO",
+    "titulo": "MATERIALES BIOACTIVOS EN PULPITIS IRREVERSIBLE DE DIENTES DECIDUOS. ESTUDIO PILOTO",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGIA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 39,
+    "nombre": "MONITOREO DE CONTAMINACIÓN POR RESIDUOS SÓLIDOS EN EL LAGO TITICACA MEDIANTE ANÁLISIS DE REDES SOCIALES",
+    "titulo": "MONITOREO DE CONTAMINACIÓN POR RESIDUOS SÓLIDOS EN EL LAGO TITICACA MEDIANTE ANÁLISIS DE REDES SOCIALES",
+    "facultad": "INGENIERIA ESTADISTICA E INFORMATICA",
+    "ep": "INGENIERIA ESTADISTICA E INFORMATICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 40,
+    "nombre": "EVALUACIÓN DEL RENDIMIENTO DE MODELOS UNIVARIANTES Y MULTIVARIANTES DE MACHINE LEARNING Y DEEP LEARNING PARA PREDECIR EL ABANDONO DE CLIENTES FINANCIEROS EN LA REGIÓN PUNO",
+    "titulo": "EVALUACIÓN DEL RENDIMIENTO DE MODELOS UNIVARIANTES Y MULTIVARIANTES DE MACHINE LEARNING Y DEEP LEARNING PARA PREDECIR EL ABANDONO DE CLIENTES FINANCIEROS EN LA REGIÓN PUNO",
+    "facultad": "INGENIERIA ESTADISTICA E INFORMATICA",
+    "ep": "INGENIERIA ESTADISTICA E INFORMATICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 41,
+    "nombre": "ANÁLISIS FILOGÉNÉTICO DEL TRICHOSTRONGYLUS SP. EN ALPACAS DE LA ZONA SUR DE LA REGIÓN PUNO",
+    "titulo": "ANÁLISIS FILOGÉNÉTICO DEL TRICHOSTRONGYLUS SP. EN ALPACAS DE LA ZONA SUR DE LA REGIÓN PUNO",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 42,
+    "nombre": "IMPACTO DE LA TECNOLOGÍA MODERNA EN LA IDENTIDAD CULTURAL DE LOS ESTUDIANTES DEL COLEGIO COMERCIAL 45 PUNO – 2025.",
+    "titulo": "IMPACTO DE LA TECNOLOGÍA MODERNA EN LA IDENTIDAD CULTURAL DE LOS ESTUDIANTES DEL COLEGIO COMERCIAL 45 PUNO – 2025.",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 43,
+    "nombre": "PÉRDIDA DE PATRONES ALIMENTARIOS ANDINOS TRADICIONALES Y DESARROLLO DE TRASTORNOS GASTROINTESTINALES FUNCIONALES EN ESTUDIANTES UNIVERSITARIOS",
+    "titulo": "PÉRDIDA DE PATRONES ALIMENTARIOS ANDINOS TRADICIONALES Y DESARROLLO DE TRASTORNOS GASTROINTESTINALES FUNCIONALES EN ESTUDIANTES UNIVERSITARIOS",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUC. SECUNDARIA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 44,
+    "nombre": "PROMOCION DEL CONSUMO Y LA PRODUCCION DE CAÑIHUA (CHENOPODIUM PALLIDICAULE AELLEN) VARIEDAD CUPI PARA DISMINUIR LA ANEMIA EN NIÑOS DE EDAD ESCOLAR",
+    "titulo": "PROMOCION DEL CONSUMO Y LA PRODUCCION DE CAÑIHUA (CHENOPODIUM PALLIDICAULE AELLEN) VARIEDAD CUPI PARA DISMINUIR LA ANEMIA EN NIÑOS DE EDAD ESCOLAR",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "ING. AGRONOMICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 45,
+    "nombre": "ENCUADRES PERIODÍSTICOS SOBRE CONFLICTOS SOCIALES POR MINERIA EN LA PRENSA DIGITAL PERUANA",
+    "titulo": "ENCUADRES PERIODÍSTICOS SOBRE CONFLICTOS SOCIALES POR MINERIA EN LA PRENSA DIGITAL PERUANA",
+    "facultad": "CIENCIAS SOCIALES",
+    "ep": "COMUNICACIÓN SOCIAL",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 46,
+    "nombre": "MODELOS DE APRENDIZAJE AUTOMÁTICO PARA LA PREDICCIÓN DE LA TEMPERATURA MEDIA MENSUAL.",
+    "titulo": "MODELOS DE APRENDIZAJE AUTOMÁTICO PARA LA PREDICCIÓN DE LA TEMPERATURA MEDIA MENSUAL.",
+    "facultad": "INGENIERIA ESTADISTICA E INFORMATICA",
+    "ep": "INGENIERIA ESTADISTICA E INFORMATICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 47,
+    "nombre": "LOCALIZACIÓN DE FALLAS EN LÍNEAS DE TRANSMISIÓN",
+    "titulo": "LOCALIZACIÓN DE FALLAS EN LÍNEAS DE TRANSMISIÓN",
+    "facultad": "MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "ING. MECANICA ELECTRICA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 48,
+    "nombre": "ACEPTABILIDAD Y EFECTO DE UN ENJUAGUE BUCAL ARTESANAL A BASE DE PLANTAS ALTOANDINAS SOBRE EL PH SALIVAL EN ESCOLARES RURALES DE PAUCARCOLLA, PUNO, 2025",
+    "titulo": "ACEPTABILIDAD Y EFECTO DE UN ENJUAGUE BUCAL ARTESANAL A BASE DE PLANTAS ALTOANDINAS SOBRE EL PH SALIVAL EN ESCOLARES RURALES DE PAUCARCOLLA, PUNO, 2025",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGIA",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 49,
+    "nombre": "VALORACIÓN DE LOS RESIDUOS Y SUBPRODUCTOS DE LA TUNA EN EL DESARROLLO DE NUEVAS MATRICES ALIMENTARIAS UTILIZANDO TECNOLOGÍAS EMERGENTES COMO ALTERNATIVA DE ALIMENTACIÓN SALUDABLE",
+    "titulo": "VALORACIÓN DE LOS RESIDUOS Y SUBPRODUCTOS DE LA TUNA EN EL DESARROLLO DE NUEVAS MATRICES ALIMENTARIAS UTILIZANDO TECNOLOGÍAS EMERGENTES COMO ALTERNATIVA DE ALIMENTACIÓN SALUDABLE",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "ING. AGROINDUSTRIAL",
+    "monto": 10000.0,
+    "anio": 2025
+  },
+  {
+    "id": 50,
+    "nombre": "GEOFFREY HINTON - IIICCD",
+    "titulo": "SISTEMA FROST-PREDICT AI PARA LA ALERTA TEMPRANA DE HELADAS MEDIANTE MODELOS ESPACIO-TEMPORALES EXPLICABLES EN LA REGIÓN PUNO, PERÚ",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 51,
+    "nombre": "INNOVA SISTEMAS",
+    "titulo": "SISTEMA DE DETECCIÓN TEMPRANA DE CONFLICTOS SOCIOAMBIENTALES Y POLÍTICOS EN PUNO MEDIANTE PROCESAMIENTO DE LENGUAJE NATURAL Y UNA ARQUITECTURA BASADA EN AGENTES DE INTELIGENCIA ARTIFICIAL.",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 52,
+    "nombre": "AGROIDET",
+    "titulo": "SISTEMA DE DETECCIÓN Y CLASIFICACIÓN DE PLAGAS Y ANOMALÍAS EN QUINUA Y CAÑIHUA MEDIANTE REDES NEURONALES CONVOLUCIONALES (CNN) ",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 53,
+    "nombre": "ENERGIAS RENOVABLES",
+    "titulo": "OPTIMIZACIÓN Y MODELAMIENTO DE UN SISTEMA HÍBRIDO FOTO-ELECTRO-FENTON EN FLUJO CONTINUO PARA LA REMOCIÓN DE CR(VI) EN AGUAS RESIDUALES DE CURTIEMBRE",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "INGENIERÍA QUÍMICA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 54,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN TECNOLÓGICA Y EDUCACIÓN INCLUSIVA – “AXIS”",
+    "titulo": "SISTEMA DE SOFTWARE CON INTELIGENCIA ARTIFICIAL PARA TAMIZAJE NO INVASIVO DE ANEMIA INFANTIL EN POBLACIONES ALTOANDINAS DE PUNO ",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 55,
+    "nombre": "COMPUGRAPH PUNO",
+    "titulo": "ANDES-DT: GEMELO DIGITAL NEURAL CON INTELIGENCIA ARTIFICIAL GENERATIVA Y MODELOS DE DIFUSIÓN PARA LA SIMULACIÓN PREDICTIVA 4D DEL CAMBIO CLIMÁTICO EN EL ALTIPLANO PERUANO",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 56,
+    "nombre": "SINERGIA ODONTO-KIDS",
+    "titulo": "EFECTIVIDAD DE UNA INTERVENCIÓN PREVENTIVA ESTRATIFICADA SEGÚN RIESGO DE CARIES SOBRE LESIONES INICIALES DE CARIES EN ESCOLARES DE LA I.E.P. N.° 70035 BELLAVISTA, PUNO, 2026.",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 57,
+    "nombre": "ORAL HEALTH RESEARCHERS TEAM (OHRT)",
+    "titulo": "ACTIVIDAD ANTIMICROBIANA Y ANTIFÚNGICA DE ENJUAGUES BUCALES A BASE DE MINTHOSTACHYS MOLLIS Y EUCALYPTUS GLOBULUS FRENTE A CEPAS CERTIFICADAS Y AISLAMIENTOS CLÍNICOS ORALES DE ESCOLARES ",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 58,
+    "nombre": "TRANSFORMANDO LA ALIMENTACIÓN EN PRODUCCIÓN",
+    "titulo": "NUTRICIÓN DE PRECISIÓN ENERGÉTICA EN VACAS LECHERAS: ESTRATEGIA PARA CONTROLAR EL BALANCE ENERGÉTICO NEGATIVO DURANTE LA ÉPOCA SECA",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGRONÓMICA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 59,
+    "nombre": "ARS BAYESIANA",
+    "titulo": "ADICCIÓN A REDES SOCIALES Y SU RELACIÓN CON EL ESTILO DE VIDA Y LA SALUD MENTAL EN ESTUDIANTES DE LA UNIVERSIDAD NACIONAL DEL ALTIPLANO PUNO: UN MODELO DE  REDES BAYESIANAS",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 60,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN EDUCATIVA YACHAY",
+    "titulo": "COMPETENCIA DIGITAL, PENSAMIENTO CRÍTICO Y ALFABETIZACIÓN EN INTELIGENCIA ARTIFICIAL EN ESTUDIANTES UNIVERSITARIOS",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 61,
+    "nombre": "SOCIOLOGÍA PARA LA INVESTIGACIÓN ACCIÓN - SOCIOLOGIA",
+    "titulo": "CAPITAL SOCIAL Y PRÁCTICAS DE INNOVACIÓN EN LA PRODUCCIÓN DE DERIVADOS LÁCTEOS DE PRODUCTORES RURALES EN EL DISTRITO DE HUATA Y ACORA, PUNO",
+    "facultad": "CIENCIAS  SOCIALES",
+    "ep": "SOCIOLOGÍA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 62,
+    "nombre": "INNOVACIÓN EDUCATIVA",
+    "titulo": "LA PEDAGOGÍA BASADA EN EL JUEGO PARA EL DESARROLLO DEL SABER SER EN ESTUDIANTES DEL PROGRAMA DE LENGUA, LITERATURA Y PSICOLOGÍA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 63,
+    "nombre": "ESENCIA ALTIPLÁNICA",
+    "titulo": "DESARROLLO DE UNA CREMA FOTOPROTECTORA CON ACTIVIDAD ANTIOXIDANTE Y ANTIINFLAMATORIA A PARTIR DE CUSHURO Y SAPONINAS DE QUINUA",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 64,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN ETNOMATEMÁTICA Y SABERES ANDINOS (SIESA)",
+    "titulo": "NOCIONES DE PROBABILIDAD EN LA LECTURA DE LA HOJA DE COCA: UN ESTUDIO ETNOMATEMÁTICO CON YATIRIS DEL ALTIPLANO PUNEÑO",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 65,
+    "nombre": "YUYAY, CULTURA Y COGNICIÓN",
+    "titulo": "\"ENTRE DOS MUNDOS: NARRATIVAS DE SUFRIMIENTO PSÍQUICO Y TRANSICIÓN SOCIOCULTURAL EN ESTUDIANTES DE ORIGEN   RIURAL DE LA UNA PUNO. APORTES PARA PREVENIR LA CONDUCTA SUICIDA\"  ",
+    "facultad": "CIENCIAS  SOCIALES",
+    "ep": "DEPARTAMENTO DE HUMANIDADES",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 66,
+    "nombre": "RAICES HUMANAS",
+    "titulo": "TRANSFORMACIONES DE LA CULTURA ALIMENTARIA ANDINA: PRÁCTICAS, SIGNIFICADOS E INFLUENCIAS CONTEMPORÁNEAS EN LA ALIMENTACIÓN DE ESTUDIANTES DE ANTROPOLOGÍA DE LA UNIVERSIDAD NACIONAL DEL ALTIPLANO PUNO",
+    "facultad": "CIENCIAS  SOCIALES",
+    "ep": "ANTROPOLOGÍA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 67,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN, INNOVACIÓN Y UNIÓN SOCIAL” (SIRIUS)",
+    "titulo": "ENTORNOS DIGITALES Y BIENESTAR SOCIOEMOCIONAL: UN ESTUDIO SOBRE LA SALUD MENTAL EN ESTUDIANTES DE SECUNDARIA DE LA CIUDAD DE PUNO",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 68,
+    "nombre": "“SEMILLERO DE INVESTIGACIÓN EN DISEÑO DE MATRICES ALIMENTARIAS FUNCIONALES (SI- DMAF)”",
+    "titulo": "“VALORIZACIÓN DE FRESAS (FRAGARIA × ANANASSA) DE ALTURA MEDIANTE LA OBTENCIÓN DE UN INGREDIENTE FUNCIONAL EN POLVO UTILIZANDO UN SISTEMA HÍBRIDO DE SECADO POR VENTANA\"",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 69,
+    "nombre": "SEMILLERO\"GENERACCIONSOCIAL",
+    "titulo": "GOBERNANZA ALGORÍTMICA Y BRECHAS DE ACCESO A SERVICIOS PÚBLICOS DIGITALES EN POBLADORES DEL CENTRO POBLADO MENOR DE LLACHÓN, CAPACHICA, PUNO, 2026.",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 70,
+    "nombre": "IMPACTO DE LA EDUCACIÓN AMBIENTAL EN EL CONSUMO DE AGUA EN INSTITUCIONES EDUCATIVAS EN LA CIUDAD DE PUNO – “EDUAGUA PUNO”",
+    "titulo": "EVALUACIÓN DEL IMPACTO DE LA EDUCACIÓN AMBIENTAL EN EL CONSUMO HÍDRICO ESCOLAR: UN ANÁLISIS COMPARATIVO EN LA CIUDAD DE PUNO",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 71,
+    "nombre": "CLIMATECH UNA PUNO",
+    "titulo": "INTELIGENCIA ARTIFICIAL GENERATIVA Y TRANSFORMERS PARA EL PRONÓSTICO EN TIEMPO REAL DE FENÓMENOS METEOROLÓGICOS EXTREMOS EN EL ALTIPLANO PERUANO",
+    "facultad": "INGENIERÍA  MECÁNICA  ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 72,
+    "nombre": "SEMILLERO DE INVESTIGACION EN SEGURIDAD DE INFORMACION",
+    "titulo": "ANÁLISIS DEL RIESGO DE CIBERSEGURIDAD MEDIANTE MODELOS DE INTELIGENCIA ARTIFICIAL EN ESTUDIANTES DE LA UNIVERSIDAD NACIONAL DEL ALTIPLANO DE PUNO, 2026",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 73,
+    "nombre": "SEMILLEROS DE SERENDIPIA EN TRABAJO SOCIAL",
+    "titulo": "REPRESENTACIONES INSTITUCIONALES Y POLÍTICAS PÚBLICAS SOBRE LA GESTIÓN AMBIENTAL DEL LAGO TITICACA",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 74,
+    "nombre": "RESILIENCIA COMUNITARIA Y CULTURA DE PREVENCIÓN EN EL CERRO AZOGUINE – “PREVENCIÓNAZOGUINE”",
+    "titulo": "ESTRATEGIAS DE FORTALECIMIENTO DE LA CULTURA DE PREVENCIÓN COMUNITARIA ANTE DESASTRES NATURALES EN EL SECTOR AZOGUINE",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 75,
+    "nombre": "EXDUCERE",
+    "titulo": "DIFERENCIAS EN LA COMPRENSIÓN DEL DESARROLLO DE COMPETENCIAS ENTRE ESTUDIANTES DE LAS ÁREAS BIOMÉDICAS, SOCIALES E INGENIERÍAS DE LA UNIVERSIDAD NACIONAL DEL ALTIPLANO",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 76,
+    "nombre": "“SEMILLERO DE INVESTIGACIÓN MONTESSORI” (SIM)",
+    "titulo": "LOS ESPACIOS LÚDICOS EN EL DESARROLLO DE HABILIDADES SOCIALES Y EL PENSAMIENTO MATEMÁTICO EN LOS NIÑOS DE EDUCACIÓN PRIMARIA",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 77,
+    "nombre": "AYLLU DEL SABER: UNIDOS POR LA INVESTIGACIÓN EDUCATIVA",
+    "titulo": "“SESGOS DE GÉNERO EN LA ELECCIÓN DE CARRERAS STEM EN ESTUDIANTES DE EDUCACIÓN SECUNDARIA DE LA CIUDAD DE PUNO, 2026”",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 78,
+    "nombre": "ODONTOCIENCIA Y SALUD",
+    "titulo": "EFECTO DE INFUSIONES TRADICIONALES ALTOANDINAS SOBRE LA ESTABILIDAD CROMÁTICA DE RESINAS COMPUESTAS, PUNO PERÚ",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 79,
+    "nombre": "GRUPO DE INVESTIGACIONES ANTROPOLÓGICAS - GIA",
+    "titulo": "TRAYECTORIAS FORMATIVAS DE ESTUDIANTES PERUANOS EN BOLIVIA: DESAFÍOS, OPORTUNIDADES Y EXPECTATIVAS DE FUTURO",
+    "facultad": "CIENCIAS  SOCIALES",
+    "ep": "ANTROPOLOGÍA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 80,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN EN EDUCACIÓN FÍSICA Y LIDERAZGO FEMENINO” (SIEFLF)",
+    "titulo": "NEURODESARROLLO INFANTIL EN CONDICIONES EXTREMAS DE ALTITUD: IMPACTO DEL PROGRAMA DE EDUCACIÓN PSICOMOTRIZ EN NIÑOS DE EDUCACIÓN INICIAL DE LAS ISLAS FLOTANTES DE LOS UROS",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACION FISICA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 81,
+    "nombre": "VOCES EN MOVIMIENTO DE TRABAJO SOCIAL",
+    "titulo": "\"EXPERIENCIAS COMUNITARIAS DEL DESARROLLO DE BIENESTAR INTEGRAL ANTE LA CONTAMINACIÓN DEL RÍO SUCHES EN COJATA - 2026\"",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 82,
+    "nombre": "REDES QUE INSPIRAN EL TURISMO MODERNO",
+    "titulo": "TRANSFERENCIA TECNOLÓGICA MEDIANTE EL USO DE WHATSAPP BUSINESS PARA FORTALECER LA COMERCIALIZACIÓN DEL TURISMO COMUNITARIO EN PUNO",
+    "facultad": "CIENCIAS  SOCIALES",
+    "ep": "TURISMO",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 83,
+    "nombre": "SENSORES 3D - IQ",
+    "titulo": "DESARROLLO DE SENSORES ELECTROQUÍMICOS IMPRESOS EN 3D PARA LA DETERMINACIÓN DE FÁRMACOS Y CONTAMINANTES EMERGENTES DE LA BAHÍA INTERIOR DEL LAGO TITICACA, PUNO",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "INGENIERÍA QUÍMICA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 84,
+    "nombre": "ADSOBENTES 3D - IQ",
+    "titulo": "DESARROLLO DE ADSORBENTES IMPRESOS EN 3D MODIFICADOS CON MATERIALES NATURALES PARA LA REMOCIÓN DE ARSÉNICO Y PLOMO EN AGUAS CONTAMINADAS DEL ALTIPLANO PERUANO",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "INGENIERÍA QUÍMICA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 85,
+    "nombre": "ALIMENTOS FUNCIONALES Y NUTRACEÚTICOS EN INVESTIGACIÓN (NUTRIALFA)",
+    "titulo": "ELABORACIÓN DE NUGETS A BASE DE TRUCHA ARCOIRIS (ONCORHYCHUS MYKISS) ENRIQUESIDOS CON HARINAS DE TARWI Y QUINUA COMO ALTERNATIVA ALIMENTARIA FUNCIONAL RICA EN PROTEINA",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "INGENIERÍA QUÍMICA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 86,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN PEDAGÓGICA, EDUCATIVA Y SOCIAL WIÑAY (SIPES)",
+    "titulo": "CIUDADANÍA DIGITAL, PENSAMIENTO CRÍTICO Y USO RESPONSABLE DE LA INTELIGENCIA ARTIFICIAL EN ESTUDIANTES UNIVERSITARIOS",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN PRIMARIA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 87,
+    "nombre": "CALIBRATECH PRECISION GROUP",
+    "titulo": "DISEÑO E IMPLEMENTACIÓN DE UN PROTOTIPO AUTOMATIZADO PARA LA CALIBRACIÓN DE DETECTORES DE METALES EN FAJAS TRANSPORTADORAS PARA LA INDUSTRIA MINERA.",
+    "facultad": "INGENIERÍA  MECÁNICA  ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA MECÁNICA ELÉCTRICA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 88,
+    "nombre": "COMPOST  TRANSFORMANDO NUESTROS RESIDUOS EN VIDA",
+    "titulo": "\"OPTIMIZACIÓN DEL PROCESO DE COMPOSTAJE DE RESIDUOS ORGÁNICOS UNIVERSITARIOS MEDIANTE LA INOCULACIÓN DE BACTERIAS PROMOTORAS DEL CRECIMIENTO VEGETAL (BPCP) EN PUNO\"",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGRONÓMICA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 89,
+    "nombre": "DATANOVA LAB",
+    "titulo": "PREVISIÓN DE LA PRODUCCIÓN DE QUINUA EN PUNO (PERÚ), BASADA EN LA TRANSFORMADA WAVELET, CONSIDERANDO VARIABLES AGROCLIMÁTICAS",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 90,
+    "nombre": "GRUPO PENSAMIENTO CRÍTICO ANTROPOLÓGICO UNA-PUNO",
+    "titulo": "“EL SIGNIFICADO DE LA DEMOCRACIA PARA LAS COMUNIDADES RURALES AYMARAS EN EL PERÚ”",
+    "facultad": "CIENCIAS  SOCIALES",
+    "ep": "ANTROPOLOGÍA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 91,
+    "nombre": "GRADO DE OBESIDAD COMO FACTOR ASOCIADO AL DOLOR LUMBAR EN PACIENTES CON ENFERMEDAD DEGENERATIVA ESPINAL - HOSPITAL BASE III ESSALUD JULIACA AGOSTO A DICIEMBRE 2024",
+    "titulo": "GRADO DE OBESIDAD COMO FACTOR ASOCIADO AL DOLOR LUMBAR EN PACIENTES CON ENFERMEDAD DEGENERATIVA ESPINAL - HOSPITAL BASE III ESSALUD JULIACA AGOSTO A DICIEMBRE 2024",
+    "facultad": "MEDICINA HUMANA",
+    "ep": "MEDICINA HUMANA",
+    "monto": 10000.0,
+    "anio": 2024
+  },
+  {
+    "id": 92,
+    "nombre": "BIODIVERSIDAD Y RESILIENCIA AL CAMBIO CLIMÁTICO",
+    "titulo": "MEJORAMIENTO DE PRODUCTIVIDAD Y TOLERANCIA A TEMPERATURAS BAJAS MEDIANTE LA INTROGRESIÓN DE UN CULTIVAR NATIVO A  VARIEDADES COMERCIALES DE PAPA COMO ALTERNATIVA AL CAMBIO CLIMATICO",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGRONÓMICA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 93,
+    "nombre": "GENETICA Y GENOMICA EN SALUD ANIMAL",
+    "titulo": "PREVALENCIA MOLECULAR DE SARCOCYSTIS AUCHENIAE EN ALPACAS DE DOS ZONAS AGROECOLOGICAS DE LA REGION DE PUNO",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 94,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN BIOQUÍMICA VETERINARIA (GIBIOQVET)",
+    "titulo": "RELACIÓN ENTRE LOS NIVELES DE TESTOSTERONA SÉRICA Y EL PERFIL PROTEICO EN CORDEROS DESTETADOS DE CUATRO RAZAS OVINAS DEL CENTRO EXPERIMENTAL CHUQUIBAMBILLA, REGIÓN PUNO",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 95,
+    "nombre": "SEMILLERO DE INVESTIGACION EN ORDENAMIENTO TERRITORIAL (SIOTA)",
+    "titulo": "MICROZONIFICACIÓN ECOLÓGICA Y ECONÓMICA EN EL DISTRITO DE ILAVE: PROPUESTA METODOLÓGICA PARA EL ORDENAMIENTO TERRITORIAL",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 96,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN EN ORDENAMIENTO TERRITORIAL Y SOSTENIBILIDAD AMBIENTAL (SIOTSA)",
+    "titulo": "MODELO METODOLÓGICO DE MICROZONIFICACIÓN ECOLÓGICA Y ECONÓMICA A NIVEL DISTRITAL: CASO ÁCORA – PUNO",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 97,
+    "nombre": "NEUROLAB DATA",
+    "titulo": "PREDICCIÓN DE LOS NIVELES HIDROLÓGICOS DEL LAGO TITICACA MEDIANTE MODELOS AVANZADOS DE REDES NEURONALES ARTIFICIALES",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 98,
+    "nombre": "NEXO MATEMATICO",
+    "titulo": "ANÁLISIS Y SIMULACIÓN DEL MODELO EPIDEMIOLÓGICO SEIR DE LA TRANSMISIÓN DEL SARAMPIÓN MEDIANTE REDES NEURONALES ARTIFICIALES",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "CIENCIAS FÍSICO-MATEMÁTICAS",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 99,
+    "nombre": "SEMILLERO DE INVESTIGACIÓN CIENCIA, TECNOLOGÍA E INNOVACIÓN (CITEI)",
+    "titulo": "EDUCACIÓN AMBIENTAL Y DESARROLLO SOSTENIBLE EN ESTUDIANTES UNIVERSITARIOS DEL ALTIPLANO PUNEÑO",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA",
+    "monto": 10000.0,
+    "anio": 2026
+  },
+  {
+    "id": 100,
+    "nombre": "SEMILLERO DE INVESTIGACION EN CIENCIAS DEL DEPORTE Y PSICOMOTRICIDAD PARA UNA VIDA SALUDABLE (CIPROVIDA)",
+    "titulo": "75",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA",
+    "monto": 10000.0,
+    "anio": 2026
+  }
+];
+
+export const gruposFinanciamiento = [
+  {
+    "id": 1,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN SALUD ANIMAL (GIENSA)",
+    "titulo": "GRUPO DE INVESTIGACIÓN EN SALUD ANIMAL (GIENSA)",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "monto": 20000.0,
+    "anio": 2025
+  },
+  {
+    "id": 2,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN PRODUCCIÓN ANIMAL SOSTENIBLE",
+    "titulo": "GRUPO DE INVESTIGACIÓN EN PRODUCCIÓN ANIMAL SOSTENIBLE",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "monto": 20000.0,
+    "anio": 2025
+  },
+  {
+    "id": 3,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN ENERGÍAS RENOVABLES (GIER)",
+    "titulo": "GRUPO DE INVESTIGACIÓN EN ENERGÍAS RENOVABLES (GIER)",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA MECÁNICA ELÉCTRICA",
+    "monto": 20000.0,
+    "anio": 2025
+  },
+  {
+    "id": 4,
+    "nombre": "GIICDA - GRUPO DE INVESTIGACIÓN EN SISTEMAS INTELIGENTES ARTIFICIAL Y CIENCIA DE DATOS APLICADA",
+    "titulo": "GIICDA - GRUPO DE INVESTIGACIÓN EN SISTEMAS INTELIGENTES ARTIFICIAL Y CIENCIA DE DATOS APLICADA",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS",
+    "monto": 20000.0,
+    "anio": 2025
+  },
+  {
+    "id": 5,
+    "nombre": "INNOVACIÓN MULTIDISCIPLINARIA EN ACCIONES SOCIOAMBIENTALES (IMAS)",
+    "titulo": "INNOVACIÓN MULTIDISCIPLINARIA EN ACCIONES SOCIOAMBIENTALES (IMAS)",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA",
+    "monto": 20000.0,
+    "anio": 2025
+  },
+  {
+    "id": 6,
+    "nombre": "GRUPO DE INVESTIGACIÓN DE ALIMENTOS FUNCIONALES Y SALUD GIAFS",
+    "titulo": "GRUPO DE INVESTIGACIÓN DE ALIMENTOS FUNCIONALES Y SALUD GIAFS",
+    "facultad": "INGENIERÍA QUÍMICA",
+    "ep": "INGENIERÍA QUÍMICA",
+    "monto": 20000.0,
+    "anio": 2025
+  },
+  {
+    "id": 7,
+    "nombre": "GRUPO DE INVESTIGACIÓN ESTADÍSTICA APLICADA - GIEA",
+    "titulo": "GRUPO DE INVESTIGACIÓN ESTADÍSTICA APLICADA - GIEA",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "monto": 20000.0,
+    "anio": 2025
+  },
+  {
+    "id": 8,
+    "nombre": "GRUPO DE INVESTIGACIÓN INNOVANDO-FIE",
+    "titulo": "GRUPO DE INVESTIGACIÓN INNOVANDO-FIE",
+    "facultad": "INGENIERÍA ECONÓMICA",
+    "ep": "INGENIERÍA ECONÓMICA",
+    "monto": 20000.0,
+    "anio": 2025
+  },
+  {
+    "id": 9,
+    "nombre": "GRUPO DE INVESTIGACIÓN CIENCIA DE DATOS - GICD",
+    "titulo": "GRUPO DE INVESTIGACIÓN CIENCIA DE DATOS - GICD",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "monto": 20000.0,
+    "anio": 2025
+  },
+  {
+    "id": 10,
+    "nombre": "INVESTIGADORES DEL TITICACA PARA EL PROGRESO ACADÉMICO Y CIENTÍFICO (INTIPAC)",
+    "titulo": "INVESTIGADORES DEL TITICACA PARA EL PROGRESO ACADÉMICO Y CIENTÍFICO (INTIPAC)",
+    "facultad": "CIENCIAS DE LA EDUCACIÓN",
+    "ep": "EDUCACIÓN SECUNDARIA",
+    "monto": 20000.0,
+    "anio": 2025
+  },
+  {
+    "id": 11,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN ARQUITECTURA, MATERIALES ALTERNATIVOS Y SOSTENIBILIDAD - ARQUIMAS",
+    "titulo": "GRUPO DE INVESTIGACIÓN EN ARQUITECTURA, MATERIALES ALTERNATIVOS Y SOSTENIBILIDAD - ARQUIMAS",
+    "facultad": "INGENIERÍA CIVIL Y ARQUITECTURA",
+    "ep": "ARQUITECTURA Y URBANISMO",
+    "monto": 20000.0,
+    "anio": 2025
+  },
+  {
+    "id": 12,
+    "nombre": "SCIENCE: GRUPO DE SALUD, COMPUTACIÓN, INTELIGENCIA ARTIFICIAL, ECONOMÍA, NUEVAS TECNOLOGÍAS, CIBERNÉTICA Y ELECTROMECÁNICA",
+    "titulo": "GENESIS-ANDES: FEW-SHOT VISIÓN TRANSFORMERS E INTELIGENCIA ARTIFICIAL GENERATIVA PARA LA CONSERVACIÓN DIGITAL DE LA AGROBIODIVERSIDAD ANDINA EN RIESGO DE EXTINCIÓN (QUINUA, CAÑIHUA Y KIWICHA)",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS",
+    "monto": 20000.0,
+    "anio": 2026
+  },
+  {
+    "id": 13,
+    "nombre": "ESTADÍSTICA BAYESIANA ",
+    "titulo": "SISTEMA HÍBRIDO IOT-IA ANDINO: DETECCIÓN TEMPRANA Y MONITOREO PREDICTIVO DE ENFERMEDADES EN PAPA NATIVA MEDIANTE VISIÓN POR COMPUTADOR, SENSORES IOT Y EDGE COMPUTING PARA LA SEGURIDAD ALIMENTARIA EN EL ALTIPLANO DE PUNO",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "monto": 20000.0,
+    "anio": 2026
+  },
+  {
+    "id": 14,
+    "nombre": "“INVESTIGACIÓN EN CONSERVACIÓN Y REVALORIZACIÓN DE PROPIEDADES DE CULTIVOS ANDINOS (CREPCA)” ",
+    "titulo": "“DISEÑO, FABRICACIÓN Y EVALUACIÓN DE UN SISTEMA DE SECADO POR VENTANA DE REFRACTANCIA ASISTIDO CON MICROONDAS PARA LA CONSERVACIÓN Y OBTENCIÓN DE INGREDIENTES FUNCIONALES A PARTIR DE CULTIVOS ANDINO”",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL",
+    "monto": 20000.0,
+    "anio": 2026
+  },
+  {
+    "id": 15,
+    "nombre": "“GRUPO DE INVESTIGACIÓN EN SALUD ANIMAL (GIENSA)” ",
+    "titulo": "“RELACIÓN ENTRE LONGITUD DE MECHA, RESISTENCIA A LA TRACCIÓN Y RENDIMIENTO AL LAVADO EN ALPACAS HUACAYA (VICUGNA PACOS) DE DIFERENTES EDADES”",
+    "facultad": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "ep": "MEDICINA VETERINARIA Y ZOOTECNIA",
+    "monto": 20000.0,
+    "anio": 2026
+  },
+  {
+    "id": 16,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN INTELIGENCIA ARTIFICIAL Y CIENCIA DE DATOS APLICADA",
+    "titulo": "MODELO DE DETECCIÓN AUTOMÁTICA DE DEFORMIDADES MORFOLÓGICAS EN TRUCHA ARCOÍRIS (ONCORHYNCHUS MYKISS) MEDIANTE VISIÓN ARTIFICIAL BASADA EN YOLO.",
+    "facultad": "INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS",
+    "ep": "INGENIERÍA DE SISTEMAS",
+    "monto": 20000.0,
+    "anio": 2026
+  },
+  {
+    "id": 17,
+    "nombre": "DATA ANALYTICS & AI-LAB",
+    "titulo": "MONITOREO SATELITAL DE BOFEDALES ALTOANDINOS EN PUNO MEDIANTE ÍNDICES ESPECTRALES Y APRENDIZAJE AUTOMÁTICO",
+    "facultad": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "ep": "INGENIERÍA ESTADÍSTICA E INFORMÁTICA",
+    "monto": 20000.0,
+    "anio": 2026
+  },
+  {
+    "id": 18,
+    "nombre": "ESTUDIOS ANDINOS Y PRACTICAS SOCIALES",
+    "titulo": "PRÁCTICAS DE BIODIVERSIDAD AGRÍCOLA QUE FORTALECEN LA SEGURIDAD ALIMENTARIA FAMILIAR EN PUNO, PROPUESTAS PARA CONSERVAR Y APROVECHAR SOSTENIBLEMENTE LOS CULTIVOS ANDINOS FRENTE A DESAFÍOS SOCIALES Y CLIMÁTICOS.",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL",
+    "monto": 20000.0,
+    "anio": 2026
+  },
+  {
+    "id": 19,
+    "nombre": "INVESTIGACIÓN EN SALUD PÚBLICA EN ALTURA (INSPA)",
+    "titulo": "DESARROLLO Y EVALUACIÓN ANTIBIOFILM DE UN GEL BUCAL EXPERIMENTAL CON SAPONINAS OBTENIDAS DE SUBPRODUCTOS DE CHENOPODIUM QUINOA WILLD DEL ALTIPLANO PUNEÑO FRENTE A STREPTOCOCCUS MUTANS",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA",
+    "monto": 20000.0,
+    "anio": 2026
+  },
+  {
+    "id": 20,
+    "nombre": "HUB DE GESTIÓN, INNOVACIÓN Y DESARROLLO SOSTENIBLE E INCLUSIVO - HUB GIDSI",
+    "titulo": "DEL SABER ANCESTRAL A LA INNOVACIÓN SOSTENIBLE: ECONOMÍA CIRCULAR Y CAPITAL SOCIAL EN LOS CULTIVOS ANDINOS DEL ALTIPLANO PERUANO",
+    "facultad": "CIENCIAS ADMINISTRATIVAS Y HUMANAS",
+    "ep": "ADMINISTRACIÓN",
+    "monto": 20000.0,
+    "anio": 2026
+  },
+  {
+    "id": 21,
+    "nombre": "“GRUPO DE INVESTIGACIÓN MULTIDISCIPLINARIO EN INVESTIGACIONES DE INGENIERÍA AGRÍCOLA Y ECONOMÍA GI-MIIAE”",
+    "titulo": "“ANÁLISIS ESPACIAL PARA LA SELECCIÓN DE LA UBICACIÓN ÓPTIMA DE UN RELLENO SANITARIO MEDIANTE SISTEMAS DE INFORMACIÓN GEOGRÁFICA EN LA PROVINCIA DE EL COLLAO, 2026.”",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA",
+    "monto": 20000.0,
+    "anio": 2026
+  },
+  {
+    "id": 22,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN RECURSOS HÍDRICOS, CAMBIO CLIMÁTICO Y GESTIÓN DE RIESGOS – HYDROCLIM",
+    "titulo": "MONITOREO DEL ESTRÉS HÍDRICO EN CULTIVOS DE PAPA USANDO IMÁGENES RGB Y NIR OBTENIDAS POR DRONES PARA UNA AGRICULTURA DE PRECISIÓN",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA",
+    "monto": 20000.0,
+    "anio": 2026
+  },
+  {
+    "id": 23,
+    "nombre": "GRUPO DE INVESTIGACIÓN Y DESARROLLO DE ALIMENTOS SALUDABLES (GI-IDEAS)",
+    "titulo": "REVALORACIÓN DE LOS CULTIVOS DE CAÑIHUA (CHENOPODIUM PALLIDICAULE) Y TARWI (LUPINUS MUTABILIS SWEET) PARA EL DESARROLLO DE UN ANÁLOGO DE CARNE MEDIANTE TECNOLOGÍA DE EXTRUSÍON.",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGROINDUSTRIAL",
+    "monto": 20000.0,
+    "anio": 2024
+  },
+  {
+    "id": 24,
+    "nombre": "GRUPO DE INVESTIGACIÓN EN PROTECCIÓN VEGETAL",
+    "titulo": "EVALUACIÓN DE CLONES Y VARIEDADES DE PAPA RESISTENTES A PHYTOPTHORA INFESTANS Y MELOIDOGYNE HAPLA",
+    "facultad": "CIENCIAS AGRARIAS",
+    "ep": "INGENIERÍA AGRONÓMICA",
+    "monto": 20000.0,
+    "anio": 2024
+  },
+  {
+    "id": 25,
+    "nombre": "INNOVACION Y DESARROLLO EN ALIMENTACION Y NUTRICION HUMANA",
+    "titulo": "INNOVACION Y DESARROLLO EN ALIMENTACION Y NUTRICION HUMANA",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "NUTRICIÓN HUMANA",
+    "monto": 20000.0,
+    "anio": 2024
+  },
+  {
+    "id": 26,
+    "nombre": "INVESTIGACIÓN EN EDUCACIÓN Y FORMACIÓN AMBIENTAL PARA EL DESARROLLO SOSTENIBLE",
+    "titulo": "IMPLEMENTACIÓN DE LA COSECHA DE AGUAS PLUVIALES COMO COMPLEMENTO AL SUMINISTRO DE AGUA DOMÉSTICA EN EL DISTRITO DE COATA, PUNO",
+    "facultad": "INGENIERÍA AGRÍCOLA",
+    "ep": "INGENIERÍA AGRÍCOLA",
+    "monto": 20000.0,
+    "anio": 2024
+  },
+  {
+    "id": 27,
+    "nombre": "MUJERES DE CIENCIA Y TECNOLOGÍA EN ACCIÓN",
+    "titulo": "MUJERES DE CIENCIA Y TECNOLOGÍA EN ACCIÓN",
+    "facultad": "CIENCIAS DE LA SALUD",
+    "ep": "ODONTOLOGÍA",
+    "monto": 20000.0,
+    "anio": 2024
+  },
+  {
+    "id": 28,
+    "nombre": "NUCLEO DE INVESTIGACION PARA LA SOCIEDAD",
+    "titulo": "GESTIÓN DE ESPACIOS REMANENTES PARA MITIGAR LA CONTAMINACIÓN AMBIENTAL EN EL CENTRO POBLADO DE ALTO PUNO-2024.",
+    "facultad": "TRABAJO SOCIAL",
+    "ep": "TRABAJO SOCIAL",
+    "monto": 20000.0,
+    "anio": 2024
+  }
+];
+
 // ------------------------------------------------------------------
 export const feduPorEscuela = [
   { ep: 'Ing. Agronómica',                 fedu2023: 4,  fedu2024: 13, fedu2025: 14 },
@@ -674,143 +3570,4 @@ export const renacytPorEscuela2026 = [
 // FINANCIAMIENTO DE PROYECTOS DE INVESTIGACIÓN
 // Fuente: directoria_financiamiento.xlsx
 // ------------------------------------------------------------------
-
-export const semillerosFinanciamiento = [
-  { n: 1,  titulo: 'PERFIL DE RESISTENCIA BACTERIANA AISLADAS DE LOS RELAVES MINEROS DEL CENTRO POBLADO DE LA MINA LA RINCONADA. PUNO - 2024', ep: 'BIOLOGIA', monto: 10000, anio: 2024 },
-  { n: 2,  titulo: 'DESARROLLO DE PELICULA ACTIVA A BASE DE ALMIDÓN DE CÁSCARA DE PAPA Y EXTRACTO DE ORÉGANO PARA ALARGAR LA VIDA ÚTIL DEL QUESO FRESCO', ep: 'INGENIERIA AGROINDUSTRIAL', monto: 10000, anio: 2024 },
-  { n: 3,  titulo: 'ANÁLISIS DE LA RADIACIÓN ULTRAVIOLETA Y SUS EFECTOS EN LA SALUD AMBIENTAL DE LA POBLACIÓN DE LA CIUDAD DE PUNO', ep: 'BIOLOGIA', monto: 10000, anio: 2024 },
-  { n: 4,  titulo: 'ANÁLISIS FACTORIAL DE LOS DETERMINANTES SOCIALES Y LA INCIDENCIA DE LA ANEMIA EN NIÑOS DE 5 AÑOS EN BARRIOS URBANO MARGINALES DE PUNO.', ep: 'TRABAJO SOCIAL', monto: 10000, anio: 2024 },
-  { n: 5,  titulo: 'SIETE NIVELES LINGÜÍSTICOS Y COMPRENSIÓN LECTORA: UN ENFOQUE EXPERIMENTAL PARA POTENCIAR LA LECTURA EN NIÑOS', ep: 'EDUCACION PRIMARIA', monto: 10000, anio: 2024 },
-  { n: 6,  titulo: 'CARACTERIZACIÓN DE PAPAS NATIVAS DE LA REGIÓN DE PUNO', ep: 'INGENIERIA AGRONOMICA', monto: 10000, anio: 2024 },
-  { n: 7,  titulo: 'IMPACTO DEL CÁLCULO DE LA HUELLA HÍDRICA EN LA CONCIENCIA AMBIENTAL SOBRE EL USO RESPONSABLE DEL AGUA EN ESTUDIANTES DE EDUCACIÓN PRIMARIA', ep: 'EDUCACION PRIMARIA', monto: 10000, anio: 2024 },
-  { n: 8,  titulo: 'EFECTO DEL PASTOREO EN LA CAPACIDAD DE ALMACENAMIENTO DE CARBONO DE PASTIZALES ALTOANDINOS', ep: 'BIOLOGIA', monto: 10000, anio: 2024 },
-  { n: 9,  titulo: 'LA IMPLEMENTACIÓN DE LA INTELIGENCIA ARTIFICIAL EN LA REDACCIÓN DE ARTÍCULOS CIENTÍFICOS CUALITATIVOS EN ESTUDIANTES DE LA FACULTAD CIENCIAS DE LA EDUCACIÓN UNA-PUNO-2024.', ep: 'EDUCACION SECUNDARIA', monto: 10000, anio: 2024 },
-  { n: 10, titulo: 'ACTIVIDAD FISICA ADAPTADA PARA MEJORAR LA COORDINACIÓN MOTRIZ EN ESTUDIANTES CON DEFICIENCIA VISUAL EN UNA INSTITUCIÓN EDUCATIVA ESPECIAL', ep: 'EDUCACION FISICA', monto: 10000, anio: 2024 },
-  { n: 11, titulo: 'PRÁCTICAS DE CRIANZA Y SU INFLUENCIA EN EL DESARROLLO PSICOAFECTIVO DE NIÑOS EN EDAD PREESCOLAR EN LA CIUDAD DE PUNO', ep: 'TRABAJO SOCIAL', monto: 10000, anio: 2024 },
-  { n: 12, titulo: 'RECONOCIMIENTO DE PATRONES DE CONSUMO Y ADICCIÓN A PLATAFORMAS DIGITALES EN ADOLESCENTES DE PUNO: UN ENFOQUE CON INTELIGENCIA ARTIFICIAL', ep: 'ING. ESTADISTICA E INFORMATICA', monto: 10000, anio: 2024 },
-  { n: 13, titulo: 'IMPACTO DEL USO DE REDES SOCIALES EN EL DESEMPEÑO ACADÉMICO Y BIENESTAR EMOCIONAL DE UNIVERSITARIOS EN PUNO', ep: 'INGENIERÍA DE SISTEMAS', monto: 10000, anio: 2024 },
-  { n: 14, titulo: 'DIAGNÓSTICO Y TRATAMIENTO DE LA ENFERMEDAD DE NEWCASTLE EN AVES DE TRASPATIO EN LA REGIÓN PUNO', ep: 'MEDICINA VETERINARIA Y ZOOTECNIA', monto: 10000, anio: 2024 },
-  { n: 15, titulo: 'PREVALENCIA DE ANEMIA FERROPÉNICA Y FACTORES ASOCIADOS EN NIÑOS DE 6 A 36 MESES EN EL CENTRO DE SALUD CIUDAD NUEVA DE PUNO', ep: 'NUTRICION HUMANA', monto: 10000, anio: 2024 },
-  { n: 16, titulo: 'EFICIENCIA DE SISTEMAS FOTOVOLTAICOS EN ZONAS ALTOANDINAS DE PUNO COMO ALTERNATIVA DE ENERGÍA RENOVABLE', ep: 'INGENIERIA ELECTRICA', monto: 10000, anio: 2024 },
-  { n: 17, titulo: 'CARACTERIZACIÓN MOLECULAR DE CEPAS DE SALMONELLA SPP. AISLADAS DE AVES DE TRASPATIO EN COMUNIDADES RURALES DE PUNO', ep: 'MEDICINA VETERINARIA Y ZOOTECNIA', monto: 10000, anio: 2024 },
-  { n: 18, titulo: 'EFECTO DE LA INCLUSIÓN DE HARINA DE QUINUA EN LA ALIMENTACIÓN DE CUYES SOBRE PARÁMETROS PRODUCTIVOS', ep: 'INGENIERIA ZOOTECNIA', monto: 10000, anio: 2024 },
-  { n: 19, titulo: 'ANÁLISIS DE VARIABILIDAD CLIMÁTICA Y SU IMPACTO EN LA PRODUCCIÓN AGROPECUARIA EN EL ALTIPLANO DE PUNO', ep: 'INGENIERIA AGROPECUARIA', monto: 10000, anio: 2024 },
-  { n: 20, titulo: 'RELACIÓN ENTRE ACTIVIDAD FÍSICA Y RENDIMIENTO ACADÉMICO EN ESTUDIANTES UNIVERSITARIOS DE LA UNA PUNO', ep: 'EDUCACION FISICA', monto: 10000, anio: 2024 },
-  // 2025
-  { n: 21, titulo: 'BIOPESTICIDAS A PARTIR DE EXTRACTOS DE PLANTAS ANDINAS PARA EL CONTROL DE PLAGAS EN CULTIVOS DE QUINUA EN PUNO', ep: 'INGENIERIA AGRONOMICA', monto: 10000, anio: 2025 },
-  { n: 22, titulo: 'EFECTO DE TÉCNICAS DE RESPIRACIÓN Y MINDFULNESS EN LA REDUCCIÓN DEL ESTRÉS ACADÉMICO EN UNIVERSITARIOS', ep: 'EDUCACION SECUNDARIA', monto: 10000, anio: 2025 },
-  { n: 23, titulo: 'EVALUACIÓN DEL POTENCIAL ANTIMICROBIANO DE EXTRACTOS DE MUÑA (MINTHOSTACHYS MOLLIS) FRENTE A PATÓGENOS COMUNES', ep: 'BIOLOGIA', monto: 10000, anio: 2025 },
-  { n: 24, titulo: 'DESARROLLO DE UN SISTEMA DE MONITOREO AMBIENTAL IOT PARA LA DETECCIÓN DE CONTAMINANTES EN EL LAGO TITICACA', ep: 'INGENIERÍA DE SISTEMAS', monto: 10000, anio: 2025 },
-  { n: 25, titulo: 'ANÁLISIS DE LA EFICIENCIA ENERGÉTICA EN EDIFICACIONES PÚBLICAS DE PUNO MEDIANTE AUDITORÍAS ENERGÉTICAS', ep: 'INGENIERIA ELECTRICA', monto: 10000, anio: 2025 },
-  { n: 26, titulo: 'IMPACTO DE LA PANDEMIA COVID-19 EN LA SALUD MENTAL DE ADULTOS MAYORES EN COMUNIDADES RURALES DE PUNO', ep: 'TRABAJO SOCIAL', monto: 10000, anio: 2025 },
-  { n: 27, titulo: 'OPTIMIZACIÓN DE ALGORITMOS DE MACHINE LEARNING PARA PREDICCIÓN DE RENDIMIENTO ACADÉMICO EN EDUCACIÓN SUPERIOR', ep: 'ING. ESTADISTICA E INFORMATICA', monto: 10000, anio: 2025 },
-  { n: 28, titulo: 'EVALUACIÓN DE SISTEMAS AGROFORESTALES EN ZONAS DE TRANSICIÓN PUNA-SELVA DE LA REGIÓN PUNO', ep: 'INGENIERIA AGRONOMICA', monto: 10000, anio: 2025 },
-  { n: 29, titulo: 'PRODUCCIÓN DE BIOGÁS A PARTIR DE RESIDUOS ORGÁNICOS AGROPECUARIOS EN COMUNIDADES DEL ALTIPLANO PUNEÑO', ep: 'INGENIERIA AGROPECUARIA', monto: 10000, anio: 2025 },
-  { n: 30, titulo: 'IDENTIDAD CULTURAL Y BIENESTAR PSICOLÓGICO EN JÓVENES AIMARAS Y QUECHUAS DE PUNO', ep: 'TRABAJO SOCIAL', monto: 10000, anio: 2025 },
-  { n: 31, titulo: 'APLICACIÓN DE INTELIGENCIA ARTIFICIAL EN EL DIAGNÓSTICO TEMPRANO DE ENFERMEDADES RESPIRATORIAS EN ALTURA', ep: 'ING. ESTADISTICA E INFORMATICA', monto: 10000, anio: 2025 },
-  { n: 32, titulo: 'ESTRATEGIAS PEDAGÓGICAS PARA LA ENSEÑANZA BILINGÜE EN CONTEXTOS INTERCULTURALES DEL ALTIPLANO', ep: 'EDUCACION PRIMARIA', monto: 10000, anio: 2025 },
-  { n: 33, titulo: 'EVALUACIÓN DEL IMPACTO AMBIENTAL DE LA MINERÍA ARTESANAL EN CUENCAS HIDROGRÁFICAS DE PUNO', ep: 'INGENIERIA AGRICOLA', monto: 10000, anio: 2025 },
-  { n: 34, titulo: 'FACTORES DETERMINANTES DEL EMPRENDIMIENTO JUVENIL EN ZONAS RURALES DE LA REGIÓN PUNO', ep: 'ADMINISTRACION', monto: 10000, anio: 2025 },
-  { n: 35, titulo: 'CARACTERIZACIÓN GENÉTICA DE ALPACAS HUACAYA DE ALTA PRODUCTIVIDAD EN CRIANZAS COMUNALES DE PUNO', ep: 'MEDICINA VETERINARIA Y ZOOTECNIA', monto: 10000, anio: 2025 },
-  { n: 36, titulo: 'DISEÑO DE SISTEMAS DE COSECHA DE AGUA DE LLUVIA PARA COMUNIDADES SIN ACCESO A AGUA POTABLE EN PUNO', ep: 'INGENIERIA AGRICOLA', monto: 10000, anio: 2025 },
-  { n: 37, titulo: 'TURISMO RURAL COMUNITARIO Y DESARROLLO ECONÓMICO LOCAL EN LA CUENCA DEL LAGO TITICACA', ep: 'TURISMO', monto: 10000, anio: 2025 },
-  { n: 38, titulo: 'ANÁLISIS DE VULNERABILIDAD ANTE HELADAS Y FRIAJE EN SISTEMAS AGROPECUARIOS DEL ALTIPLANO PUNEÑO', ep: 'INGENIERIA AGROPECUARIA', monto: 10000, anio: 2025 },
-  { n: 39, titulo: 'MODELAMIENTO HIDRÁULICO PARA LA PREVENCIÓN DE INUNDACIONES EN ZONAS URBANAS DE PUNO', ep: 'INGENIERIA CIVIL', monto: 10000, anio: 2025 },
-  { n: 40, titulo: 'EVALUACIÓN DE LA CALIDAD DEL AGUA EN RÍOS AFLUENTES AL LAGO TITICACA MEDIANTE BIOINDICADORES', ep: 'BIOLOGIA', monto: 10000, anio: 2025 },
-  { n: 41, titulo: 'ANÁLISIS DE RESIDUOS SÓLIDOS Y PROPUESTAS DE GESTIÓN AMBIENTAL EN MUNICIPIOS RURALES DE PUNO', ep: 'INGENIERIA CIVIL', monto: 10000, anio: 2025 },
-  { n: 42, titulo: 'FACTORES SOCIOECONÓMICOS Y DESERCIÓN ESCOLAR EN COMUNIDADES RURALES DEL ALTIPLANO', ep: 'EDUCACION SECUNDARIA', monto: 10000, anio: 2025 },
-  { n: 43, titulo: 'DISEÑO DE UNA APLICACIÓN MÓVIL PARA EL MONITOREO DE LA SALUD NUTRICIONAL EN NIÑOS MENORES DE 5 AÑOS', ep: 'INGENIERÍA DE SISTEMAS', monto: 10000, anio: 2025 },
-  { n: 44, titulo: 'EVALUACIÓN DE PRÁCTICAS DE LACTANCIA MATERNA Y SU RELACIÓN CON EL DESARROLLO INFANTIL EN PUNO', ep: 'NUTRICION HUMANA', monto: 10000, anio: 2025 },
-  { n: 45, titulo: 'RESILIENCIA COMUNITARIA Y ESTRATEGIAS DE ADAPTACIÓN AL CAMBIO CLIMÁTICO EN COMUNIDADES ALTO ANDINAS', ep: 'TRABAJO SOCIAL', monto: 10000, anio: 2025 },
-  { n: 46, titulo: 'ANÁLISIS DE LA CADENA DE VALOR DE LA FIBRA DE ALPACA Y PROPUESTAS DE MEJORA PARA PEQUEÑOS PRODUCTORES', ep: 'ADMINISTRACION', monto: 10000, anio: 2025 },
-  { n: 47, titulo: 'DETERMINACIÓN DE PARÁMETROS DE CALIDAD FISICOQUÍMICA Y MICROBIOLÓGICA DE QUESOS ARTESANALES DE PUNO', ep: 'INGENIERIA AGROINDUSTRIAL', monto: 10000, anio: 2025 },
-  { n: 48, titulo: 'PREVALENCIA Y FACTORES DE RIESGO DE PARASITOSIS INTESTINAL EN NIÑOS DE COMUNIDADES RURALES DE PUNO', ep: 'BIOLOGIA', monto: 10000, anio: 2025 },
-  { n: 49, titulo: 'DISEÑO DE PRÓTESIS DE BAJO COSTO MEDIANTE IMPRESIÓN 3D PARA PERSONAS CON DISCAPACIDAD EN PUNO', ep: 'INGENIERIA MECANICA', monto: 10000, anio: 2025 },
-  { n: 50, titulo: 'INTELIGENCIA ARTIFICIAL PARA LA CLASIFICACIÓN AUTOMÁTICA DE MINERALES EN YACIMIENTOS DEL ALTIPLANO', ep: 'ING. ESTADISTICA E INFORMATICA', monto: 10000, anio: 2025 },
-  // 2026
-  { n: 51, titulo: 'BIORREMEDIACIÓN DE SUELOS CONTAMINADOS POR METALES PESADOS EN ZONAS MINERAS DE PUNO', ep: 'BIOLOGIA', monto: 10000, anio: 2026 },
-  { n: 52, titulo: 'DESARROLLO DE ALIMENTOS FUNCIONALES A BASE DE GRANOS ANDINOS PARA LA PREVENCIÓN DE ENFERMEDADES CRÓNICAS', ep: 'INGENIERIA AGROINDUSTRIAL', monto: 10000, anio: 2026 },
-  { n: 53, titulo: 'ANÁLISIS DE FACTORES PSICOSOCIALES Y RENDIMIENTO ACADÉMICO EN ESTUDIANTES DE SECUNDARIA DE PUNO', ep: 'EDUCACION SECUNDARIA', monto: 10000, anio: 2026 },
-  { n: 54, titulo: 'INNOVACIÓN EN TÉCNICAS DE ENSEÑANZA DE MATEMÁTICAS MEDIANTE GAMIFICACIÓN EN EDUCACIÓN BÁSICA', ep: 'EDUCACION PRIMARIA', monto: 10000, anio: 2026 },
-  { n: 55, titulo: 'ESTUDIO DEL COMPORTAMIENTO HIDRÁULICO DEL RÍO ILAVE Y PROPUESTAS DE GESTIÓN DEL RIESGO', ep: 'INGENIERIA CIVIL', monto: 10000, anio: 2026 },
-  { n: 56, titulo: 'ANÁLISIS DEL MERCADO DE EXPORTACIÓN DE PRODUCTOS AGRÍCOLAS ORGÁNICOS DE PUNO', ep: 'ADMINISTRACION', monto: 10000, anio: 2026 },
-  { n: 57, titulo: 'EVALUACIÓN DEL POTENCIAL TURÍSTICO DE SITIOS ARQUEOLÓGICOS POCO EXPLORADOS DE LA REGIÓN PUNO', ep: 'TURISMO', monto: 10000, anio: 2026 },
-  { n: 58, titulo: 'DISEÑO E IMPLEMENTACIÓN DE UN SISTEMA DE INFORMACIÓN GEOGRÁFICA PARA GESTIÓN DE RECURSOS HÍDRICOS', ep: 'INGENIERÍA DE SISTEMAS', monto: 10000, anio: 2026 },
-  { n: 59, titulo: 'EVALUACIÓN DEL DESEMPEÑO DE MICRORREDES ELÉCTRICAS CON ENERGÍA RENOVABLE EN COMUNIDADES RURALES', ep: 'INGENIERIA ELECTRICA', monto: 10000, anio: 2026 },
-  { n: 60, titulo: 'ESTRATEGIAS DE DESARROLLO LOCAL Y REDUCCIÓN DE LA POBREZA EN COMUNIDADES CAMPESINAS DE PUNO', ep: 'TRABAJO SOCIAL', monto: 10000, anio: 2026 },
-  { n: 61, titulo: 'OPTIMIZACIÓN DEL PROCESAMIENTO DE CARNE DE ALPACA PARA MERCADOS NACIONALES E INTERNACIONALES', ep: 'INGENIERIA AGROINDUSTRIAL', monto: 10000, anio: 2026 },
-  { n: 62, titulo: 'ANÁLISIS DE LA DISTRIBUCIÓN ESPACIAL DE HELADAS Y SU IMPACTO EN LA AGRICULTURA EN EL ALTIPLANO', ep: 'INGENIERIA AGRICOLA', monto: 10000, anio: 2026 },
-  { n: 63, titulo: 'MODELOS DE PREDICCIÓN DE RENDIMIENTO EN CULTIVOS DE PAPA USANDO SENSORES REMOTOS', ep: 'ING. ESTADISTICA E INFORMATICA', monto: 10000, anio: 2026 },
-  { n: 64, titulo: 'EVALUACIÓN DE LA EFICACIA DE VACUNAS TRADICIONALES EN BOVINOS BAJO CONDICIONES DE ALTURA', ep: 'MEDICINA VETERINARIA Y ZOOTECNIA', monto: 10000, anio: 2026 },
-  { n: 65, titulo: 'ANÁLISIS DE LA CALIDAD DEL SUELO EN ZONAS AFECTADAS POR MINERÍA INFORMAL EN PUNO', ep: 'INGENIERIA AGRICOLA', monto: 10000, anio: 2026 },
-  { n: 66, titulo: 'ESTUDIO DEL IMPACTO DEL CAMBIO CLIMÁTICO EN LA GANADERÍA ALTOANDINA DE PUNO', ep: 'INGENIERIA ZOOTECNIA', monto: 10000, anio: 2026 },
-  { n: 67, titulo: 'DISEÑO DE ESTRATEGIAS DE MARKETING DIGITAL PARA EMPRENDIMIENTOS RURALES DE PUNO', ep: 'ADMINISTRACION', monto: 10000, anio: 2026 },
-  { n: 68, titulo: 'ANÁLISIS COMPARATIVO DE SISTEMAS CONSTRUCTIVOS TRADICIONALES Y MODERNOS EN VIVIENDAS RURALES', ep: 'INGENIERIA CIVIL', monto: 10000, anio: 2026 },
-  { n: 69, titulo: 'EVALUACIÓN DE INDICADORES DE SALUD BUCAL EN POBLACIÓN ESTUDIANTIL DE LA UNA PUNO', ep: 'ODONTOLOGIA', monto: 10000, anio: 2026 },
-  { n: 70, titulo: 'ANÁLISIS DE LA PRESENCIA DE MICROPLÁSTICOS EN EL LAGO TITICACA Y SUS EFECTOS EN LA BIOTA ACUÁTICA', ep: 'BIOLOGIA', monto: 10000, anio: 2026 },
-  { n: 71, titulo: 'SISTEMA DE DETECCIÓN TEMPRANA DE ENFERMEDADES EN GANADO BOVINO MEDIANTE VISIÓN ARTIFICIAL', ep: 'INGENIERÍA DE SISTEMAS', monto: 10000, anio: 2026 },
-  { n: 72, titulo: 'ANÁLISIS DEL COMPORTAMIENTO ELECTORAL Y PARTICIPACIÓN CIUDADANA EN REGIONES RURALES DE PUNO', ep: 'TRABAJO SOCIAL', monto: 10000, anio: 2026 },
-  { n: 73, titulo: 'EVALUACIÓN DE SISTEMAS DE RIEGO PRESURIZADO PARA CULTIVOS HORTÍCOLAS EN ZONAS SEMIÁRIDAS DE PUNO', ep: 'INGENIERIA AGRICOLA', monto: 10000, anio: 2026 },
-  { n: 74, titulo: 'ANÁLISIS DE BACTERIAS PROMOTORAS DE CRECIMIENTO VEGETAL EN SUELOS ALTOANDINOS', ep: 'BIOLOGIA', monto: 10000, anio: 2026 },
-  { n: 75, titulo: 'DESARROLLO DE BIOPLÁSTICOS A BASE DE ALMIDÓN DE PAPA PARA REDUCIR CONTAMINACIÓN PLÁSTICA EN PUNO', ep: 'INGENIERIA AGROINDUSTRIAL', monto: 10000, anio: 2026 },
-  { n: 76, titulo: 'ANÁLISIS DE TRAYECTORIAS EDUCATIVAS Y FACTORES DE ÉXITO EN ESTUDIANTES DE PRIMERA GENERACIÓN EN LA UNA PUNO', ep: 'EDUCACION SECUNDARIA', monto: 10000, anio: 2026 },
-  { n: 77, titulo: 'EVALUACIÓN DE ESPECIES FORESTALES NATIVAS PARA PROGRAMAS DE REFORESTACIÓN EN ZONAS DEGRADADAS DE PUNO', ep: 'INGENIERIA AGRONOMICA', monto: 10000, anio: 2026 },
-  { n: 78, titulo: 'ANÁLISIS DE LA EFICACIA DE PROGRAMAS SOCIALES EN LA REDUCCIÓN DE LA POBREZA EXTREMA EN PUNO', ep: 'TRABAJO SOCIAL', monto: 10000, anio: 2026 },
-  { n: 79, titulo: 'DISEÑO DE UN SISTEMA DE ALERTA TEMPRANA PARA DESASTRES NATURALES EN ZONAS VULNERABLES DE PUNO', ep: 'INGENIERÍA DE SISTEMAS', monto: 10000, anio: 2026 },
-  { n: 80, titulo: 'EVALUACIÓN DE LA CALIDAD NUTRICIONAL DE DIETAS EN HOGARES DE COMUNIDADES RURALES DEL ALTIPLANO', ep: 'NUTRICION HUMANA', monto: 10000, anio: 2026 },
-  { n: 81, titulo: 'ANÁLISIS DE LAS CONDICIONES LABORALES Y BIENESTAR DE TRABAJADORES INFORMALES EN PUNO', ep: 'TRABAJO SOCIAL', monto: 10000, anio: 2026 },
-  { n: 82, titulo: 'MODELAMIENTO MATEMÁTICO DEL TRANSPORTE DE SEDIMENTOS EN RÍOS ALTOANDINOS', ep: 'INGENIERIA CIVIL', monto: 10000, anio: 2026 },
-  { n: 83, titulo: 'ESTUDIO DE PROPIEDADES FÍSICO-MECÁNICAS DE MATERIALES DE CONSTRUCCIÓN CON FIBRAS NATURALES ANDINAS', ep: 'INGENIERIA CIVIL', monto: 10000, anio: 2026 },
-  { n: 84, titulo: 'ANÁLISIS DEL POTENCIAL GEOTÉRMICO EN ZONAS VOLCÁNICAS DE LA REGIÓN PUNO PARA GENERACIÓN DE ENERGÍA', ep: 'INGENIERIA ELECTRICA', monto: 10000, anio: 2026 },
-  { n: 85, titulo: 'EVALUACIÓN DE LA EFICACIA DE PLANTAS MEDICINALES ANDINAS EN EL TRATAMIENTO DE INFECCIONES RESPIRATORIAS', ep: 'BIOLOGIA', monto: 10000, anio: 2026 },
-  { n: 86, titulo: 'ANÁLISIS DE PATRONES DE MIGRACIÓN Y SUS EFECTOS EN LAS COMUNIDADES RURALES DE PUNO', ep: 'TRABAJO SOCIAL', monto: 10000, anio: 2026 },
-  { n: 87, titulo: 'DISEÑO DE SISTEMAS DE ENERGÍA SOLAR HÍBRIDA PARA ESTABLECIMIENTOS DE SALUD RURALES DE PUNO', ep: 'INGENIERIA ELECTRICA', monto: 10000, anio: 2026 },
-  { n: 88, titulo: 'EVALUACIÓN DE MÉTODOS DE CONSERVACIÓN DE SEMILLAS NATIVAS EN BANCOS COMUNITARIOS DEL ALTIPLANO', ep: 'INGENIERIA AGRONOMICA', monto: 10000, anio: 2026 },
-  { n: 89, titulo: 'ANÁLISIS SOCIOECONÓMICO DE LA ACTIVIDAD PESQUERA EN EL LAGO TITICACA Y PROPUESTAS DE SOSTENIBILIDAD', ep: 'ADMINISTRACION', monto: 10000, anio: 2026 },
-  { n: 90, titulo: 'EVALUACIÓN DE ESTRATEGIAS DE INTERVENCIÓN PARA LA REDUCCIÓN DE ANEMIA EN GESTANTES DE PUNO', ep: 'NUTRICION HUMANA', monto: 10000, anio: 2026 },
-  { n: 91, titulo: 'DISEÑO DE ECOSISTEMAS DIGITALES PARA EL FORTALECIMIENTO DEL APRENDIZAJE AUTÓNOMO EN EDUCACIÓN BÁSICA', ep: 'EDUCACION PRIMARIA', monto: 10000, anio: 2026 },
-  { n: 92, titulo: 'ANÁLISIS DE LA RESISTENCIA A ANTIBIÓTICOS EN BACTERIAS AISLADAS DEL LAGO TITICACA', ep: 'BIOLOGIA', monto: 10000, anio: 2026 },
-  { n: 93, titulo: 'EVALUACIÓN DEL DESEMPEÑO MECÁNICO DE MATERIALES COMPUESTOS CON FIBRA DE ALPACA', ep: 'INGENIERIA MECANICA', monto: 10000, anio: 2026 },
-  { n: 94, titulo: 'ANÁLISIS DE ESTRATEGIAS DE ADAPTACIÓN TECNOLÓGICA EN PEQUEÑAS EMPRESAS RURALES DE PUNO', ep: 'ADMINISTRACION', monto: 10000, anio: 2026 },
-  { n: 95, titulo: 'EVALUACIÓN DE LA EFICACIA DE PROBIÓTICOS EN LA PREVENCIÓN DE ENFERMEDADES GASTROINTESTINALES EN BOVINOS', ep: 'MEDICINA VETERINARIA Y ZOOTECNIA', monto: 10000, anio: 2026 },
-  { n: 96, titulo: 'ANÁLISIS DE LA COMPETITIVIDAD DE DESTINOS TURÍSTICOS EMERGENTES EN LA REGIÓN PUNO', ep: 'TURISMO', monto: 10000, anio: 2026 },
-  { n: 97, titulo: 'DISEÑO DE UN SISTEMA DE GESTIÓN DE CONOCIMIENTO PARA SABERES ANCESTRALES ANDINOS', ep: 'INGENIERÍA DE SISTEMAS', monto: 10000, anio: 2026 },
-  { n: 98, titulo: 'EVALUACIÓN DEL IMPACTO DE PROGRAMAS DE RESPONSABILIDAD SOCIAL UNIVERSITARIA EN COMUNIDADES DE PUNO', ep: 'TRABAJO SOCIAL', monto: 10000, anio: 2026 },
-  { n: 99, titulo: 'ANÁLISIS DE LA DISTRIBUCIÓN Y ABUNDANCIA DE AVES ACUÁTICAS EN EL LAGO TITICACA', ep: 'BIOLOGIA', monto: 10000, anio: 2026 },
-  { n: 100, titulo: 'DESARROLLO DE HERRAMIENTAS DIGITALES PARA LA ENSEÑANZA DE LENGUAS ORIGINARIAS EN EDUCACIÓN BÁSICA', ep: 'EDUCACION FISICA', monto: 10000, anio: 2026 },
-];
-
-export const gruposFinanciamiento = [
-  // 2024
-  { titulo: 'REVALORIZACIÓN DE LOS CULTIVOS DE CAÑIHUA (CHENOPODIUM PALLIDICAULE) Y TARWI (LUPINUS MUTABILIS SWEET) PARA EL DESARROLLO DE UN ANÁLOGO DE CARNE MEDIANTE TECNOLOGÍA DE EXTRUSIÓN', ep: 'INGENIERIA AGROINDUSTRIAL', monto: 20000, anio: 2024 },
-  { titulo: 'EVALUACIÓN DE CLONES Y VARIEDADES DE PAPA RESISTENTES A PHYTOPTHORA INFESTANS Y MELOIDOGYNE HAPLA', ep: 'INGENIERIA AGRONOMICA', monto: 20000, anio: 2024 },
-  { titulo: 'ELABORACIÓN DE UNA BEBIDA CON CARACTERÍSTICAS FUNCIONALES A BASE DE LACTOSUERO ENRIQUECIDA CON CUSHURO (NOSTOC COMUNE) Y FRUCTOOLIGOSACÁRIDOS PROVENIENTES DE LA QUINUA', ep: 'NUTRICION HUMANA', monto: 20000, anio: 2024 },
-  { titulo: 'IMPLEMENTACIÓN DE LA COSECHA DE AGUAS PLUVIALES COMO COMPLEMENTO AL SUMINISTRO DE AGUA DOMÉSTICA EN EL DISTRITO DE COATA, PUNO', ep: 'INGENIERIA AGRICOLA', monto: 20000, anio: 2024 },
-  { titulo: 'CARACTERIZACIÓN MOLECULAR Y ACTIVIDAD ANTIBACTERIANA DE LACTOBACILLUS SP AISLADOS DE LECHE DE ALPACA HUACAYA FRENTE A E. COLI ENTEROPATÓGENA ATCC EN ALTURA GEOGRÁFICA', ep: 'ODONTOLOGIA', monto: 20000, anio: 2024 },
-  { titulo: 'GESTIÓN DE ESPACIOS REMANENTES PARA MITIGAR LA CONTAMINACIÓN AMBIENTAL EN EL CENTRO POBLADO DE ALTO PUNO-2024', ep: 'TRABAJO SOCIAL', monto: 20000, anio: 2024 },
-  // 2025
-  { titulo: 'CARACTERIZACIÓN CLÍNICA Y MOLECULAR DE LA FASCIOLOSIS CRÓNICA EN ALPACAS', ep: 'MEDICINA VETERINARIA Y ZOOTECNIA', monto: 20000, anio: 2025 },
-  { titulo: 'DESARROLLO DEL CUERPO LÚTEO EN ALPACAS SOMETIDAS A GNRH Y PLASMA SEMINAL Y SU RELACIÓN CON NIVELES DE PROGESTERONA', ep: 'MEDICINA VETERINARIA Y ZOOTECNIA', monto: 20000, anio: 2025 },
-  { titulo: 'DISEÑO, CONSTRUCCIÓN Y VALIDACIÓN DE UNA NANORED EN CORRIENTE CONTINUA CON ENERGÍA SOLAR FOTOVOLTAICA PARA USOS PRODUCTIVOS Y CONFORT EN COMUNIDADES DE LA REGIÓN PUNO', ep: 'INGENIERÍA MECÁNICA ELÉCTRICA', monto: 20000, anio: 2025 },
-  { titulo: 'MODELO AUTOMATIZADO PARA LA DETECCIÓN DE REZAGOS DE LA MINERÍA ILEGAL EN LOS BOSQUES AMAZÓNICOS PERUANOS MEDIANTE APRENDIZAJE AUTOMÁTICO E IMÁGENES SATELITALES MULTIESPECTRALES', ep: 'INGENIERÍA DE SISTEMAS', monto: 20000, anio: 2025 },
-  { titulo: 'EDUCACIÓN AMBIENTAL Y TECNOLOGÍAS VERDES PARA PROMOVER LA SOSTENIBILIDAD HÍDRICA EN LA IES INDUSTRIAL 32 DE PUNO', ep: 'INGENIERÍA AGRÍCOLA', monto: 20000, anio: 2025 },
-  { titulo: 'ELABORACIÓN DE UNA BEBIDA FERMENTADA (KOMBUCHA) CON CARACTERÍSTICAS FUNCIONALES A BASE DE QUINUA ROJA Y FRESA', ep: 'INGENIERÍA QUÍMICA', monto: 20000, anio: 2025 },
-  { titulo: 'MODELOS PREDICTIVOS DE ZOOMETRÍA CON MACHINE LEARNING PARA ESTIMAR EL PESO CORPORAL DE LAS LLAMAS CHAKU Y KARA DE LA REGIÓN DE PUNO', ep: 'INGENIERÍA ESTADÍSTICA E INFORMÁTICA', monto: 20000, anio: 2025 },
-  { titulo: 'EFECTOS DE LA ADOPCIÓN TECNOLÓGICA Y LA CAPACITACIÓN EN EL DESEMPEÑO ECONÓMICO DE LOS PRODUCTORES DE TRUCHA EN LA REGIÓN PUNO', ep: 'INGENIERÍA ECONÓMICA', monto: 20000, anio: 2025 },
-  { titulo: 'DESARROLLO DE UN MODELO DE PREDICCIÓN DEL ÍNDICE UV EN PUNO EMPLEANDO APRENDIZAJE AUTOMÁTICO SUPERVISADO', ep: 'INGENIERÍA ESTADÍSTICA E INFORMÁTICA', monto: 20000, anio: 2025 },
-  { titulo: 'SEGURIDAD ALIMENTARIA Y PREVENCIÓN DE LA ANEMIA INFANTIL EN COMUNIDADES AIMARAS CON ENFOQUE DE GÉNERO', ep: 'EDUCACIÓN SECUNDARIA', monto: 20000, anio: 2025 },
-  { titulo: 'IMPLEMENTACIÓN DE PANELES BIO-AISLANTES SUSTENTABLES EN BASE AL TALLO DE QUINUA PARA MEJORAR EL CONFORT TÉRMICO EN VIVIENDAS RURALES ALTOANDINAS DE LA REGIÓN PUNO', ep: 'ARQUITECTURA Y URBANISMO', monto: 20000, anio: 2025 },
-  // 2026
-  { titulo: 'GENESIS-ANDES: FEW-SHOT VISIÓN TRANSFORMERS E INTELIGENCIA ARTIFICIAL GENERATIVA PARA LA CONSERVACIÓN DIGITAL DE LA AGROBIODIVERSIDAD ANDINA EN RIESGO DE EXTINCIÓN', ep: 'INGENIERÍA DE SISTEMAS', monto: 20000, anio: 2026 },
-  { titulo: 'SISTEMA HÍBRIDO IOT-IA ANDINO: DETECCIÓN TEMPRANA Y MONITOREO PREDICTIVO DE ENFERMEDADES EN PAPA NATIVA MEDIANTE VISIÓN POR COMPUTADOR, SENSORES IOT Y EDGE COMPUTING', ep: 'INGENIERÍA ESTADÍSTICA E INFORMÁTICA', monto: 20000, anio: 2026 },
-  { titulo: 'DISEÑO, FABRICACIÓN Y EVALUACIÓN DE UN SISTEMA DE SECADO POR VENTANA DE REFRACTANCIA ASISTIDO CON MICROONDAS PARA LA CONSERVACIÓN DE INGREDIENTES FUNCIONALES A PARTIR DE CULTIVOS ANDINOS', ep: 'INGENIERIA AGROINDUSTRIAL', monto: 20000, anio: 2026 },
-  { titulo: 'RELACIÓN ENTRE LONGITUD DE MECHA, RESISTENCIA A LA TRACCIÓN Y RENDIMIENTO AL LAVADO EN ALPACAS HUACAYA DE DIFERENTES EDADES', ep: 'MEDICINA VETERINARIA Y ZOOTECNIA', monto: 20000, anio: 2026 },
-  { titulo: 'MODELO DE DETECCIÓN AUTOMÁTICA DE DEFORMIDADES MORFOLÓGICAS EN TRUCHA ARCOÍRIS (ONCORHYNCHUS MYKISS) MEDIANTE VISIÓN ARTIFICIAL BASADA EN YOLO', ep: 'INGENIERÍA DE SISTEMAS', monto: 20000, anio: 2026 },
-  { titulo: 'MONITOREO SATELITAL DE BOFEDALES ALTOANDINOS EN PUNO MEDIANTE ÍNDICES ESPECTRALES Y APRENDIZAJE AUTOMÁTICO', ep: 'INGENIERÍA ESTADÍSTICA E INFORMÁTICA', monto: 20000, anio: 2026 },
-  { titulo: 'PRÁCTICAS DE BIODIVERSIDAD AGRÍCOLA QUE FORTALECEN LA SEGURIDAD ALIMENTARIA FAMILIAR EN PUNO, PROPUESTAS PARA CONSERVAR Y APROVECHAR SOSTENIBLEMENTE LOS CULTIVOS ANDINOS', ep: 'TRABAJO SOCIAL', monto: 20000, anio: 2026 },
-  { titulo: 'DESARROLLO Y EVALUACIÓN ANTIBIOFILM DE UN GEL BUCAL EXPERIMENTAL CON SAPONINAS OBTENIDAS DE SUBPRODUCTOS DE CHENOPODIUM QUINOA WILLD DEL ALTIPLANO PUNEÑO FRENTE A STREPTOCOCCUS MUTANS', ep: 'ODONTOLOGIA', monto: 20000, anio: 2026 },
-  { titulo: 'ANÁLISIS ESPACIAL PARA LA SELECCIÓN DE LA UBICACIÓN ÓPTIMA DE UN RELLENO SANITARIO MEDIANTE SISTEMAS DE INFORMACIÓN GEOGRÁFICA EN LA PROVINCIA DE EL COLLAO, 2026', ep: 'INGENIERÍA AGRÍCOLA', monto: 20000, anio: 2026 },
-  { titulo: 'MONITOREO DEL ESTRÉS HÍDRICO EN CULTIVOS DE PAPA USANDO IMÁGENES RGB Y NIR OBTENIDAS POR DRONES PARA UNA AGRICULTURA DE PRECISIÓN', ep: 'INGENIERÍA AGRÍCOLA', monto: 20000, anio: 2026 },
-  { titulo: 'DESARROLLO DE ESTRATEGIAS DE MARKETING DIGITAL E INNOVACIÓN PARA FORTALECER LA COMPETITIVIDAD DE MICRO Y PEQUEÑAS EMPRESAS EN PUNO', ep: 'ADMINISTRACIÓN', monto: 20000, anio: 2026 },
-];
 

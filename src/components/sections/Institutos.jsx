@@ -79,7 +79,7 @@ export default function Institutos() {
           <h2 className="section-title">Institutos de Investigación</h2>
           <p className="section-subtitle">Centros especializados de investigación por facultad — UNA Puno</p>
         </div>
-        <YearFilter years={[2023, 2024, 2025, 2026]} activeYear={activeYear} onChange={setActiveYear} />
+        <YearFilter years={[2020, 2021, 2022, 2023, 2024, 2025, 2026]} activeYear={activeYear} onChange={setActiveYear} />
       </div>
 
       {/* KPI Row */}
@@ -89,11 +89,13 @@ export default function Institutos() {
           <div className="stat-number" style={{ fontSize:'2.8rem', color:'#2e7d32' }}>{total}</div>
           <div style={{ fontSize:'0.78rem', color:'#78909c', marginTop:4 }}>Activos hasta {activeYear}</div>
         </div>
-        <div className="kpi-card" style={{ '--kpi-color': '#43a047' }}>
-          <div style={{ fontSize:'0.75rem', fontWeight:700, color:'#78909c', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:8 }}>Nuevos {activeYear}</div>
-          <div className="stat-number" style={{ fontSize:'2.8rem', color:'#43a047' }}>{newThisYear}</div>
-          <div style={{ fontSize:'0.78rem', color:'#78909c', marginTop:4 }}>Creados en el año</div>
-        </div>
+        {newThisYear > 0 && (
+          <div className="kpi-card" style={{ '--kpi-color': '#43a047' }}>
+            <div style={{ fontSize:'0.75rem', fontWeight:700, color:'#78909c', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:8 }}>Nuevos {activeYear}</div>
+            <div className="stat-number" style={{ fontSize:'2.8rem', color:'#43a047' }}>{newThisYear}</div>
+            <div style={{ fontSize:'0.78rem', color:'#78909c', marginTop:4 }}>Creados en el año</div>
+          </div>
+        )}
         <div className="kpi-card" style={{ '--kpi-color': '#558b2f' }}>
           <div style={{ fontSize:'0.75rem', fontWeight:700, color:'#78909c', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:8 }}>Facultades</div>
           <div className="stat-number" style={{ fontSize:'2.8rem', color:'#558b2f' }}>{byFacultad.length}</div>

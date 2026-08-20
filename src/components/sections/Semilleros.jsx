@@ -49,6 +49,14 @@ export default function Semilleros() {
   const currentList = listByYear[activeYear] || [];
   const total = currentList.length;
 
+  const cumulativeTotal = useMemo(() => {
+    let sum = 0;
+    for (let y = 2023; y <= activeYear; y++) {
+      sum += listByYear[y]?.length || 0;
+    }
+    return sum;
+  }, [activeYear]);
+
   // Aggregate by facultad
   const byFacultad = useMemo(() => {
     const map = {};
@@ -98,13 +106,13 @@ export default function Semilleros() {
       <div className="grid grid-4 gap-4 mb-6">
         <div className="kpi-card" style={{ '--kpi-color': '#2e7d32' }}>
           <div style={{ fontSize:'0.75rem', fontWeight:700, color:'#78909c', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:8 }}>Total Semilleros</div>
-          <div className="stat-number" style={{ fontSize:'2.8rem', color:'#2e7d32' }}>{total}</div>
-          {growthPct && <div className="trend trend-up mt-2"><ArrowUpRight size={13}/> +{growthPct}% vs {activeYear-1}</div>}
+          <div className="stat-number" style={{ fontSize:'2.8rem', color:'#2e7d32' }}>{cumulativeTotal}</div>
+          <div style={{ fontSize:'0.78rem', color:'#78909c', marginTop:4 }}>Acumulado hasta {activeYear}</div>
         </div>
         <div className="kpi-card" style={{ '--kpi-color': '#43a047' }}>
           <div style={{ fontSize:'0.75rem', fontWeight:700, color:'#78909c', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:8 }}>Nuevos {activeYear}</div>
           <div className="stat-number" style={{ fontSize:'2.8rem', color:'#43a047' }}>{currentEv?.nuevos || '-'}</div>
-          <div style={{ fontSize:'0.78rem', color:'#78909c', marginTop:4 }}>Reconocidos en el año</div>
+          {growthPct && <div className="trend trend-up mt-2"><ArrowUpRight size={13}/> +{growthPct}% vs {activeYear-1}</div>}
         </div>
         <div className="kpi-card" style={{ '--kpi-color': '#558b2f' }}>
           <div style={{ fontSize:'0.75rem', fontWeight:700, color:'#78909c', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:8 }}>Facultades</div>
